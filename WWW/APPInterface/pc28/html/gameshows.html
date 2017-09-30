@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>玩法说明</title>
+		<link rel="stylesheet" href="../css/communal.css" />
+		<link rel="stylesheet" type="text/css" href="../dist/libs/font-awesome-4.7.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="../css/gameshows.css" />
+		<script src="../js/jquery-3.1.0.min.js"></script>
+	</head>
+
+	<body>
+
+		<div class="gameshow-box">
+			<div>
+				<p style="color: #fd7776;">北京28玩法说明</p>
+				<br />
+				<div style="color: rgba(70, 65, 65, 0.96);">
+					<p>北京28采用北京快乐8数据(9:00-23:55):</p>
+				<p>北京快乐8开奖结果来源于国家福利彩票北京快乐8开奖号码，每5分钟一期，不停开奖。</p>
+				<p>北京快乐8每期开奖共开出20个号码，并按照从小到大的顺序依次排列。</p>
+				<p>取其1-6位开奖号码并进行相加，和值的末位作为幸运28开奖的第一位数值；</p>
+				<p>取其7-12位开奖号码并进行相加，和值的末位作为幸运28开奖的第二位数值；</p>
+				<p>取其13-18位开奖号码并进行相加，和值的末位作为幸运28开奖的第三位数值。</p>
+				<p>将三位数值进行相加，所得的结果即为幸运28的开奖结果。</p>
+				</div>	
+			</div>
+		</div>
+	</body>
+	<script type="text/template" id="odds_temp">
+		{{~it:value:index}}
+		<div>
+			<div class="top">{{=value.hallName}}</div>
+			<ul class="info">
+				{{~value.infoArray:info:i}}
+				<li>{{=info}}</li>
+				{{~}}
+			</ul>
+		</div>
+		{{~}}
+	</script>
+	<script src="../js/doT.min.js"></script>
+	<script src="../js/config.js"></script>
+	<script src="../js/myStorage.js"></script>
+	<script src="../json/gameshows.js"></script>
+	<script>
+		var lotteryId = myStorage.getItem('lotteryId')
+		$(function() {
+			//getOddsData()
+			//setDataList(listArray)
+		})
+
+		function getOddsData() {
+			$.ajax({
+				type: "Get",
+				url: "../json/gameshows.json",
+				cache: false,
+				async: false,
+				success: function(data) {
+					console.log(data)
+					var dataArray
+					if(systemType() == 'Android') {
+						dataArray = JSON.parse(data).listArray
+					} else {
+						dataArray = data.listArray
+					}
+					setDataList(dataArray)
+				},
+				error: function() {
+					//alert("调用错误")
+					console.log('调用错误')
+				}
+			})
+		}
+
+		function getScale() {
+			var hallName = myStorage.getItem('hallName')
+			var hallId = 0
+			if(hallName == '回水厅') {
+				hallId = 0
+			} else if(hallName == '保本厅') {
+				hallId = 1
+			} else if(hallName == '高倍率厅') {
+				hallId = 2
+			}
+			$.ajax({
+				type: "Post",
+				url: config().base_url + "/ajax/Bjxy28.ashx",
+				data: {
+					"opt": 2,
+					"lotteryId": lotteryId,
+					"hall": hallId
+				},
+				cache: false,
+				async: false,
+				success: function(data) {
+					console.log(data)
+					if(data.error == '0') {
+						if(data.msg.length > 0) {
+							for(var i = 0; i < data.msg.length; i++) {
+								var name = data.msg[i].name
+								var nameArray = name.split(',')
+								if(nameArray.length > 0) {
+									for(var j = 0; j < nameArray.length; j++) {
+										//weight_scale_json[nameArray[j]] = data.msg[i].defaultMoney
+									}
+								} else {
+									//weight_scale_json[name] = data.msg[i].defaultMoney
+								}
+							}
+						}
+					}
+				},
+				error: function() {
+					//alert("调用错误")
+					console.log('调用错误')
+				}
+			})
+		}
+
+		function setDataList(data) {
+			var tempFN = doT.template(document.getElementById('odds_temp').innerHTML)
+			var resultText = tempFN(data)
+			$('.last').before(resultText)
+		}
+
+		function fnGoBack() {
+			var url
+			if(lotteryId == '99') {
+				url = '../html/bj28-play.html'
+			} else {
+				url = '../html/jnd28-play.html'
+			}
+			window.location.replace(url)
+		}
+	</script>
+
+</html>

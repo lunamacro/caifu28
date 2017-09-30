@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>客服咨询</title>
+		<link rel="stylesheet" href="../css/communal.css" />
+		<link rel="stylesheet" type="text/css" href="../dist/libs/font-awesome-4.7.0/css/font-awesome.min.css" />
+		<script src="../js/jquery-3.1.0.min.js"></script>
+	</head>
+
+	<body>
+		<div class="header">
+			<a onclick="fnGoBack()"><i class="fa fa-angle-left" style="font-size: 18px;margin-right: 5px;"></i>返回</a>
+			<div>
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div id="hall" class="swiper-slide">客服咨询</div>
+					</div>
+				</div>
+			</div>
+			<a><span style="margin-left: 10px;"></span></a>
+		</div>
+		<iframe src="http://api.pop800.com/chat/284881" style="width: 100%;"></iframe>
+	</body>
+	<script src="../js/myStorage.js"></script>
+	<script>
+		var lotteryId = myStorage.getItem('lotteryId')
+		$(function(){
+			//var height = window.screen.availHeight //667
+			//var height = window.screen.height //667
+			//var height = window.outerHeight //667
+			var height = window.innerHeight //667
+			console.log(height)
+			$('iframe').css('height',height+'px')
+		})
+
+		function fnGoBack() {
+			var url
+			if(lotteryId == '99') {
+				url = '../html/bj28-play.html'
+			} else {
+				url = '../html/jnd28-play.html'
+			}
+			window.location.replace(url)
+		}
+	</script>
+
+</html>

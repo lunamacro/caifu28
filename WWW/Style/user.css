@@ -1,0 +1,236 @@
+
+/* -- 公共样式 -- */
+#user { margin-top: 15px; margin-bottom: 30px; }
+#user > div.menu { width: 150px; background-color: #F6F7F8; padding-bottom: 15px; }
+#user > div.con { width: 830px; }
+/*选项卡*/
+.con h3 { font:bold 18px "微软雅黑"; border-bottom: 2px solid #B9B9B9; }
+.con .money-hint {font-family: "微软雅黑"; margin-top: 10px; margin-bottom: 10px; height: 32px; line-height: 32px; font-size: 14px; text-indent: 15px; border: 1px solid #FAE378; background-color: #FEFCD2; }
+.con .tabs { height: 40px; line-height: 40px; border-bottom: 2px solid #91B8F8}
+.con .tabs > li { float: left; margin-top: -1px; width: 150px; margin-left: 10px; font-size: 15px; font-weight: bold; text-align: center; border: 1px solid #91B8F8; background-color: #F4F8FE; cursor: pointer; } 
+.con .tabs > li.active { border-width: 2px; border-bottom-color: #fff; background-color: #fff; margin-top: -2px; }
+.con .tabs-box { margin-top: 10px; }
+/*表格*/
+.table { width: 100%; border-spacing: 0; border: 1px solid #d5d5d5; text-align: center; }
+.table tr:nth-child(odd) { background-color: #F5F5F5; }
+.table tr:hover { background-color: #FFFFE8; }
+.table th { height: 28px;  font-weight: normal; background: url(../Images/user-th-bg.png) repeat-x; }
+.table td { padding-top: 8px; padding-bottom: 8px; line-height: 1.8em; border-top: 1px solid #d5d5d5; }
+
+.public-box { text-indent: 10px; }
+.public-box ul { *width: 100%; border-top: 1px solid #d5d5d5; border-left: 1px solid #d5d5d5; }
+.public-box li { position: relative; float: left; height: 36px; line-height: 36px; width: 50%; background-color: #FBFBFB; border-bottom: 1px solid #d5d5d5; }
+.public-box li > em { position: absolute; display: inline-block; height: 36px; top: 0; right: 0; border-left: 1px solid #d5d5d5; }
+.public-box > div { padding-top: 10px; padding-bottom: 10px; background-color: #FEFDE8; border-top: 0; }
+.public-box > div > p { line-height: 24px; }
+/*排序*/
+.order-by { cursor: pointer; }
+.order-by:hover { text-decoration: underline; }
+.order-by span { display: inline-block; margin-left: 1px; height: 9px; width: 8px; background-image: url(../Images/user-down-ico.png);}
+.order-by span.active { background-image: url(../Images/user-up-ico.png) }
+/*搜索*/
+.search { margin-top: 10px; margin-bottom: 10px; height: 40px; line-height: 40px; background-color: #F6F7F8; }
+.search > li > input,
+.search > li select { vertical-align: middle; }
+.search > li { float: left; margin-left: 15px; }
+.search > li > input { width: 80px; }
+.search > li > a { padding: 3px 10px; background-color: #F88134; border: 1px solid #D96214; border-radius: 3px;  color: #fff; cursor: pointer; }
+
+/*公共信息面板*/
+.info-box > p { line-height: 40px; border-bottom: 1px dashed #d5d5d5; }
+.info-box > p > i { display: inline-block; margin-right: 10px; width: 100px; text-align: right; }
+.info-box > p > em { margin-left: 15px; margin-right: 15px; color: #df1515; }
+.info-box > p > span { margin-left: 15px; color: #999; }
+.info-box > p .mark { margin-left: 15px; }
+.info-box > p input,
+.info-box > p select { padding-top: 3px; padding-bottom: 3px; vertical-align: middle; }
+.info-box > div.btn { margin-left: 110px; margin-top: 20px; margin-bottom: 30px; }
+.info-box > div.btn > button { margin-right: 10px; padding: 6px 20px; color: #fff; font-size: 14px; font-weight: bold; background-color: #FF6600; border: 1px solid #F74601; border-radius: 5px; }
+.info-box > hr { margin-top: -1px; }
+
+.service {height: 32px; line-height: 32px; padding-left: 40px; background: #FEFDE8 url(../Images/user-service-ico.png) no-repeat 10px; }
+
+/* -- 左侧菜单选项 -- */
+.menu > h3,
+.menu > div { text-indent: 40px; }
+.menu > h3 { margin-top: 10px; }
+.menu > div { margin-top: 5px; }
+.menu > div > a { display: block; height: 26px; line-height: 26px; color: #333; border: 1px solid transparent; border-left-width: 2px; }
+.menu > div > a.active,
+.menu > div > a:hover { border-top-color: #d5d5d5; border-bottom-color: #d5d5d5; border-left-color: #3366CC; color: #3366CC; text-decoration: none; background-color: #fff; }
+.menu > hr { margin-left: 10px; margin-right: 10px; margin-top: 10px; height: 1px; background-color: #fff; border: 0; border-top: 1px solid #E6E7EE; }
+.menu > h3 { background: url(../Images/user-id-ico.jpg) no-repeat 11px; }
+.menu > h3.my-lottery { background-image: url(../Images/user-lottery-ico.jpg) }
+.menu > h3.my-data { background-image: url(../Images/user-data-ico.jpg) }
+.menu > h3.my-integral { background-image: url(../Images/user-integral-ico.jpg) }
+.menu > h3.my-expand { background-image: url(../Images/user-expand-ico.jpg) }
+
+/* -- 用户中心首页 -- */
+.home .welcome { position: relative; margin-bottom: 15px; height: 54px; line-height: 54px; font-size: 14px; border: 1px solid #FAE378; background-color: #FEFCD2;  }
+.home .welcome > p { text-indent: 20px; }
+.home .welcome > p > i { margin-right: 20px; margin-left: 20px; }
+.home .welcome .btn { position: absolute; top: 0; right: 10px; }
+.home .welcome .btn > a { display: inline-block; margin-right: 20px; font: 16px "微软雅黑"; height: 30px; line-height: 30px; width: 80px; color: #000; text-align: center; border: 1px solid #B5B5B5; background-color: #F1F1F1; }
+.home .welcome .btn > a.pay { background-color: #D20101; color: #fff; border-color: #A70103; }
+.home .welcome .btn > a:hover { text-decoration: none; }
+.home > div.info { margin-top: 10px; margin-bottom: 20px; font-size: 14px; line-height: 30px; }
+.home > div.info span { display: inline-block; width: 85px; text-align: right; }
+.home > div.info li { float: left; width: 50%; }
+.home > div.info li > b	{ color: #F4235B; }
+.home > div.info li > a { margin-left: 5px; }
+.home > div.text { margin: 10px; padding-top: 8px; padding-bottom: 8px; background-color: #F9F9F9; line-height: 24px; color: #666; }
+
+/* -- 邮箱/手机验证/设置安全问题 -- */
+.verify table { margin-top: 15px; border-collapse: collapse; }
+.verify table th,
+.verify table td { padding-top: 10px; padding-bottom: 10px; border: 1px solid #d5d5d5; }
+.verify table th { width: 15%; text-align: right; background-color: #F9F9F9; font-weight: normal; }
+.verify table td { padding-left: 10px; }
+.verify table td.data { color: #666; }
+.verify table td.data > i { margin-left: 20px; margin-right: 20px; }
+.verify table td input,
+.verify table td select { padding-top: 2px; padding-bottom: 2px; vertical-align: middle; }
+.verify table td.warn { background-color: #FFFFE1; color: #df1515; line-height: 1.5em; }
+.verify table td > a.btn { display: inline-block; margin-right: 10px; height: 24px; line-height: 24px; width: 70px; color: #333; text-align: center; border: 1px solid #d5d5d5; background-color: #F2F2F2; border-radius: 3px; vertical-align: middle; cursor: pointer; }
+
+/* -- 账户充值 -- */
+.recharge > div { padding-left: 40px; line-height: 42px; color: #666; }
+.recharge > div > div > img,
+.recharge > div > div > input { vertical-align: middle; }
+.recharge > div > div > input[type="text"] { height: 24px; width: 160px; border: 1px solid #ccc; }
+.recharge > div > a { display: inline-block; margin-top: 15px; margin-left: 60px; width: 120px; height: 36px; line-height: 36px; color: #fff; font-size: 14px; font-weight: bold; text-align: center; border: 1px solid #F74601; background-color: #FF6600; border-radius: 4px; }
+
+/* -- 我要提款 -- */
+.withdrawal .norm > table { text-align: left; border-collapse: collapse; }
+.withdrawal .norm > table tr { background-color: #fff; }
+.withdrawal .norm > table th,
+.withdrawal .norm > table td { border: 1px solid #d5d5d5; }
+.withdrawal .norm > table th { text-indent: 15px; }
+.withdrawal .norm > table td { padding: 10px 15px; }
+.withdrawal .hint { margin-top: 10px; }
+.withdrawal .hint > p { line-height: 1.8em; text-indent: 10px; }
+.withdrawal .hint > p > em { color: #226699; }
+.withdrawal .hint > div { margin-top: 10px; padding-top: 10px; padding-bottom: 10px; background-color: #FEFDE8; }
+.withdrawal .hint > div > p { text-indent: 40px; line-height: 20px; }
+.withdrawal .hint > div > p.title { text-indent: 15px; }
+
+/* -- 我的站内信 -- */
+.message table td > input { vertical-align: middle; }
+.message table td > a { margin-right: 10px; }
+
+/* -- 绑定银行卡/积分明细/积分兑换 -- */
+.integral-exchange .warn,
+.integral-detail .warn,
+.bank-card .warn { margin-top: 10px; margin-bottom: 10px; padding:10px 15px; line-height: 20px; background-color: #F3F3F3; }
+.integral-exchange .warn .mark { padding-left: 20px; }
+.integral-exchange .warn i { color: #df1515; }
+.integral-exchange .change { margin-top: 20px; padding-left: 15px; line-height: 30px; }
+.integral-exchange .change p > input { padding-top: 2px; padding-bottom: 2px; width: 100px; }
+.integral-exchange .change p > a { margin-left: 20px; padding: 3px 8px; background-color: #F88134; border: 1px solid #D96214; border-radius: 3px;  color: #fff; cursor: pointer; }
+
+/* -- 卡密（电子优惠劵) -- */
+.coupon .warn { height: 50px; line-height: 50px; border: 1px solid #FFCD33; background-color: #FFFFE1; text-indent: 15px; }
+.coupon .table { table-layout: fixed; }
+.coupon .total { height: 36px; line-height: 36px; background-color: #F5F5F5; border: 1px solid #d5d5d5; text-indent: 15px; }
+
+/* -- 我推广的会员 -- */
+.promotion-member .search .mark { width: 200px; }
+.promotion-member .dialogue { margin-top: 10px; padding: 5px 20px; line-height: 24px; border: 1px dashed #d5d5d5; background-color: #F4F8FE; border-radius: 10px; }
+.promotion-member .dialogue b { margin-right: 5px; font-size: 14px; color: #096ed6; }
+.promotion-member .circle .btn { margin-top: 30px; text-align: center; }
+.promotion-member .circle .btn button { padding: 8px 30px; background-color: #6D98E0; border: 0; border-radius: 5px; color: #fff; font-size: 16px; font-weight: bold; }
+.userbutton { width:30px; height:22px; outline:none; background-color: #ff6600; border: 0; border-radius: 2px; color:White; font-size: 12px; cursor: pointer; }
+.promotion-member .expand { position: relative; margin-top: 20px; }
+.promotion-member .expand > div { margin-left: 100px; }
+.promotion-member .expand > i { position: absolute; left: 15px; top: 20px; }
+.promotion-member .expand textarea { height: 50px; width: 100%; resize: none; }
+.promotion-member .expand > div > div { height: 28px; line-height: 28px; }
+.promotion-member .expand > div input { vertical-align: middle; }
+
+/*购买成功提示*/
+.acquired {width: 528px; height: 151px; border:1px solid #fae378; padding: 0 0 0 300px; background:#fefde8 url(../images/success.png) no-repeat 221px 17px;}
+.acquired_prompt { font-size: 16px; color:#37b515; padding: 40px 0 20px 0; height: 20px; line-height: 20px; font-weight: bold;  }
+.acquired_prompt span { font-size: 14px; color: #333; padding: 0 0 0 20px; }
+.acquired_prompt span i { color: #d31010; }
+.acqjf,.acquser { font-size: 14px; line-height: 30px;}
+.acqjf i,.acquser i { color: #d31010; padding: 0 5px; font-weight: bold;}
+.acquser a { padding: 0 10px; color: #666; }
+.acquser a span {color:#36c;}
+
+.hotlottery {}
+.hotlottery h5 {height: 35px; border-bottom:2px solid #7c7c7c; font-size: #14px; line-height: 35px; margin: 10px 0 0 0; }
+.hotlottery ul { border-width:0 1px 1px 1px; border-style: solid; border-color:#e8e8e8; height: 200px; }
+.hotlottery ul li {float: left; width: 165px; height: 200px;}
+.hotlottery ul li .hotlotteryimg { width:85px; height: 85px; margin: 15px auto; }
+.hotlottery ul li .hotlotteryname { height: 20px; line-height: 20px; text-align: center; font-weight: bold;}
+.hotlottery ul li .hotlotteryinfo { height: 20px; line-height: 20px; text-align: center;}
+.hotlottery ul li .hotlotteryname a,.hotlottery ul li .hotlotteryinfo a {color: #333;}
+.hotlottery ul li .hotbuybtn { height: 20px; line-height: 20px; text-align: center;}
+.hotlottery ul li .hotbuybtn a {  font-weight: bold; color: #36c; }
+/*购买成功提示*/
+
+/*注册成功提示*/
+.registration {}
+.registrationinfo {width: 528px; height: 60px; border:1px solid #fae378; padding: 40px 0 0 300px; background:#fefde8 url(../images/success.png) no-repeat 221px 17px; font-size: 16px; color: #37b515; font-weight: bold;}
+ul.safe_operation { height: 30px; padding: 20px 0 17px 200px; }
+ul.safe_operation li { width: 130px; height: 30px; background: #fd9b3b; border-radius:4px; float: left; line-height: 30px; text-align: center; margin:0 12px 0 0;}
+ul.safe_operation li a {color: #fff; font-family: "微软雅黑";font-size: 14px; text-decoration: none; display: block; line-height: 30px; border-radius:4px;}
+ul.safe_operation li a:hover {background: #ff7e00;}
+.promptinfo { color: #f00; text-align: center; line-height: 20px; } 
+.promptinfo .li2 { text-indent: 72px; }
+
+.hotnew {}
+.hotnew h5 {height: 35px; border-bottom:2px solid #7c7c7c; font-size: #14px; line-height: 35px; margin: 10px 0 0 0; }
+.hotnew ul { border-width:0 1px 1px 1px; border-style: solid; border-color:#e8e8e8; height: 253px; padding: 5px 13px; }
+.hotnew ul li { height: 40px; border-bottom:1px dashed #d5d5d5; line-height: 40px; font-size: 14px; padding: 0 15px; }
+.hotnew ul li a { color:#36c;  }
+.hotnew ul li i { float: right; }
+/*注册成功提示*/
+
+/* new 注册成功提示 */
+.registered_wrap {border:1px solid #fae378; background:#fefde8; padding: 52px 0 72px 0;  font-family: "微软雅黑";}
+.prompt_icon { width: 65px; height: 65px; margin:0 auto; padding: 0 0 30px 0; }
+.prompt_info { text-align: center; font-size:16px; color:#666; line-height: 30px; }
+.prompt_info i { color: #c93221; }
+.registered_wrap ul { padding: 20px 0 0 76px; }
+.registered_wrap li { width: 200px; height: 40px; border-radius:3px; background:#fd9b3b; float: left; margin:0 38px 0 0; }
+.registered_wrap li a { display: block; line-height: 40px; text-align: center; color: #fff; font-size: 16px; }
+.promptreg { clear: both; padding: 30px 0 0 0; text-align: center; color: #e60013; }
+/* new 注册成功提示 */
+
+/* 安全设置 sta */
+.security { padding: 20px 0 0 0;  }
+.security li { width: 222px; height: 87px; border-radius: 3px; background: #ebeff2; float: left; margin:0 26px; *+display: inline; }
+.security_icon { width: 45px; height: 45px; float: left; padding: 20px 6px 20px 16px; }
+.security li h6 { font-size: 18px;font-family: "微软雅黑"; padding: 24px 0 0 0;}
+.security li h6 a { color: #333; }
+.security li .secinfo a { color: #818181; line-height: 18px; }
+.security li .secinfo a i { color: #37b515; }
+.security li a:hover { text-decoration: none; }
+/* 安全设置 sta  */
+
+/* 安全设置验证页面 sta */
+.yzwrap { padding: 52px 0 0 45px; }
+.yzinpu { font-size: 14px; overflow: hidden; }
+.yzinpu label { display: block; overflow: hidden; float: left; line-height:36px;}
+.yzinpu span { display:block; width: 140px; height: 38px; line-height: 38px; float: left; text-align: right; padding: 0 5px 0 0; color: #333; }
+.yzinpu input { display:block; width: 248px; height: 36px; border:1px solid #b9b9b9; float: left; }
+.yzinpu input.addper {  }
+.yzinpu select { width: 248px; height: 36px; border:1px solid #b9b9b9;}
+.yzinpu select.short { width: 123px; }
+.yzinpu select.short2 { width: 83px; }
+.num_box { float: left; height: 38px; line-height: 38px;  font-family: "微软雅黑"; font-weight: bold; }
+.num_box i { padding: 0 0 0 30px; }
+.hqyzm { float: left; padding: 0 0 0 10px; }
+.hqyzm a { display: block; width: 138px; height: 36px; border:1px solid #f60; color: #f60; text-align: center; line-height: 36px; }
+.hqyzm input { display: block; width: 138px; height: 38px; border:1px solid #f60; color: #f60; text-align: center; line-height: 36px; background-color:White; font-size:14px; cursor:pointer; }
+.promptxx { height: 30px; padding: 0 0 0 145px; line-height: 30px; font-size: 12px; color: #666; }
+.colred { color: #e60013;  }
+.yzbtn { padding: 10px 0 0 105px; }
+.qrbtn a { float: left; display: block; width: 118px; height: 36px; line-height:36px; text-align: center;  font-family: "微软雅黑"; color: #fff; font-size: 14px; font-weight: bold;background-color: #FF6600;border: 1px solid #F74601; border-radius:3px; }
+.qrbtn input { float: left; display: block; width: 118px; height: 36px; line-height:36px; text-align: center;  font-family: "微软雅黑"; color: #fff; font-size: 14px; font-weight: bold;background-color: #FF6600;border: 1px solid #F74601; border-radius:3px; cursor:pointer; }
+.qrbtn a.newbtn { border:1px solid #f60; background: #fff; color:#f60; margin:0 0 0 15px; }
+.qrbtn .newbtn { border:1px solid #f60; background: #fff; color:#f60; margin:0 0 0 15px; }
+.yzwrap a:hover { text-decoration: none; }
+.yzinpu input#rbSexM,.yzinpu input#rbSexW { width:24px; }
+/* 安全设置验证页面 end */

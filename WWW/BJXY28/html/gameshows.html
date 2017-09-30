@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>玩法说明</title>
+		<script src="../js/jquery-3.1.0.min.js"></script>
+	</head>
+
+	<body>
+		<div style="margin:10px">
+			<div>
+				<p style="color: #fd7776;">幸运28游戏简介</p>
+				<div style="color: rgba(70, 65, 65, 0.96);">
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;北京幸运28开奖结果来源于国家福利彩票北京快乐8（官网）开奖号码，从早上9:05至23:55，每5分钟一期不停开奖。</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;加拿大幸运28开奖结果来源于加拿大快乐8（官网）开奖号码，全天24小时，每3分钟一期不停开奖。</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;总共有28个数字，从00依次到27。</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;00-13为小，14-27为大，奇数为单，偶数为双</p>
+				<p>组合：</p>
+				<p>01、03、05、07、09、11、13为小单</p>
+				<p>00、02、04、06、08、10、12为小双</p>
+				<p>15、17、19、21、23、25、27为大单</p>
+				<p>14、16、18、20、22、24、26为大双</p>
+				<p>00、01、02、03、04、05为极小</p>
+				<p>22、23、24、25、26、27为极大</p>
+				<p>特码：从00依次到27</p>
+				<br />
+				<p style="color: #fd7776;">幸运28游戏规则</p>
+				<p>1.大小单双 【2倍】</p>
+				<p>2.组合 【4.2倍】</p>
+				<p>3.极大极小 【11倍】</p>
+				<p>4.特码赔率表</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;00 27--（188倍）&nbsp;&nbsp;01 26--（100倍）</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;02 25--（25倍）&nbsp;&nbsp;&nbsp;&nbsp;03 24--（25倍）</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;04 23--（20倍）&nbsp;&nbsp;&nbsp;&nbsp;05 22--（20倍）</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;06 21--（14倍）&nbsp;&nbsp;&nbsp;&nbsp;07 20--（14倍）</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;08 19--（13倍）&nbsp;&nbsp;&nbsp;&nbsp;09 18--（13倍）</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;10 17--（12倍）&nbsp;&nbsp;&nbsp;&nbsp;11 16--（12倍）</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;12 15--（11倍）&nbsp;&nbsp;&nbsp;&nbsp;13 14--（11倍）</p>
+				<p>5.特殊号码：13/14</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;遇开特殊号码13：投注 单、小、小单回本</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;遇开特殊号码14：投注 双、大、大双回本</p>
+				<p>6.以上赔率均含本金</p>
+				<p>7.普通会员房：单注10起，大小单双3000封顶，组合1500封顶，特码极大小500封顶，总注8000封顶</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;贵宾会员房：单注50起，大小单双60000封顶，组合30000封顶，特码极大小5000封顶，总注180000封顶</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;VIP会员房：单注500起，大小单双1000000封顶，组合50000封顶，特码极大小10000封顶，总注380000封顶</p>
+				<p>8.下注格式：</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;每次只能单项下注，可以多次下注，不能改注，如下错注，先取消再重新下注。</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;大小单双如：在投注框里输入【单100】然后点击【投注】确认。</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;下注组合如：在投注框里输入【小单100】然后点击【投注】确认。</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;下注特码如：在投注框里输入【11/100】或【11草100】然后点击【投注】确认。</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;上下分：点击【上下分】选择支付方式付款成功后，再金额框里输入上下分金额然后点击【提交】。</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;注：所有格式一律金额在后才有效，否则系统无法识别。</p>
+				<p>9.上分需一倍流水方可下分</p>
+				<p style="color: #fd7776;">10.注：如果遇到平台故障、网络问题、没开奖等情况，则所有下注金额全部无效，系统恢复后全部退回本金</p>
+				<br>
+				<p>如需帮助请添加客服微信：caifu6208<br>QQ:2218738725</p>
+				</div>	
+			</div>
+		</div>
+	</body>
+	<script type="text/template" id="odds_temp">
+		{{~it:value:index}}
+		<div>
+			<div class="top">{{=value.hallName}}</div>
+			<ul class="info">
+				{{~value.infoArray:info:i}}
+				<li>{{=info}}</li>
+				{{~}}
+			</ul>
+		</div>
+		{{~}}
+	</script>
+	<script src="../js/doT.min.js"></script>
+	<script src="../js/config.js"></script>
+	<script src="../js/myStorage.js"></script>
+	<script src="../json/gameshows.js"></script>
+	<script>
+		var lotteryId = myStorage.getItem('lotteryId')
+		$(function() {
+			//getOddsData()
+			//setDataList(listArray)
+		})
+
+		function getOddsData() {
+			$.ajax({
+				type: "Get",
+				url: "../json/gameshows.json",
+				cache: false,
+				async: false,
+				success: function(data) {
+					console.log(data)
+					var dataArray
+					if(systemType() == 'Android') {
+						dataArray = JSON.parse(data).listArray
+					} else {
+						dataArray = data.listArray
+					}
+					setDataList(dataArray)
+				},
+				error: function() {
+					//alert("调用错误")
+					console.log('调用错误')
+				}
+			})
+		}
+
+		function getScale() {
+			var hallName = myStorage.getItem('hallName')
+			var hallId = 0
+			if(hallName == '回水厅') {
+				hallId = 0
+			} else if(hallName == '保本厅') {
+				hallId = 1
+			} else if(hallName == '高倍率厅') {
+				hallId = 2
+			}
+			$.ajax({
+				type: "Post",
+				url: config().base_url + "/ajax/Bjxy28.ashx",
+				data: {
+					"opt": 2,
+					"lotteryId": lotteryId,
+					"hall": hallId
+				},
+				cache: false,
+				async: false,
+				success: function(data) {
+					console.log(data)
+					if(data.error == '0') {
+						if(data.msg.length > 0) {
+							for(var i = 0; i < data.msg.length; i++) {
+								var name = data.msg[i].name
+								var nameArray = name.split(',')
+								if(nameArray.length > 0) {
+									for(var j = 0; j < nameArray.length; j++) {
+										//weight_scale_json[nameArray[j]] = data.msg[i].defaultMoney
+									}
+								} else {
+									//weight_scale_json[name] = data.msg[i].defaultMoney
+								}
+							}
+						}
+					}
+				},
+				error: function() {
+					//alert("调用错误")
+					console.log('调用错误')
+				}
+			})
+		}
+
+		function setDataList(data) {
+			var tempFN = doT.template(document.getElementById('odds_temp').innerHTML)
+			var resultText = tempFN(data)
+			$('.last').before(resultText)
+		}
+
+		function fnGoBack() {
+			var url
+			if(lotteryId == '99') {
+				url = '../html/bj28-play.html'
+			} else {
+				url = '../html/jnd28-play.html'
+			}
+			window.location.replace(url)
+		}
+	</script>
+
+</html>

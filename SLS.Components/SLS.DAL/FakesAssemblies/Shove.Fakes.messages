@@ -1,0 +1,130 @@
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Q5mcKeZUAOsfR4mD6W.BYv1NlsTo0m5WdpwcR 生成存根: 类型已密封。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove._Drawing 生成存根: 类型已过时。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.WordSplit.WordsList 生成存根: 类型是一个值类型。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove._Web.WebConfig 生成存根: 类型已密封。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 j3Nb3rCRHuKan23Tji.QX4inxcZFSrFgNoe1s 生成存根: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 weelEhfcXPaIlbA7HK.n4PUi6JgRPKZtKZRu2 生成存根: 类型已密封。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Db3vOlWEUniKFUYiv4.HnGfgF6fHfm75Xvop6 生成存根: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 N9laaISjDVp1rZtr65.IbuM71MtG91xP6OA1F 生成存根: 类型已密封。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 NbJtE5yR68ELbLp0MH.Ikl0G5VMR4V28BIw2K 生成存根: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 vVAlqW0aKToX2MdEvH.Ky6emBEYb7OuAjeX0h 生成存根: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 pltXI7vPsRWnE7NEWX.X01GW68wMfggNNxgMS 生成存根: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.NewtonServices.getSICompletedEventHandler 生成存根: 类型已密封。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.NewtonServices.getSICompletedEventArgs 生成存根: 类型没有系列可见的构造函数。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.NewtonServices.getSI2CompletedEventHandler 生成存根: 类型已密封。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.NewtonServices.getSI2CompletedEventArgs 生成存根: 类型没有系列可见的构造函数。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.NewtonServices.getClientSIServiceStatusCompletedEventHandler 生成存根: 类型已密封。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.NewtonServices.getClientSIServiceStatusCompletedEventArgs 生成存根: 类型没有系列可见的构造函数。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.NewtonServices.TestSoapHeaderCompletedEventHandler 生成存根: 类型已密封。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.NewtonServices.TestSoapHeaderCompletedEventArgs 生成存根: 类型没有系列可见的构造函数。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.I3kmSMS_GatewayService.SMSReceiveCompletedEventHandler 生成存根: 类型已密封。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.I3kmSMS_GatewayService.SMSReceiveCompletedEventArgs 生成存根: 类型没有系列可见的构造函数。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.I3kmSMS_GatewayService.SendSMS_2CompletedEventHandler 生成存根: 类型已密封。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.I3kmSMS_GatewayService.SendSMS_2CompletedEventArgs 生成存根: 类型没有系列可见的构造函数。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.I3kmSMS_GatewayService.QueryBalanceCompletedEventHandler 生成存根: 类型已密封。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.I3kmSMS_GatewayService.QueryBalanceCompletedEventArgs 生成存根: 类型没有系列可见的构造函数。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.com_shovesoft_icp.IcpBeianQueryRealTimeCompletedEventHandler 生成存根: 类型已密封。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.com_shovesoft_icp.IcpBeianQueryRealTimeCompletedEventArgs 生成存根: 类型没有系列可见的构造函数。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 dk3Ofk9IiIAieLSHC1.qOHPBGlKxjcaKfdFvU 生成存根: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.Properties.Settings 生成存根: 类型已密封。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.Properties.Resources 生成存根: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove._Net.IIS.AppPoolMethodType 生成存根: 类型是一个值类型。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove._Net.IIS.AppPoolType 生成存根: 类型是一个值类型。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove._Net.IIS.IISWebServerState 生成存根: 类型是一个值类型。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove._Net.Ftp.Direction 生成存根: 类型是一个值类型。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove._Net.Ftp.Instruct 生成存根: 类型是一个值类型。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove._Net.Ftp.OverrideMode 生成存根: 类型是一个值类型。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove._Net.Ftp.Status 生成存根: 类型是一个值类型。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.CharsetDetector.BIG5Verifier 生成存根: 类型已密封。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.CharsetDetector.CP1252Verifier 生成存根: 类型已密封。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.CharsetDetector.EUCJPVerifier 生成存根: 类型已密封。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.CharsetDetector.EUCKRVerifier 生成存根: 类型已密封。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.CharsetDetector.EUCTWVerifier 生成存根: 类型已密封。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.CharsetDetector.GB18030Verifier 生成存根: 类型已密封。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.CharsetDetector.GB2312Verifier 生成存根: 类型已密封。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.CharsetDetector.HZVerifier 生成存根: 类型已密封。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.CharsetDetector.ISO2022CNVerifier 生成存根: 类型已密封。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.CharsetDetector.ISO2022JPVerifier 生成存根: 类型已密封。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.CharsetDetector.ISO2022KRVerifier 生成存根: 类型已密封。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.CharsetDetector.SJISVerifier 生成存根: 类型已密封。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.CharsetDetector.UCS2BEVerifier 生成存根: 类型已密封。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.CharsetDetector.UCS2LEVerifier 生成存根: 类型已密封。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.CharsetDetector.UTF8Verifier 生成存根: 类型已密封。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Tu5K8BoYFZxIM4THXK.iu2SGEHAhLBiMwcS2S 生成存根: 类型是一个值类型。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 FOVxisIl7JCH3X5Ysw.nGlcVC1ykR1SHVLtlQ 生成存根: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 sNL77K7JHCpg1c5rtU.lXqF1QuqXiKYGZqhI4 生成存根: 类型是一个值类型。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 RUkMioKRLd2u69LrCg.cGYYBfXG2e43hR9J6F 生成存根: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 dtYD5Jmgf4aGFwZFq8.WjMwI6duRiKaehYtXQ 生成存根: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 v3M5meq1lAsPuXPjwP.VkmxX0rhg8Wr3vbN6G 生成存根: 类型是一个值类型。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 HLVbbE4oEAvKfolmfC.KHQvTVP4Cy56jnLEMi 生成存根: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 MYI7Yg2l50eXIsoBYt.y2eBtlpLTGNv4qDXgZ 生成存根: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 HYPLy8F9UZyrYm5tNm.u20lh5kOrU9QpYTUHp 生成存根: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 <PrivateImplementationDetails> 生成存根: 类型已密封。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 <Module>{E029BB2F-60BB-4E8D-ADE2-44A131DDC1C9} 生成存根: 类型不受支持，因为存在内部限制。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 tVJ9G4AHhohHVxTh7t.tKmkSD55pLqeMbEbW6 生成存根: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 SbHUFQx1BiHqSHQVBL.Xmi1xqhwqfAW1qmrGX 生成存根: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 es37JlicI6qwIfqMbSp.dWFbvbiZPD0qGi5cgBC 生成存根: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 <PrivateImplementationDetails>{81F5C1E5-6786-4EFE-9EA6-CE4C1658F9EB} 生成存根: 类型不受支持，因为存在内部限制。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Q5mcKeZUAOsfR4mD6W.BYv1NlsTo0m5WdpwcR 生成填充码: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove._Drawing 生成填充码: 类型已过时。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.WordSplit.Dictionary+V0fG2OjbTGYi7UOKLr 生成填充码: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.WordSplit.Dictionary+hyqnN1thaFvTAPdZXG 生成填充码: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove._Web.IIS+ApplicationPoolOperateType 生成填充码: 类型是一个枚举。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 j3Nb3rCRHuKan23Tji.QX4inxcZFSrFgNoe1s 生成填充码: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 weelEhfcXPaIlbA7HK.n4PUi6JgRPKZtKZRu2 生成填充码: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Db3vOlWEUniKFUYiv4.HnGfgF6fHfm75Xvop6 生成填充码: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 N9laaISjDVp1rZtr65.IbuM71MtG91xP6OA1F 生成填充码: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 NbJtE5yR68ELbLp0MH.Ikl0G5VMR4V28BIw2K 生成填充码: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 vVAlqW0aKToX2MdEvH.Ky6emBEYb7OuAjeX0h 生成填充码: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 pltXI7vPsRWnE7NEWX.X01GW68wMfggNNxgMS 生成填充码: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.NewtonServices.getSICompletedEventHandler 生成填充码: 类型是一个委托。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.NewtonServices.getSI2CompletedEventHandler 生成填充码: 类型是一个委托。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.NewtonServices.getClientSIServiceStatusCompletedEventHandler 生成填充码: 类型是一个委托。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.NewtonServices.TestSoapHeaderCompletedEventHandler 生成填充码: 类型是一个委托。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.I3kmSMS_GatewayService.SMSReceiveCompletedEventHandler 生成填充码: 类型是一个委托。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.I3kmSMS_GatewayService.SendSMS_2CompletedEventHandler 生成填充码: 类型是一个委托。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.I3kmSMS_GatewayService.QueryBalanceCompletedEventHandler 生成填充码: 类型是一个委托。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.com_shovesoft_icp.IcpBeianQueryRealTimeCompletedEventHandler 生成填充码: 类型是一个委托。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove._System._Screen+ER7O3dadA4d2lVqsAw 生成填充码: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove._System._Screen+kiVxlrBfO0DxNvvt80 生成填充码: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 dk3Ofk9IiIAieLSHC1.qOHPBGlKxjcaKfdFvU 生成填充码: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove._Security.Encrypt+FcRlH3wkHBdTLasnln 生成填充码: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove._Security.Encrypt+GiHCjvDPmsJwdxcCGx 生成填充码: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.Properties.Settings 生成填充码: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.Properties.Resources 生成填充码: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove._Net.Internet+RasManager+Callback 生成填充码: 类型是一个委托。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove._Net.TCP.SocketService+LGEf1HO5ipk7hJsEy5 生成填充码: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove._Net.TCP.SocketService+Server+ReceiveHandler 生成填充码: 类型是一个委托。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove._Net.IIS.AppPoolMethodType 生成填充码: 类型是一个枚举。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove._Net.IIS.AppPoolType 生成填充码: 类型是一个枚举。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove._Net.IIS.IISWebServerState 生成填充码: 类型是一个枚举。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove._Net.Ftp.Direction 生成填充码: 类型是一个枚举。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove._Net.Ftp.FtpClient+TransferEventHandler 生成填充码: 类型是一个委托。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove._Net.Ftp.Instruct 生成填充码: 类型是一个枚举。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove._Net.Ftp.OverrideMode 生成填充码: 类型是一个枚举。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove._Net.Ftp.Status 生成填充码: 类型是一个枚举。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove._Net.Ftp.Task+<GetEnumerator>d__18 生成填充码: 类型不受支持，因为存在内部限制。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.CharsetDetector.ICharsetDetectionObserver 生成填充码: 类型是一个接口。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.CharsetDetector.ICharsetDetector 生成填充码: 类型是一个接口。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove._IO.PrintDirect+Dw1VPBYqNdJCCkUxis 生成填充码: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove._IO.PrintDirect2+Nfeqn0TfN8keARqfWR 生成填充码: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove._IO.Printer+PrinterEnumFlags 生成填充码: 类型是一个枚举。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove._IO.File+pVfgqkGlesGGxGundn 生成填充码: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.Gateways.GeneralRestGateway+DelegateHandleRequest 生成填充码: 类型是一个委托。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.Gateways.Weixin.Shanghu.Pay+DelegateHandleBusiness 生成填充码: 类型是一个委托。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Shove.Gateways.Weixin.Gongzhong.UserMessage+DelegateGetData 生成填充码: 类型是一个委托。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 Tu5K8BoYFZxIM4THXK.iu2SGEHAhLBiMwcS2S 生成填充码: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 FOVxisIl7JCH3X5Ysw.nGlcVC1ykR1SHVLtlQ 生成填充码: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 sNL77K7JHCpg1c5rtU.lXqF1QuqXiKYGZqhI4 生成填充码: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 RUkMioKRLd2u69LrCg.cGYYBfXG2e43hR9J6F 生成填充码: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 dtYD5Jmgf4aGFwZFq8.WjMwI6duRiKaehYtXQ 生成填充码: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 v3M5meq1lAsPuXPjwP.VkmxX0rhg8Wr3vbN6G 生成填充码: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 HLVbbE4oEAvKfolmfC.KHQvTVP4Cy56jnLEMi 生成填充码: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 MYI7Yg2l50eXIsoBYt.y2eBtlpLTGNv4qDXgZ 生成填充码: 类型是一个接口。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 HYPLy8F9UZyrYm5tNm.u20lh5kOrU9QpYTUHp 生成填充码: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 <PrivateImplementationDetails> 生成填充码: 类型不受支持，因为存在内部限制。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 <Module>{E029BB2F-60BB-4E8D-ADE2-44A131DDC1C9} 生成填充码: 类型不受支持，因为存在内部限制。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 tVJ9G4AHhohHVxTh7t.tKmkSD55pLqeMbEbW6 生成填充码: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 SbHUFQx1BiHqSHQVBL.Xmi1xqhwqfAW1qmrGX 生成填充码: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 es37JlicI6qwIfqMbSp.dWFbvbiZPD0qGi5cgBC 生成填充码: 类型对 exported or assembly(Shove.Fakes) 不可见。
+D:\caipiao\SLS.Components\SLS.DAL\Fakes\Shove.fakes : warning : 无法为 <PrivateImplementationDetails>{81F5C1E5-6786-4EFE-9EA6-CE4C1658F9EB} 生成填充码: 类型不受支持，因为存在内部限制。

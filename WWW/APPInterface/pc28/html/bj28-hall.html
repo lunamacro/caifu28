@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="../css/communal.css" />
+		<link rel="stylesheet" type="text/css" href="../dist/libs/font-awesome-4.7.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="../css/hall.css" />
+		<style>
+			
+		</style>
+	</head>
+
+	<body>
+		<div class="header">
+			<a onclick="goBack()"><i class="fa fa-angle-left" style="font-size: 18px;margin-right: 5px;"></i>返回</a>
+			<div>
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div id="hall" class="swiper-slide">北京幸运28</div>
+					</div>
+				</div>
+			</div>
+			<a><span style="margin-left: 10px;"></span></a>
+		</div>
+		<div class="list-hall">
+			<img class="loadingimg" id='loading' src='../img/loading.gif'>
+			<p id="oddsthat_01" class="oddsthat" onclick="goToOddsthat(0)"><span>赔率说明</span></p>
+			<div class="pfont" onclick="goToRoom(0)">
+				<img class="img-hall" src="../img/hall-01.png" />
+				<p class="font"><i class="iconuser"></i><span id="online_users_01" class="iconfont">获取中...</span></p>
+			</div>
+			<p id="oddsthat_02" class="oddsthat" onclick="goToOddsthat(1)"><span id="online_users_01">赔率说明</span></p>
+			<div class="pfont" onclick="goToRoom(1)">
+				<img class="img-hall" src="../img/hall-02.png" />
+				<p class="font"><i class="iconuser"></i><span id="online_users_02" class="iconfont">获取中...</span></p>
+			</div>
+			<p id="oddsthat_03" class="oddsthat" onclick="goToOddsthat(2)"><span id="online_users_01">赔率说明</span></p>
+			<div class="pfont" onclick="goToRoom(2)">
+				<img class="img-hall" src="../img/hall-03.png" />
+				<p class="font"><i class="iconuser"></i><span id="online_users_03" class="iconfont">获取中...</span></p>
+			</div>
+		</div>
+
+	</body>
+
+	<!--遮罩层1(全局遮住)-->
+	<div class="mask"></div>
+
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<script src="../js/rong/RongIMLib-2.2.5.min.js"></script>
+	<script src="../js/config.js"></script>
+	<script src="../js/myStorage.js"></script>
+	<script src="../js/judge-systemType.js"></script>
+	<script src="../js/bj28-hall.js"></script>
+	<script>
+		function goToRoom(index) {
+//			if(index == 3) {
+//				if((balance + handsel) <= 10000) {
+//					alert('余额不大于10000元，请充值后进入房间。')
+//					return
+//				}
+//				select_hall = '玩法三'
+//			}
+			myStorage.setItem('hallIndex', index)
+			myStorage.setItem('online_users_room_array', online_users_hall_array[index].join(','))
+			myStorage.setItem('roomId_area_array', roomId_hall_array[index].join(','))
+			window.location.href = '../html/bj28-room.html'
+		}
+
+		function goToOddsthat(index) {
+			myStorage.setItem('lotteryId', 99)
+			myStorage.setItem('hallIndex', index)
+			window.location.href = '../html/oddsthat-hall.html'
+		}
+
+		function goBack() {
+			if(systemType() == 'Android') {
+				window.MyI.goBack()
+			} else if(systemType() == 'iOS') {
+				window.webkit.messageHandlers.GoBack.postMessage(null)
+			}
+		}
+	</script>
+
+</html>

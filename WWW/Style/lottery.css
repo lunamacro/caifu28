@@ -1,0 +1,494 @@
+
+
+.main { margin-top: 10px; margin-bottom: 30px; }
+
+/* -- 时时彩 -- */
+#ssc .content { margin-top: 8px; margin-bottom: 8px; }
+#ssc .content > div.left { width: 770px; margin:20px 0px; }
+#ssc .content > div.right { width: 220px; margin:20px 0px;color: #333;}
+/*选号选项卡*/
+#ssc .lect-num .tabs { width: 770px; margin: -1px; table-layout: fixed; border-collapse: collapse; text-align: center; }
+#ssc .lect-num .tabs td { height: 60px; line-height: 1.5em; border: 1px solid #d5d5d5; background-color: #F3F3F3; cursor: pointer; }
+#ssc .lect-num .tabs td > h4 { margin-top: 4px; font-size: 14px; }
+#ssc .lect-num .tabs td > p { color: #979797; }
+#ssc .lect-num .tabs td.active,
+#ssc .lect-num .tabs td:hover { background-color: #DA3829; color: #fff; }
+#ssc .lect-num .tabs td.active p,
+#ssc .lect-num .tabs td:hover p { color: #fff; }
+/*玩法说明*/
+#ssc .lect-num > p { margin-top: 15px; margin-bottom: 15px; text-indent: 10px; }
+#ssc .lect-num > p:before { content: url(../Images/text-ico.png); margin-right: 3px; vertical-align: middle; }
+#ssc .lect-num .lect { text-indent: 10px; }
+#ssc .lect-num .lect label { cursor:pointer; }
+/*普通/粘贴单选项*/
+#ssc .lect-num .lect label { margin-right: 40px; }
+#ssc .lect-num .lect input { vertical-align: middle; }
+/*普通选号区*/
+#ssc .lect-num .lect-box { margin-top: 25px; margin-bottom: 5px; }
+#ssc .lect-num .ball { position: relative; padding-left: 70px; width: 380px; }
+#ssc .lect-num .lect-box h4 { height: 15px; line-height: 15px; margin-bottom: 15px; font-size: 12px; }
+#ssc .lect-num .number li { position: relative; margin-bottom: 6px; height: 58px; }
+#ssc .lect-box .ball li > b,
+#ssc .lect-box .ball .omit > span { display: inline-block; margin-right: 3px; width: 32px; text-align: center; }
+#ssc .lect-box .ball li > b {  height: 32px; line-height: 32px; color: #555; font-size: 18px; background-image: url(../Images/js_ball.png); cursor: pointer; }
+#ssc .lect-box .ball li > b.active { background-image: url(../Images/hl_03.png); color: #fff; }
+#ssc .lect-box .ball .omit {  position: absolute; left: 0; bottom: 5px; color: #8a8a8a; }
+#ssc .lect-box .digits,
+#ssc .lect-box .select { position: absolute; left: -60px; top: 5px; width: 50px; height: 20px; line-height: 20px; color: #717171; border-radius: 3px; text-align: center; background-color: #E6E6E6;  }
+#ssc .lect-box .select { left: 10px; top: 65px; background-color: #E7F3FB; cursor: pointer; }
+#ssc .lect-box .trilateral { position: absolute; top: 5px; height: 0; width: 0; }
+#ssc .lect-box .out { right: -4px; border-left: 5px solid #E6E6E6; border-top: 5px solid transparent; border-bottom: 5px solid transparent; }
+#ssc .lect-box .in { top: 7px; right: 5px; border-top: 6px solid #000; border-left: 4px solid transparent; border-right: 4px solid transparent; }
+#ssc .lect-box .select .out { border-left-color: #E7F3FB; }
+#ssc .lect-box .select > div { text-align: left; text-indent: 7px; z-index: 2;}
+#ssc .lect-box .select > dl { position: absolute; left: 0; top: 20px; padding-top: 5px; padding-bottom: 5px; width: 55px; border: 1px solid #ccc; background-color: #fff; }
+#ssc .lect-box .select dd:hover { background-color: #E7F3FB; }
+/*普通选号帮助区*/
+#ssc .lect-box .help { width: 260px; margin-right: 30px; }
+#ssc .lect-box .help > h4 { color: #808080; }
+#ssc .lect-box .help li > a { display: inline-block; margin-right: 10px; margin-top: 3px;  padding: 5px 6px; border: 1px solid #A8A8A8; background: url(../Images/ccs-help.btn-bg.png) repeat-x; border-radius: 3px; color: #333; cursor: pointer; }
+#ssc .lect-box .help li > a:hover { text-decoration: none; background-image: url(../Images/ccs-help.btn-bg-1.png); }
+/*普通选号按大小单双*/
+#ssc .lect-box .size { position: relative; padding-left: 75px; margin-bottom: 15px; }
+#ssc .lect-box .size li { position: relative; }
+#ssc .lect-box .size .omit > span,
+#ssc .lect-box .size li > b { display: inline-block; margin-left: 15px; width: 116px;  text-align: center; cursor: pointer; }
+#ssc .lect-box .size li > b { height: 40px; line-height: 40px; border: 1px solid #A8A8A8; border-radius: 4px; font-size: 14px; background: url(../Images/ball-size-bg.jpg) repeat-x; }
+#ssc .lect-box .size li > b.active { border-color: #D13F3D; background-image: url(../Images/ball-size-bg.png); color: #fff; } 
+#ssc .lect-box .size li > b > span { font-size: 12px; font-weight: normal; }
+#ssc .lect-box .size .omit > span { height: 30px; line-height: 30px; border: 1px solid transparent; }
+#ssc .lect-box .size .digits { top: 11px; }
+#ssc .lect-box .size .select { left: 15px; top: 79px; }
+/*粘贴选号*/
+#ssc .lect-box .paste { padding-left: 90px; line-height: 22px; }
+#ssc .lect-box .paste > h4 { margin-bottom: 0; height:22px; line-height: 22px; }
+#ssc .lect-box .paste > h4 > span { font-weight: normal; color: #717171; }
+#ssc .lect-box .paste > p { margin-left: 63px; color: #717171; }
+#ssc .lect-box .paste > textarea { margin-top: 20px; padding: 10px; width: 460px; height: 150px; }
+
+#ssc .lect-box .miss { margin-left: 15px; padding-left: 30px; width: 360px; height: 30px; line-height: 30px; background-color: #F7F7F7; }
+#ssc .lect-box .miss > label input { vertical-align: middle; margin-left: 30px; }
+/*今日开奖*/
+#ssc .today-lottery { margin-top: 8px; margin-bottom: 8px; }
+#ssc .today-lottery h4 { position: relative; padding-left: 10px; height: 25px; line-height: 25px; border-bottom: 1px solid #000; background-color: #F5F3F3; }
+#ssc .today-lottery h4 > span { position: absolute; top: 0; right: 15px; padding-right: 20px; font-weight: normal; background: url(../Images/down-ico-1.jpg) no-repeat right; cursor: pointer; }
+#ssc .today-lottery h4 > span.active { background-image: url(../Images/up-ico-1.jpg); }
+#ssc .today-lottery .list table { float: left; width: 25%; border-right: 1px solid #d5d5d5; text-align: center; }
+#ssc .today-lottery .list th { height: 32px; line-height: 32px; background-color: #F8F8F8; }
+#ssc .today-lottery .list td { height: 25px; line-height: 25px; border-top: 1px solid #d5d5d5; }
+/*开奖公告*/
+#ssc .content > div.right > div > h3 { text-indent: 10px; background-color: #F1F1F1; border-bottom: 1px solid #d5d5d5; }
+#ssc .notice > p { margin:10px; }
+#ssc .notice > p.num > b { display: inline-block; margin-right: 2px; height: 28px; line-height: 28px; width: 28px; color: #fff; font-size: 16px; text-align: center; background-image: url(../Images/ziehung-ball-red.png); }
+#ssc .notice > table { width: 95%; margin: 15px auto; margin-bottom: -1px; }
+#ssc .notice > table th { height: 26px; line-height: 26px; background-color: #EBEBEB; }
+#ssc .notice > table td { height: 30px; line-height: 30px; text-align: center; border-bottom: 1px dotted #d5d5d5; }
+#ssc .notice > table td.num { letter-spacing: 2px; }
+/*最新中奖*/
+#ssc .new-win { margin-bottom: 10px; }
+#ssc .new-win > h3 { margin-bottom: -1px; }
+#ssc .new-win > p { width: 95%; margin: auto; height: 35px; line-height: 35px; border-top: 1px dotted #d5d5d5; color: #717171; }
+#ssc .new-win > p span { display: inline-block; width: 55px; padding-left: 14px; background: url(../Images/zhongjiang_ming.png) no-repeat left; }
+#ssc .new-win > p i { display: inline-block; width: 50px; font-weight: normal; }
+/*时时彩走势图*/
+#ssc .trend > h3 { position: relative; }
+#ssc .trend > h3 > a { position: absolute; top: 0; right: 15px; color: #333; font: normal 12px "微软雅黑"; line-height: 30px; }
+#ssc .trend > div { margin-top: 5px; margin-bottom: 5px; }
+#ssc .trend > div > a { float: left; width: 50%; height: 30px; line-height: 30px; color: #333; text-indent: 10px; }
+
+/* -- 广东11选5 -- */
+#gd11x5 .content { margin-top: 8px; margin-bottom: 8px; }
+#gd11x5 .content > div.left { width: 770px; }
+#gd11x5 .content > div.right { width: 220px; }
+/*选号选项卡*/
+#gd11x5 .lect-num .tabs { width: 770px; margin: -1px; table-layout: fixed; border-collapse: collapse; text-align: center; }
+#gd11x5 .lect-num .tabs td { height: 60px; line-height: 1.5em; border: 1px solid #d5d5d5; background-color: #F3F3F3; cursor: pointer; }
+#gd11x5 .lect-num .tabs td > h4 { margin-top: 4px; font-size: 14px; }
+#gd11x5 .lect-num .tabs td > p { color: #979797; }
+#gd11x5 .lect-num .tabs td.active,
+#gd11x5 .lect-num .tabs td:hover { background-color: #DA3829; color: #fff; }
+#gd11x5 .lect-num .tabs td.active p,
+#gd11x5 .lect-num .tabs td:hover p { color: #fff; }
+#gd11x5 .lect-num .lect { text-indent: 10px; }
+/*普通/粘贴单选项*/
+#gd11x5 .lect-num .lect label { margin-right: 40px; }
+#gd11x5 .lect-num .lect input { vertical-align: middle; }
+/*普通选号区*/
+#gd11x5 .lect-num .lect-box { margin-top: 25px; margin-bottom: 5px; }
+#gd11x5 .lect-num .ball { position: relative; padding-left: 70px; width: 380px; }
+#gd11x5 .lect-num .lect-box h4 { height: 15px; line-height: 15px; margin-bottom: 15px; font-size: 12px; }
+#gd11x5 .lect-num .number li { position: relative; margin-bottom: 6px; height: 58px; }
+#gd11x5 .lect-box .ball li > b,
+#gd11x5 .lect-box .ball .omit > span { display: inline-block; margin-right: 3px; width: 32px; text-align: center; }
+#gd11x5 .lect-box .ball li > b {  height: 32px; line-height: 32px; color: #555; font-size: 18px; background-image: url(../Images/js_ball.png); cursor: pointer; }
+#gd11x5 .lect-box .ball li > b.active { background-image: url(../Images/hl_03.png); color: #fff; }
+#gd11x5 .lect-box .ball .omit {  position: absolute; left: 0; bottom: 5px; color: #8a8a8a; }
+#gd11x5 .lect-box .digits,
+#gd11x5 .lect-box .select { position: absolute; left: -60px; top: 5px; width: 50px; height: 20px; line-height: 20px; color: #717171; border-radius: 3px; text-align: center; background-color: #E6E6E6;  }
+#gd11x5 .lect-box .select { left: 10px; top: 65px; background-color: #E7F3FB; cursor: pointer; }
+#gd11x5 .lect-box .trilateral { position: absolute; top: 5px; height: 0; width: 0; }
+#gd11x5 .lect-box .out { right: -4px; border-left: 5px solid #E6E6E6; border-top: 5px solid transparent; border-bottom: 5px solid transparent; }
+#gd11x5 .lect-box .in { top: 7px; right: 5px; border-top: 6px solid #000; border-left: 4px solid transparent; border-right: 4px solid transparent; }
+#gd11x5 .lect-box .select .out { border-left-color: #E7F3FB; }
+#gd11x5 .lect-box .select > div { text-align: left; text-indent: 7px; z-index: 2;}
+#gd11x5 .lect-box .select > dl { position: absolute; left: 0; top: 20px; padding-top: 5px; padding-bottom: 5px; width: 55px; border: 1px solid #ccc; background-color: #fff; }
+#gd11x5 .lect-box .select dd:hover { background-color: #E7F3FB; }
+/*普通选号帮助区*/
+#gd11x5 .lect-box .help { width: 260px; margin-right: 30px; }
+#gd11x5 .lect-box .help > h4 { color: #808080; }
+#gd11x5 .lect-box .help li > a { display: inline-block; margin-right: 10px; margin-top: 3px;  padding: 5px 6px; border: 1px solid #A8A8A8; background: url(../Images/ccs-help.btn-bg.png) repeat-x; border-radius: 3px; color: #333; cursor: pointer; }
+#gd11x5 .lect-box .help li > a:hover { text-decoration: none; background-image: url(../Images/ccs-help.btn-bg-1.png); }
+/*普通选号按大小单双*/
+#gd11x5 .lect-box .size { position: relative; padding-left: 75px; margin-bottom: 15px; }
+#gd11x5 .lect-box .size li { position: relative; }
+#gd11x5 .lect-box .size .omit > span,
+#gd11x5 .lect-box .size li > b { display: inline-block; margin-left: 15px; width: 116px;  text-align: center; cursor: pointer; }
+#gd11x5 .lect-box .size li > b { height: 40px; line-height: 40px; border: 1px solid #A8A8A8; border-radius: 4px; font-size: 14px; background: url(../Images/ball-size-bg.jpg) repeat-x; }
+#gd11x5 .lect-box .size li > b.active { border-color: #D13F3D; background-image: url(../Images/ball-size-bg.png); color: #fff; } 
+#gd11x5 .lect-box .size li > b > span { font-size: 12px; font-weight: normal; }
+#gd11x5 .lect-box .size .omit > span { height: 30px; line-height: 30px; border: 1px solid transparent; }
+#gd11x5 .lect-box .size .digits { top: 11px; }
+#gd11x5 .lect-box .size .select { left: 15px; top: 79px; }
+/*粘贴选号*/
+#gd11x5 .lect-box .paste { padding-left: 90px; line-height: 22px; }
+#gd11x5 .lect-box .paste > h4 { margin-bottom: 0; height:22px; line-height: 22px; }
+#gd11x5 .lect-box .paste > h4 > span { font-weight: normal; color: #717171; }
+#gd11x5 .lect-box .paste > p { margin-left: 63px; color: #717171; }
+#gd11x5 .lect-box .paste > textarea { margin-top: 20px; padding: 10px; width: 460px; height: 150px; }
+
+#gd11x5 .lect-box .miss { margin-left: 15px; padding-left: 30px; width: 360px; height: 30px; line-height: 30px; background-color: #F7F7F7; }
+#gd11x5 .lect-box .miss > label input { vertical-align: middle; margin-left: 30px; }
+/*今日开奖*/
+#gd11x5 .today-lottery { margin-top: 8px; margin-bottom: 8px; }
+#gd11x5 .today-lottery h4 { position: relative; padding-left: 10px; height: 25px; line-height: 25px; border-bottom: 1px solid #000; background-color: #F5F3F3; }
+#gd11x5 .today-lottery h4 > span { position: absolute; top: 0; right: 15px; padding-right: 20px; font-weight: normal; background: url(../Images/down-ico-1.jpg) no-repeat right; cursor: pointer; }
+#gd11x5 .today-lottery h4 > span.active { background-image: url(../Images/up-ico-1.jpg); }
+#gd11x5 .today-lottery .list table { float: left; width: 25%; border-right: 1px solid #d5d5d5; text-align: center; }
+#gd11x5 .today-lottery .list th { height: 32px; line-height: 32px; background-color: #F8F8F8; }
+#gd11x5 .today-lottery .list td { height: 25px; line-height: 25px; border-top: 1px solid #d5d5d5; }
+/*开奖公告*/
+#gd11x5 .content > div.right > div > h3 { text-indent: 10px; background-color: #F1F1F1; border-bottom: 1px solid #d5d5d5; }
+#gd11x5 .notice > p { margin:10px; }
+#gd11x5 .notice > p.num > b { display: inline-block; margin-right: 2px; height: 28px; line-height: 28px; width: 28px; color: #fff; font-size: 16px; text-align: center; background-image: url(../Images/ziehung-ball-red.png); }
+#gd11x5 .notice > table { width: 95%; margin: 15px auto; margin-bottom: -1px; }
+#gd11x5 .notice > table th { height: 26px; line-height: 26px; background-color: #EBEBEB; }
+#gd11x5 .notice > table td { height: 30px; line-height: 30px; text-align: center; border-bottom: 1px dotted #d5d5d5; }
+#gd11x5 .notice > table td.num { letter-spacing: 2px; }
+
+#gd11x5 #newLottery > p { margin:10px; }
+#gd11x5 #newLottery > p.num > b { display: inline-block; margin-right: 6px; height: 28px; line-height: 28px; width: 28px; color: #fff; font-size: 16px; text-align: center; background-image: url(../Images/ziehung-ball-red.png); }
+#gd11x5 #newLottery > table { width: 95%; margin: 15px auto; margin-bottom: -1px; }
+#gd11x5 #newLottery > table th { height: 26px; line-height: 26px; background-color: #EBEBEB; }
+#gd11x5 #newLottery > table td { height: 30px; line-height: 30px; text-align: center; border-bottom: 1px dotted #d5d5d5; }
+#gd11x5 #newLottery > table td.num { letter-spacing: 2px; }
+/*最新中奖*/
+#gd11x5 .new-win { margin-bottom: 10px; }
+#gd11x5 .new-win > h3 { margin-bottom: -1px; }
+#gd11x5 .new-win > p { width: 95%; margin: auto; height: 35px; line-height: 35px; border-top: 1px dotted #d5d5d5; color: #717171; }
+#gd11x5 .new-win > p span { display: inline-block; width: 55px; padding-left: 14px; background: url(../Images/zhongjiang_ming.png) no-repeat left; }
+#gd11x5 .new-win > p i { display: inline-block; width: 50px; font-weight: normal; }
+/*广东11选5走势图*/
+#gd11x5 .trend > h3 { position: relative; }
+#gd11x5 .trend > h3 > a { position: absolute; top: 0; right: 15px; color: #333; font: normal 12px "微软雅黑"; line-height: 30px; }
+#gd11x5 .trend > div { margin-top: 5px; margin-bottom: 5px; }
+#gd11x5 .trend > div > a { float: left; width: 50%; height: 30px; line-height: 30px; color: #333; text-indent: 10px; }
+
+/* -- 江西11选5 -- */
+#jx11x5 .content { margin-top: 8px; margin-bottom: 8px; }
+#jx11x5 .content > div.left { width: 770px; }
+#jx11x5 .content > div.right { width: 220px; }
+/*选号选项卡*/
+#jx11x5 .lect-num .tabs { width: 770px; margin: -1px; table-layout: fixed; border-collapse: collapse; text-align: center; }
+#jx11x5 .lect-num .tabs td { height: 60px; line-height: 1.5em; border: 1px solid #d5d5d5; background-color: #F3F3F3; cursor: pointer; }
+#jx11x5 .lect-num .tabs td > h4 { margin-top: 4px; font-size: 14px; }
+#jx11x5 .lect-num .tabs td > p { color: #979797; }
+#jx11x5 .lect-num .tabs td.active,
+#jx11x5 .lect-num .tabs td:hover { background-color: #DA3829; color: #fff; }
+#jx11x5 .lect-num .tabs td.active p,
+#jx11x5 .lect-num .tabs td:hover p { color: #fff; }
+#jx11x5 .lect-num .lect { text-indent: 10px; }
+/*普通/粘贴单选项*/
+#jx11x5 .lect-num .lect label { margin-right: 40px; }
+#jx11x5 .lect-num .lect input { vertical-align: middle; }
+/*普通选号区*/
+#jx11x5 .lect-num .lect-box { margin-top: 25px; margin-bottom: 5px; }
+#jx11x5 .lect-num .ball { position: relative; padding-left: 70px; width: 380px; }
+#jx11x5 .lect-num .lect-box h4 { height: 15px; line-height: 15px; margin-bottom: 15px; font-size: 12px; }
+#jx11x5 .lect-num .number li { position: relative; margin-bottom: 6px; height: 58px; }
+#jx11x5 .lect-box .ball li > b,
+#jx11x5 .lect-box .ball .omit > span { display: inline-block; margin-right: 3px; width: 32px; text-align: center; }
+#jx11x5 .lect-box .ball li > b {  height: 32px; line-height: 32px; color: #555; font-size: 18px; background-image: url(../Images/js_ball.png); cursor: pointer; }
+#jx11x5 .lect-box .ball li > b.active { background-image: url(../Images/hl_03.png); color: #fff; }
+#jx11x5 .lect-box .ball .omit {  position: absolute; left: 0; bottom: 5px; color: #8a8a8a; }
+#jx11x5 .lect-box .digits,
+#jx11x5 .lect-box .select { position: absolute; left: -60px; top: 5px; width: 50px; height: 20px; line-height: 20px; color: #717171; border-radius: 3px; text-align: center; background-color: #E6E6E6;  }
+#jx11x5 .lect-box .select { left: 10px; top: 65px; background-color: #E7F3FB; cursor: pointer; }
+#jx11x5 .lect-box .trilateral { position: absolute; top: 5px; height: 0; width: 0; }
+#jx11x5 .lect-box .out { right: -4px; border-left: 5px solid #E6E6E6; border-top: 5px solid transparent; border-bottom: 5px solid transparent; }
+#jx11x5 .lect-box .in { top: 7px; right: 5px; border-top: 6px solid #000; border-left: 4px solid transparent; border-right: 4px solid transparent; }
+#jx11x5 .lect-box .select .out { border-left-color: #E7F3FB; }
+#jx11x5 .lect-box .select > div { text-align: left; text-indent: 7px; z-index: 2;}
+#jx11x5 .lect-box .select > dl { position: absolute; left: 0; top: 20px; padding-top: 5px; padding-bottom: 5px; width: 55px; border: 1px solid #ccc; background-color: #fff; }
+#jx11x5 .lect-box .select dd:hover { background-color: #E7F3FB; }
+/*普通选号帮助区*/
+#jx11x5 .lect-box .help { width: 260px; margin-right: 30px; }
+#jx11x5 .lect-box .help > h4 { color: #808080; }
+#jx11x5 .lect-box .help li > a { display: inline-block; margin-right: 10px; margin-top: 3px;  padding: 5px 6px; border: 1px solid #A8A8A8; background: url(../Images/ccs-help.btn-bg.png) repeat-x; border-radius: 3px; color: #333; cursor: pointer; }
+#jx11x5 .lect-box .help li > a:hover { text-decoration: none; background-image: url(../Images/ccs-help.btn-bg-1.png); }
+/*普通选号按大小单双*/
+#jx11x5 .lect-box .size { position: relative; padding-left: 75px; margin-bottom: 15px; }
+#jx11x5 .lect-box .size li { position: relative; }
+#jx11x5 .lect-box .size .omit > span,
+#jx11x5 .lect-box .size li > b { display: inline-block; margin-left: 15px; width: 116px;  text-align: center; cursor: pointer; }
+#jx11x5 .lect-box .size li > b { height: 40px; line-height: 40px; border: 1px solid #A8A8A8; border-radius: 4px; font-size: 14px; background: url(../Images/ball-size-bg.jpg) repeat-x; }
+#jx11x5 .lect-box .size li > b.active { border-color: #D13F3D; background-image: url(../Images/ball-size-bg.png); color: #fff; } 
+#jx11x5 .lect-box .size li > b > span { font-size: 12px; font-weight: normal; }
+#jx11x5 .lect-box .size .omit > span { height: 30px; line-height: 30px; border: 1px solid transparent; }
+#jx11x5 .lect-box .size .digits { top: 11px; }
+#jx11x5 .lect-box .size .select { left: 15px; top: 79px; }
+/*粘贴选号*/
+#jx11x5 .lect-box .paste { padding-left: 90px; line-height: 22px; }
+#jx11x5 .lect-box .paste > h4 { margin-bottom: 0; height:22px; line-height: 22px; }
+#jx11x5 .lect-box .paste > h4 > span { font-weight: normal; color: #717171; }
+#jx11x5 .lect-box .paste > p { margin-left: 63px; color: #717171; }
+#jx11x5 .lect-box .paste > textarea { margin-top: 20px; padding: 10px; width: 460px; height: 150px; }
+
+#jx11x5 .lect-box .miss { margin-left: 15px; padding-left: 30px; width: 360px; height: 30px; line-height: 30px; background-color: #F7F7F7; }
+#jx11x5 .lect-box .miss > label input { vertical-align: middle; margin-left: 30px; }
+/*今日开奖*/
+#jx11x5 .today-lottery { margin-top: 8px; margin-bottom: 8px; }
+#jx11x5 .today-lottery h4 { position: relative; padding-left: 10px; height: 25px; line-height: 25px; border-bottom: 1px solid #000; background-color: #F5F3F3; }
+#jx11x5 .today-lottery h4 > span { position: absolute; top: 0; right: 15px; padding-right: 20px; font-weight: normal; background: url(../Images/down-ico-1.jpg) no-repeat right; cursor: pointer; }
+#jx11x5 .today-lottery h4 > span.active { background-image: url(../Images/up-ico-1.jpg); }
+#jx11x5 .today-lottery .list table { float: left; width: 25%; border-right: 1px solid #d5d5d5; text-align: center; }
+#jx11x5 .today-lottery .list th { height: 32px; line-height: 32px; background-color: #F8F8F8; }
+#jx11x5 .today-lottery .list td { height: 25px; line-height: 25px; border-top: 1px solid #d5d5d5; }
+/*开奖公告*/
+#jx11x5 .content > div.right > div > h3 { text-indent: 10px; background-color: #F1F1F1; border-bottom: 1px solid #d5d5d5; }
+#jx11x5 .notice > p { margin:10px; }
+#jx11x5 .notice > p.num > b { display: inline-block; margin-right: 2px; height: 28px; line-height: 28px; width: 28px; color: #fff; font-size: 16px; text-align: center; background-image: url(../Images/ziehung-ball-red.png); }
+#jx11x5 .notice > table { width: 95%; margin: 15px auto; margin-bottom: -1px; }
+#jx11x5 .notice > table th { height: 26px; line-height: 26px; background-color: #EBEBEB; }
+#jx11x5 .notice > table td { height: 30px; line-height: 30px; text-align: center; border-bottom: 1px dotted #d5d5d5; }
+#jx11x5 .notice > table td.num { letter-spacing: 2px; }
+
+#jx11x5 #newLottery > p { margin:10px; }
+#jx11x5 #newLottery > p.num > b { display: inline-block; margin-right: 6px; height: 28px; line-height: 28px; width: 28px; color: #fff; font-size: 16px; text-align: center; background-image: url(../Images/ziehung-ball-red.png); }
+#jx11x5 #newLottery > table { width: 95%; margin: 15px auto; margin-bottom: -1px; }
+#jx11x5 #newLottery > table th { height: 26px; line-height: 26px; background-color: #EBEBEB; }
+#jx11x5 #newLottery > table td { height: 30px; line-height: 30px; text-align: center; border-bottom: 1px dotted #d5d5d5; }
+#jx11x5 #newLottery > table td.num { letter-spacing: 2px; }
+/*最新中奖*/
+#jx11x5 .new-win { margin-bottom: 10px; }
+#jx11x5 .new-win > h3 { margin-bottom: -1px; }
+#jx11x5 .new-win > p { width: 95%; margin: auto; height: 35px; line-height: 35px; border-top: 1px dotted #d5d5d5; color: #717171; }
+#jx11x5 .new-win > p span { display: inline-block; width: 55px; padding-left: 14px; background: url(../Images/zhongjiang_ming.png) no-repeat left; }
+#jx11x5 .new-win > p i { display: inline-block; width: 50px; font-weight: normal; }
+/*江西11选5走势图*/
+#jx11x5 .trend > h3 { position: relative; }
+#jx11x5 .trend > h3 > a { position: absolute; top: 0; right: 15px; color: #333; font: normal 12px "微软雅黑"; line-height: 30px; }
+#jx11x5 .trend > div { margin-top: 5px; margin-bottom: 5px; }
+#jx11x5 .trend > div > a { float: left; width: 50%; height: 30px; line-height: 30px; color: #333; text-indent: 10px; }
+
+/* -- 十一运夺金 -- */
+#syydj .content { margin-top: 8px; margin-bottom: 8px; }
+#syydj .content > div.left { width: 770px; }
+#syydj .content > div.right { width: 220px; }
+/*选号选项卡*/
+#syydj .lect-num .tabs { width: 770px; margin: -1px; table-layout: fixed; border-collapse: collapse; text-align: center; }
+#syydj .lect-num .tabs td { height: 60px; line-height: 1.5em; border: 1px solid #d5d5d5; background-color: #F3F3F3; cursor: pointer; }
+#syydj .lect-num .tabs td > h4 { margin-top: 4px; font-size: 14px; }
+#syydj .lect-num .tabs td > p { color: #979797; }
+#syydj .lect-num .tabs td.active,
+#syydj .lect-num .tabs td:hover { background-color: #DA3829; color: #fff; }
+#syydj .lect-num .tabs td.active p,
+#syydj .lect-num .tabs td:hover p { color: #fff; }
+#syydj .lect-num .lect { text-indent: 10px; }
+/*普通/粘贴单选项*/
+#syydj .lect-num .lect label { margin-right: 40px; }
+#syydj .lect-num .lect input { vertical-align: middle; }
+/*普通选号区*/
+#syydj .lect-num .lect-box { margin-top: 25px; margin-bottom: 5px; }
+#syydj .lect-num .ball { position: relative; padding-left: 70px; width: 380px; }
+#syydj .lect-num .lect-box h4 { height: 15px; line-height: 15px; margin-bottom: 15px; font-size: 12px; }
+#syydj .lect-num .number li { position: relative; margin-bottom: 6px; height: 58px; }
+#syydj .lect-box .ball li > b,
+#syydj .lect-box .ball .omit > span { display: inline-block; margin-right: 3px; width: 32px; text-align: center; }
+#syydj .lect-box .ball li > b {  height: 32px; line-height: 32px; color: #555; font-size: 18px; background-image: url(../Images/js_ball.png); cursor: pointer; }
+#syydj .lect-box .ball li > b.active { background-image: url(../Images/hl_03.png); color: #fff; }
+#syydj .lect-box .ball .omit {  position: absolute; left: 0; bottom: 5px; color: #8a8a8a; }
+#syydj .lect-box .digits,
+#syydj .lect-box .select { position: absolute; left: -60px; top: 5px; width: 50px; height: 20px; line-height: 20px; color: #717171; border-radius: 3px; text-align: center; background-color: #E6E6E6;  }
+#syydj .lect-box .select { left: 10px; top: 65px; background-color: #E7F3FB; cursor: pointer; }
+#syydj .lect-box .trilateral { position: absolute; top: 5px; height: 0; width: 0; }
+#syydj .lect-box .out { right: -4px; border-left: 5px solid #E6E6E6; border-top: 5px solid transparent; border-bottom: 5px solid transparent; }
+#syydj .lect-box .in { top: 7px; right: 5px; border-top: 6px solid #000; border-left: 4px solid transparent; border-right: 4px solid transparent; }
+#syydj .lect-box .select .out { border-left-color: #E7F3FB; }
+#syydj .lect-box .select > div { text-align: left; text-indent: 7px; z-index: 2;}
+#syydj .lect-box .select > dl { position: absolute; left: 0; top: 20px; padding-top: 5px; padding-bottom: 5px; width: 55px; border: 1px solid #ccc; background-color: #fff; }
+#syydj .lect-box .select dd:hover { background-color: #E7F3FB; }
+/*普通选号帮助区*/
+#syydj .lect-box .help { width: 260px; margin-right: 30px; }
+#syydj .lect-box .help > h4 { color: #808080; }
+#syydj .lect-box .help li > a { display: inline-block; margin-right: 10px; margin-top: 3px;  padding: 5px 6px; border: 1px solid #A8A8A8; background: url(../Images/ccs-help.btn-bg.png) repeat-x; border-radius: 3px; color: #333; cursor: pointer; }
+#syydj .lect-box .help li > a:hover { text-decoration: none; background-image: url(../Images/ccs-help.btn-bg-1.png); }
+/*普通选号按大小单双*/
+#syydj .lect-box .size { position: relative; padding-left: 75px; margin-bottom: 15px; }
+#syydj .lect-box .size li { position: relative; }
+#syydj .lect-box .size .omit > span,
+#syydj .lect-box .size li > b { display: inline-block; margin-left: 15px; width: 116px;  text-align: center; cursor: pointer; }
+#syydj .lect-box .size li > b { height: 40px; line-height: 40px; border: 1px solid #A8A8A8; border-radius: 4px; font-size: 14px; background: url(../Images/ball-size-bg.jpg) repeat-x; }
+#syydj .lect-box .size li > b.active { border-color: #D13F3D; background-image: url(../Images/ball-size-bg.png); color: #fff; } 
+#syydj .lect-box .size li > b > span { font-size: 12px; font-weight: normal; }
+#syydj .lect-box .size .omit > span { height: 30px; line-height: 30px; border: 1px solid transparent; }
+#syydj .lect-box .size .digits { top: 11px; }
+#syydj .lect-box .size .select { left: 15px; top: 79px; }
+/*粘贴选号*/
+#syydj .lect-box .paste { padding-left: 90px; line-height: 22px; }
+#syydj .lect-box .paste > h4 { margin-bottom: 0; height:22px; line-height: 22px; }
+#syydj .lect-box .paste > h4 > span { font-weight: normal; color: #717171; }
+#syydj .lect-box .paste > p { margin-left: 63px; color: #717171; }
+#syydj .lect-box .paste > textarea { margin-top: 20px; padding: 10px; width: 460px; height: 150px; }
+
+#syydj .lect-box .miss { margin-left: 15px; padding-left: 30px; width: 360px; height: 30px; line-height: 30px; background-color: #F7F7F7; }
+#syydj .lect-box .miss > label input { vertical-align: middle; margin-left: 30px; }
+/*今日开奖*/
+#syydj .today-lottery { margin-top: 8px; margin-bottom: 8px; }
+#syydj .today-lottery h4 { position: relative; padding-left: 10px; height: 25px; line-height: 25px; border-bottom: 1px solid #000; background-color: #F5F3F3; }
+#syydj .today-lottery h4 > span { position: absolute; top: 0; right: 15px; padding-right: 20px; font-weight: normal; background: url(../Images/down-ico-1.jpg) no-repeat right; cursor: pointer; }
+#syydj .today-lottery h4 > span.active { background-image: url(../Images/up-ico-1.jpg); }
+#syydj .today-lottery .list table { float: left; width: 25%; border-right: 1px solid #d5d5d5; text-align: center; }
+#syydj .today-lottery .list th { height: 32px; line-height: 32px; background-color: #F8F8F8; }
+#syydj .today-lottery .list td { height: 25px; line-height: 25px; border-top: 1px solid #d5d5d5; }
+/*开奖公告*/
+#syydj .content > div.right > div > h3 { text-indent: 10px; background-color: #F1F1F1; border-bottom: 1px solid #d5d5d5; }
+#syydj .notice > p { margin:10px; }
+#syydj .notice > p.num > b { display: inline-block; margin-right: 2px; height: 28px; line-height: 28px; width: 28px; color: #fff; font-size: 16px; text-align: center; background-image: url(../Images/ziehung-ball-red.png); }
+#syydj .notice > table { width: 95%; margin: 15px auto; margin-bottom: -1px; }
+#syydj .notice > table th { height: 26px; line-height: 26px; background-color: #EBEBEB; }
+#syydj .notice > table td { height: 30px; line-height: 30px; text-align: center; border-bottom: 1px dotted #d5d5d5; }
+#syydj .notice > table td.num { letter-spacing: 2px; }
+
+#syydj #newLottery > p { margin:10px; }
+#syydj #newLottery > p.num > b { display: inline-block; margin-right: 6px; height: 28px; line-height: 28px; width: 28px; color: #fff; font-size: 16px; text-align: center; background-image: url(../Images/ziehung-ball-red.png); }
+#syydj #newLottery > table { width: 95%; margin: 15px auto; margin-bottom: -1px; }
+#syydj #newLottery > table th { height: 26px; line-height: 26px; background-color: #EBEBEB; }
+#syydj #newLottery > table td { height: 30px; line-height: 30px; text-align: center; border-bottom: 1px dotted #d5d5d5; }
+#syydj #newLottery > table td.num { letter-spacing: 2px; }
+/*最新中奖*/
+#syydj .new-win { margin-bottom: 10px; }
+#syydj .new-win > h3 { margin-bottom: -1px; }
+#syydj .new-win > p { width: 95%; margin: auto; height: 35px; line-height: 35px; border-top: 1px dotted #d5d5d5; color: #717171; }
+#syydj .new-win > p span { display: inline-block; width: 55px; padding-left: 14px; background: url(../Images/zhongjiang_ming.png) no-repeat left; }
+#syydj .new-win > p i { display: inline-block; width: 50px; font-weight: normal; }
+/*十一运夺金走势图*/
+#syydj .trend > h3 { position: relative; }
+#syydj .trend > h3 > a { position: absolute; top: 0; right: 15px; color: #333; font: normal 12px "微软雅黑"; line-height: 30px; }
+#syydj .trend > div { margin-top: 5px; margin-bottom: 5px; }
+#syydj .trend > div > a { float: left; width: 50%; height: 30px; line-height: 30px; color: #333; text-indent: 10px; }
+
+/* -- 江苏快3 -- */
+#jsk3 .content { margin-top: 8px; margin-bottom: 8px; }
+#jsk3 .content > div.left { width: 770px; }
+#jsk3 .content > div.right { width: 220px; }
+/*选号选项卡*/
+#jsk3 .lect-num .tabs { width: 770px; margin: -1px; table-layout: fixed; border-collapse: collapse; text-align: center; }
+#jsk3 .lect-num .tabs td { height: 60px; line-height: 1.5em; border: 1px solid #d5d5d5; background-color: #F3F3F3; cursor: pointer; }
+#jsk3 .lect-num .tabs td > h4 { margin-top: 4px; font-size: 14px; }
+#jsk3 .lect-num .tabs td > p { color: #979797; }
+#jsk3 .lect-num .tabs td.active,
+#jsk3 .lect-num .tabs td:hover { background-color: #DA3829; color: #fff; }
+#jsk3 .lect-num .tabs td.active p,
+#jsk3 .lect-num .tabs td:hover p { color: #fff; }
+#jsk3 .lect-num .lect { text-indent: 10px; }
+/*普通/粘贴单选项*/
+#jsk3 .lect-num .lect label { margin-right: 40px; }
+#jsk3 .lect-num .lect input { vertical-align: middle; }
+/*普通选号区*/
+#jsk3 .lect-num .lect-box { margin-top: 25px; margin-bottom: 5px; }
+#jsk3 .lect-num .ball { position: relative; padding-left: 70px; width: 380px; }
+#jsk3 .lect-num .lect-box h4 { height: 15px; line-height: 15px; margin-bottom: 15px; font-size: 12px; }
+#jsk3 .lect-num .number li { position: relative; margin-bottom: 6px; height: 58px; }
+#jsk3 .lect-box .ball li > b,
+#jsk3 .lect-box .ball .omit > span { display: inline-block; margin-right: 3px; width: 32px; text-align: center; }
+#jsk3 .lect-box .ball li > b {  height: 32px; line-height: 32px; color: #555; font-size: 18px; background-image: url(../Images/js_ball.png); cursor: pointer; }
+#jsk3 .lect-box .ball li > b.active { background-image: url(../Images/hl_03.png); color: #fff; }
+#jsk3 .lect-box .ball .omit {  position: absolute; left: 0; bottom: 5px; color: #8a8a8a; }
+#jsk3 .lect-box .digits,
+#jsk3 .lect-box .select { position: absolute; left: -60px; top: 5px; width: 50px; height: 20px; line-height: 20px; color: #717171; border-radius: 3px; text-align: center; background-color: #E6E6E6;  }
+#jsk3 .lect-box .select { left: 10px; top: 65px; background-color: #E7F3FB; cursor: pointer; }
+#jsk3 .lect-box .trilateral { position: absolute; top: 5px; height: 0; width: 0; }
+#jsk3 .lect-box .out { right: -4px; border-left: 5px solid #E6E6E6; border-top: 5px solid transparent; border-bottom: 5px solid transparent; }
+#jsk3 .lect-box .in { top: 7px; right: 5px; border-top: 6px solid #000; border-left: 4px solid transparent; border-right: 4px solid transparent; }
+#jsk3 .lect-box .select .out { border-left-color: #E7F3FB; }
+#jsk3 .lect-box .select > div { text-align: left; text-indent: 7px; z-index: 2;}
+#jsk3 .lect-box .select > dl { position: absolute; left: 0; top: 20px; padding-top: 5px; padding-bottom: 5px; width: 55px; border: 1px solid #ccc; background-color: #fff; }
+#jsk3 .lect-box .select dd:hover { background-color: #E7F3FB; }
+/*普通选号帮助区*/
+#jsk3 .lect-box .help { width: 260px; margin-right: 30px; }
+#jsk3 .lect-box .help > h4 { color: #808080; }
+#jsk3 .lect-box .help li > a { display: inline-block; margin-right: 10px; margin-top: 3px;  padding: 5px 6px; border: 1px solid #A8A8A8; background: url(../Images/ccs-help.btn-bg.png) repeat-x; border-radius: 3px; color: #333; cursor: pointer; }
+#jsk3 .lect-box .help li > a:hover { text-decoration: none; background-image: url(../Images/ccs-help.btn-bg-1.png); }
+/*普通选号按大小单双*/
+#jsk3 .lect-box .size { position: relative; padding-left: 75px; margin-bottom: 15px; }
+#jsk3 .lect-box .size li { position: relative; }
+#jsk3 .lect-box .size .omit > span,
+#jsk3 .lect-box .size li > b { display: inline-block; margin-left: 15px; width: 116px;  text-align: center; cursor: pointer; }
+#jsk3 .lect-box .size li > b { height: 40px; line-height: 40px; border: 1px solid #A8A8A8; border-radius: 4px; font-size: 14px; background: url(../Images/ball-size-bg.jpg) repeat-x; }
+#jsk3 .lect-box .size li > b.active { border-color: #D13F3D; background-image: url(../Images/ball-size-bg.png); color: #fff; } 
+#jsk3 .lect-box .size li > b > span { font-size: 12px; font-weight: normal; }
+#jsk3 .lect-box .size .omit > span { height: 30px; line-height: 30px; border: 1px solid transparent; }
+#jsk3 .lect-box .size .digits { top: 11px; }
+#jsk3 .lect-box .size .select { left: 15px; top: 79px; }
+/*粘贴选号*/
+#jsk3 .lect-box .paste { padding-left: 90px; line-height: 22px; }
+#jsk3 .lect-box .paste > h4 { margin-bottom: 0; height:22px; line-height: 22px; }
+#jsk3 .lect-box .paste > h4 > span { font-weight: normal; color: #717171; }
+#jsk3 .lect-box .paste > p { margin-left: 63px; color: #717171; }
+#jsk3 .lect-box .paste > textarea { margin-top: 20px; padding: 10px; width: 460px; height: 150px; }
+
+#jsk3 .lect-box .miss { margin-left: 15px; padding-left: 30px; width: 360px; height: 30px; line-height: 30px; background-color: #F7F7F7; }
+#jsk3 .lect-box .miss > label input { vertical-align: middle; margin-left: 30px; }
+/*今日开奖*/
+#jsk3 .today-lottery { margin-top: 8px; margin-bottom: 8px; }
+#jsk3 .today-lottery h4 { position: relative; padding-left: 10px; height: 25px; line-height: 25px; border-bottom: 1px solid #000; background-color: #F5F3F3; }
+#jsk3 .today-lottery h4 > span { position: absolute; top: 0; right: 15px; padding-right: 20px; font-weight: normal; background: url(../Images/down-ico-1.jpg) no-repeat right; cursor: pointer; }
+#jsk3 .today-lottery h4 > span.active { background-image: url(../Images/up-ico-1.jpg); }
+#jsk3 .today-lottery .list table { float: left; width: 25%; border-right: 1px solid #d5d5d5; text-align: center; }
+#jsk3 .today-lottery .list th { height: 32px; line-height: 32px; background-color: #F8F8F8; }
+#jsk3 .today-lottery .list td { height: 25px; line-height: 25px; border-top: 1px solid #d5d5d5; }
+/*开奖公告*/
+#jsk3 .content > div.right > div > h3 { text-indent: 10px; background-color: #F1F1F1; border-bottom: 1px solid #d5d5d5; }
+#jsk3 .notice > p { margin:10px; }
+#jsk3 .notice > p.num > b { display: inline-block; margin-right: 2px; height: 28px; line-height: 28px; width: 28px; color: #fff; font-size: 16px; text-align: center; background-image: url(../Images/ziehung-ball-red.png); }
+#jsk3 .notice > table { width: 95%; margin: 15px auto; margin-bottom: -1px; }
+#jsk3 .notice > table th { height: 26px; line-height: 26px; background-color: #EBEBEB; }
+#jsk3 .notice > table td { height: 30px; line-height: 30px; text-align: center; border-bottom: 1px dotted #d5d5d5; }
+#jsk3 .notice > table td.num { letter-spacing: 2px; }
+
+#jsk3 #newLottery > p { margin:10px; }
+#jsk3 #newLottery > p.num > b { display: inline-block; margin-right: 6px; height: 28px; line-height: 28px; width: 28px; color: #fff; font-size: 16px; text-align: center; background-image: url(../Images/ziehung-ball-red.png); }
+#jsk3 #newLottery > table { width: 95%; margin: 15px auto; margin-bottom: -1px; }
+#jsk3 #newLottery > table th { height: 26px; line-height: 26px; background-color: #EBEBEB; }
+#jsk3 #newLottery > table td { height: 30px; line-height: 30px; text-align: center; border-bottom: 1px dotted #d5d5d5; }
+#jsk3 #newLottery > table td.num { letter-spacing: 2px; }
+/*最新中奖*/
+#jsk3 .new-win { margin-bottom: 10px; }
+#jsk3 .new-win > h3 { margin-bottom: -1px; }
+#jsk3 .new-win > p { width: 95%; margin: auto; height: 35px; line-height: 35px; border-top: 1px dotted #d5d5d5; color: #717171; }
+#jsk3 .new-win > p span { display: inline-block; width: 55px; padding-left: 14px; background: url(../Images/zhongjiang_ming.png) no-repeat left; }
+#jsk3 .new-win > p i { display: inline-block; width: 50px; font-weight: normal; }
+/*十一运夺金走势图*/
+#jsk3 .trend > h3 { position: relative; }
+#jsk3 .trend > h3 > a { position: absolute; top: 0; right: 15px; color: #333; font: normal 12px "微软雅黑"; line-height: 30px; }
+#jsk3 .trend > div { margin-top: 5px; margin-bottom: 5px; }
+#jsk3 .trend > div > a { float: left; width: 50%; height: 30px; line-height: 30px; color: #333; text-indent: 10px; }
+
+/*Tab New Add*/
+.play_explain h4 { border-width: 1px 1px 0 1px; border-style: solid; border-color:#ddd; height: 23px; background: #f4f3f1; font-size: 12px; line-height: 23px; padding: 0 0 0 10px; }
+.play_explain_table {background: #ddd; font-size: 12px;}
+.play_explain_table th { background: #f8f8f8; height: 32px;}
+.play_explain_table td { background: #fff; height: 25px; padding: 0 0 0 15px; }
+.play_explain_table td b { color: #f00; }
+.bets_explain { border:1px solid #ddd; background: #f7f7f7; padding: 12px; margin: 10px 0 0 0; line-height: 22px; font-size: 12px; }
+.bets_explain h4 { font-size: 14px; padding: 0 0 5px 0; }

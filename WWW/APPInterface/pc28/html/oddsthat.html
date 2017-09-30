@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>赔率说明</title>
+		<link rel="stylesheet" href="../css/communal.css" />
+		<link rel="stylesheet" type="text/css" href="../dist/libs/font-awesome-4.7.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="../css/oddsthat.css" />
+		<script src="../js/jquery-3.1.0.min.js"></script>
+	</head>
+
+	<body>
+		<div class="header">
+			<a onclick="fnGoBack()"><i class="fa fa-angle-left" style="font-size: 18px;margin-right: 5px;"></i>返回</a>
+			<div>
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div id="hall" class="swiper-slide">赔率说明</div>
+					</div>
+				</div>
+			</div>
+			<a><span style="margin-left: 10px;"></span></a>
+		</div>
+
+		<iframe id="content" src="" style="width: 100%;height: 1050px;"></iframe>
+
+	</body>
+	<script src="../js/config.js"></script>
+	<script src="../js/myStorage.js"></script>
+	<script>
+		var lotteryId = myStorage.getItem('lotteryId')
+		var hallId = myStorage.getItem('hallIndex')
+		$(function() {
+			if(lotteryId == '99') {
+				if(hallId == 0) {
+					$('#content').attr('src', config().base_url + '/BJXY28/html/oddsthat-01.html')
+				} else if(hallId == 1) {
+					$('#content').attr('src', config().base_url + '/BJXY28/html/oddsthat-02.html')
+				} else {
+					$('#content').attr('src', config().base_url + '/BJXY28/html/oddsthat-03.html')
+				}
+			} else {
+				if(hallId == 0) {
+					$('#content').attr('src', config().base_url + '/JND28/html/oddsthat-01.html')
+				} else if(hallId == 1) {
+					$('#content').attr('src', config().base_url + '/JND28/html/oddsthat-02.html')
+				} else {
+					$('#content').attr('src', config().base_url + '/JND28/html/oddsthat-03.html')
+				}
+			}
+		})
+
+		function fnGoBack() {
+			var url
+			if(lotteryId == '99') {
+				url = '../html/bj28-play.html'
+			} else {
+				url = '../html/jnd28-play.html'
+			}
+			window.location.replace(url)
+		}
+	</script>
+
+</html>

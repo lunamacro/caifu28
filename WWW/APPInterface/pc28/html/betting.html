@@ -1,0 +1,273 @@
+﻿<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>投注记录</title>
+		<link rel="stylesheet" href="../css/communal.css" />
+		<link rel="stylesheet" type="text/css" href="../dist/libs/font-awesome-4.7.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="../css/betting.css" />
+		<link rel="stylesheet" type="text/css" href="../dist/dropload.css" />
+		<script src="../js/jquery-3.1.0.min.js"></script>
+		<script src="../dist/dropload.min.js"></script>
+
+	</head>
+
+	<body>
+		<div id="box">
+			<div class="balance">
+				<p class="balance-font">当前账户余额<span class="balance_money">获取中...</span>元</p>
+			</div>
+			<div class="balance-list">
+				<ul class="list-group-ul">
+					<div id="bet_record_list"></div>
+				</ul>
+			</div>
+			<div class="screening" style="display: none;">
+				<div class="screening-content">
+					<div class="time">
+						<p class="title">时间</p>
+						<div class="time-end-start">
+							<p class="time-start">开始时间</p>
+							<span>-</span>
+							<p class="time-end">结束时间</p>
+						</div>
+					</div>
+					<div class="time">
+						<p class="title">状态</p>
+						<div class="time-end-start">
+							<p class="time-start">已中奖</p>
+							<p class="time-end">未中奖</p>
+						</div>
+					</div>
+					<div class="time">
+						<p class="title">分类</p>
+						<div class="time-end-start">
+							<p class="time-start">北京幸运28</p>
+							<p class="time-end">加拿大幸运28</p>
+						</div>
+						<div class="time-end-start">
+							<p class="time-end">北京PK10</p>
+							<p class="time-end">福彩3D</p>
+						</div>
+						<div class="time-end-start">
+							<p class="time-end">广东11选5</p>
+							<p class="time-end">山东11选5</p>
+						</div>
+						<div class="time-end-start">
+							<p class="time-end">双色球</p>
+							<p class="time-end">乐彩五分彩</p>
+						</div>
+						<div class="time-end-start">
+							<p class="time-end">重庆时时彩</p>
+							<p class="time-end">韩国1.5分彩</p>
+						</div>
+						<div class="time-end-start">
+							<p class="time-end">排列三</p>
+							<p class="time-end" style="background: #fff;"></p>
+						</div>
+					</div>
+					<div class="but-lits">
+						<button class="but reset">重置</button>
+						<button class="but submit">确认</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/template" id="bet_record_temp">
+			{{~it:value:index}}
+			<li class="list-group-li">
+				<div class="balance-name">
+					<p class="ba-name">{{=value.lotteryName}}</p>
+					<span class="ba-period">第{{=value.isuseName}}期</span>
+				</div>
+				<div class="balance-number">
+					<p class="ba-name ba-num">{{=value.open_number}}</p>
+					<span class="ba-period">{{=value.lotteryNumber}}</span>
+				</div>
+				<div class="balance-money">
+					<p class="ba-name">{{=value.sumMoney}}</p>
+					<span class="ba-period">投注金额</span>
+				</div>
+				{{? value.schemeStatus == '已中奖'}}
+				<div class="winning-money">
+					<p class="ba-name">{{=value.winMoney}}</p>
+					<span class="ba-period money-font">{{=value.schemeStatus}}</span>
+				</div>
+				{{??}}
+				<div class="winning-money">
+					<p class="ba-name">{{=value.winMoney}}</p>
+					<span class="ba-period">{{=value.schemeStatus}}</span>
+				</div>
+				{{?}}
+			</li>
+			{{~}}
+		</script>
+		<script src="../js/doT.min.js"></script>
+		<script src="../js/myStorage.js"></script>
+		<script src="../js/config.js"></script>
+		<script>
+			//var lotteryId = myStorage.getItem('lotteryId')
+			//var userId = myStorage.getItem('userId')
+			var lotteryId = getQueryString('lotteryId')
+			var userId =getQueryString('userId')
+			
+			var pageIndex = 1
+
+			$(function() {
+				getUserInfo()
+				//menu()
+				dropload()
+			})
+
+			function dropload() {
+				$('.list-group-ul').dropload({
+					scrollArea: window,
+					loadDownFn: function(me) {
+						getHistoryBetRecord(me)
+					}
+				})
+			}
+			function fnSetBetRecordItem(data) {
+			    var tempFn = doT.template(document.getElementById('bet_record_temp').innerHTML)
+			    var resultText = tempFn(data)
+			    $('#bet_record_list').before(resultText)
+			}
+
+
+			function getHistoryBetRecord(me) {
+				
+				$.ajax({
+					type: "Post",
+					url: config().base_url + "/AppGateWay/Common.ashx",
+					data: {
+						"opt": 7,
+						"lotteryId": lotteryId,
+						"uid": userId,
+						"pageIndex": pageIndex,
+					},
+					cache: false,
+					async: false,
+					success: function(data) {
+						console.log(data)
+
+						if(data.error == '0') {
+							if(data.schemeList.length <= 0) {
+								// 锁定
+								me.lock();
+								// 无数据
+								me.noData();
+								//已经没有更多数据了，必须重置
+								me.resetload()
+								return
+							}
+							var betRecord_array = []
+							if(data.schemeList.length > 0) {
+								var dateDetail_array = data.schemeList[0].dateDetail
+								if(dateDetail_array.length > 0) {
+									for(var i = 0; i < dateDetail_array.length; i++) {
+										var obj = {}
+										obj["lotteryName"] = dateDetail_array[i].lotteryName
+										obj["isuseName"] = dateDetail_array[i].isuseName
+										obj["winMoney"] = dateDetail_array[i].winMoney
+										obj["schemeStatus"] = dateDetail_array[i].schemeStatus
+										if(dateDetail_array[i].isOpened == 'True') {
+											var winNumber = dateDetail_array[i].winNumber.split('')
+											obj["open_number"] = winNumber[0] + ',' + winNumber[1] + ',' + winNumber[2]
+										} else {
+											obj["open_number"] = '等待开奖'
+										}
+										var buyContent = dateDetail_array[i].buyContent[0][0]
+										obj["sumMoney"] = buyContent.sumMoney
+										obj["lotteryNumber"] = buyContent.lotteryNumber
+										betRecord_array.push(obj)
+									}
+								}
+							}
+							// 为了测试，延迟1秒加载
+							setTimeout(function() {
+								console.log(pageIndex)
+								pageIndex++
+								fnSetBetRecordItem(betRecord_array)
+								// 每次数据加载完，必须重置
+								me.resetload()
+							}, 1000);
+						}
+					},
+					error: function() {
+						//alert("调用错误")
+						console.log('调用错误')
+						// 即使加载出错，也得重置
+						me.resetload();
+					}
+				})
+			}
+
+
+			function getUserInfo() {
+				
+				$.ajax({
+					type: "Post",
+					url: config().base_url + "/AppGateWay/Common.ashx",
+					data: {
+					    "opt": 8,
+						"uid": userId
+					},
+					cache: false,
+					async: false,
+					success: function(data) {
+						console.log(data)
+						if(data.error == '0') {
+							$('.balance_money').text(data.balance)
+						} else {
+							alert(data.msg)
+						}
+					},
+					error: function() {
+						//alert("调用错误")
+						console.log('调用错误')
+					}
+				})
+			}
+
+			function menu() {
+				var flag = false;
+				$('.balance-but').on('click', function() {
+					if(!flag) {
+						$('.screening').show()
+						$('.screening-content').animate({
+							marginLeft: "30%"
+						});
+						flag = true;
+					} else {
+						$('.screening-content').animate({
+							marginLeft: "100%"
+						}, function() {
+							$('.screening').fadeOut();
+						});
+						flag = false;
+					}
+				})
+			}
+			
+			function getQueryString(name) { 
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+				var r = window.location.search.substr(1).match(reg); 
+				if (r != null) return unescape(r[2]); return null; 
+			} 
+
+			function fnGoBack() {
+				var url
+				if(lotteryId == '99') {
+					url = '../html/bj28-play.html'
+				} else {
+					url = '../html/jnd28-play.html'
+				}
+				window.location.replace(url)
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,63 @@
+{
+	"index.html": {
+		"resources": [
+			"img/baoben28.png",
+			"img/gaobeilv28.png",
+			"img/huishui28.png",
+			"img/btn_back.png",
+			"html/room.html",
+			"js/cookie.js",
+			"js/jquery-3.1.1.min.js",
+			"js/config.js",
+			"img/user.png",
+			"js/online-users-hall.js",
+			"js/base-loading.js",
+			"img/loading.gif",
+			"js/myStorage.js",
+			"js/rong/RongIMLib-2.2.5.min.js"
+		],
+		"refer": [
+			"html/room.html"
+		]
+	},
+	"html/room.html": {
+		"resources": [
+			"img/room04.png",
+			"img/room03.png",
+			"img/room01.png",
+			"img/room02.png",
+			"img/btn_back.png",
+			"html/play28.html",
+			"js/receive-chatRoom.js",
+			"js/config.js",
+			"js/cookie.js",
+			"js/jquery-3.1.1.min.js",
+			"js/online-users-chatRoom.js"
+		],
+		"refer": [
+			"html/play28.html"
+		]
+	},
+	"html/play28.html": {
+		"resources": [
+			"css/index.css",
+			"js/cookie.js",
+			"js/jquery-3.1.1.min.js",
+			"js/base-loading.js",
+			"js/receive-group.js",
+			"img/loading.gif",
+			"js/doT.min.js",
+			"img/btn_back.png",
+			"js/config.js",
+			"img/face1.png",
+			"js/index.js",
+			"js/chatbox_group.js",
+			"js/chatbox_chatRoom.js",
+			"js/receive-chatRoom.js",
+			"js/rong/RongIMLib-2.2.5.min.js",
+			"js/myStorage.js",
+			"js/timeUtil.js",
+			"img/dasd.png"
+		]
+	}
+}

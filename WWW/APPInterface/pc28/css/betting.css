@@ -1,0 +1,122 @@
+.balance {
+	margin-top: 5px;
+	width: 100%;
+	background: #F5F5F5;
+	font-size: 12px;
+	padding: 10px 10px;
+	color: #999;
+}
+
+.balance_money {
+	color: #fd7776;
+}
+
+.list-group-li {
+	display: flex;
+	margin-left: 10px;
+	padding: 10px 0;
+	border-bottom: 1px solid #eee;
+}
+
+.balance-name,
+.balance-number,
+.balance-money,
+.inning-money,
+.winning-money {
+	flex: 1;
+}
+
+.ba-name {
+	font-size: 12px;
+	color: #000000;
+	font-weight: 600;
+}
+
+.ba-period {
+	font-size: 12px;
+	color: #999;
+}
+
+.balance-number,
+.balance-money,
+.winning-money {
+	text-align: center;
+}
+
+.ba-num,
+.money-font {
+	color: #fd7776;
+}
+
+.screening {
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	width: 100%;
+	height: 94%;
+	margin-top: 40px;
+	background: rgba(0, 0, 0, .3);
+}
+
+.screening-content {
+	width: 70%;
+	height: 100%;
+	background: #fff;
+	margin-left: 100%;
+}
+
+.time {
+	padding: 10px 15px;
+}
+
+.time-end-start {
+	display: flex;
+	position: relative;
+}
+
+.title {
+	font-size: 14px;
+}
+
+.time-start,
+.time-end {
+	flex: 1;
+	border-radius: 5px;
+	padding: 10px 0;
+	margin: 10px 10px 0 0px;
+	background-color: #EEF2F5;
+	font-size: 12px;
+	color: #999;
+	text-align: center;
+}
+
+.time-end-start>span {
+	position: absolute;
+	top: 15px;
+	left: 108px;
+}
+
+.but-lits {
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	width: 70%;
+}
+
+.but {
+	flex: 1;
+	outline: none;
+	border: none;
+	padding: 15px 0;
+	margin: 0 1px;
+	border-radius: 5px;
+	color: #fff;
+}
+
+.submit {
+	background-color: red;
+}
+
+.reset {
+	background-color: #999;
+}

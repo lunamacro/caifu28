@@ -1,0 +1,95 @@
+#sand
+{
+    clear: both;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 20px;
+    color: #999999;
+    font-size: 14px; /*-moz-border-radius: 4px;     -webkit-border-radius: 4px;      border-radius: 4px;*/
+}
+#sand a
+{
+    padding: 5px 12px;
+    margin: 10px 3px;
+    font-size: 13px;
+    border: 1px solid #DFDFDF;
+    background-color: #FFF;
+    color: #9a9a9a;
+    text-decoration: none; /*-moz-border-radius: 4px;     -webkit-border-radius: 4px; border-radius: 4px;*/
+}
+#sand span
+{
+    font-size: 13px;
+}
+#sand span.disabled
+{
+    padding: 5px 12px;
+    margin: 10px 3px;
+    font-size: 13px;
+    border: 1px solid #DFDFDF;
+    background-color: #FFF;
+    color: #DFDFDF; /*-moz-border-radius: 4px;     -webkit-border-radius: 4px; border-radius: 4px;*/
+}
+#sand span.curr
+{
+    padding: 5px 12px;
+    margin: 10px 3px;
+    font-size: 12px;
+    border: 1px solid #FF6600;
+    background-color: #FF6600;
+    color: #FFF; /*-moz-border-radius: 4px;     -webkit-border-radius: 4px; border-radius: 4px;*/
+}
+#sand a:hover
+{
+    background-color: #df1515;
+    border: 1px solid #fff;
+}
+#sand span.normalsize
+{
+    font-size: 14px;
+}
+#sand_gopage_wrap
+{
+    display: inline-block;
+    width: 44px;
+    height: 18px;
+    border: 1px solid #DFDFDF;
+    margin: 0px 1px;
+    padding: 0px;
+    position: relative;
+    left: 0px;
+    top: 5px; /*-moz-border-radius: 4px;     -webkit-border-radius: 4px; border-radius: 4px;*/
+}
+#sand_btn_go
+{
+    width: 44px;
+    height: 20px;
+    line-height: 20px;
+    padding: 0px;
+    font-family: arial,Î¢ÈíÑÅºÚ,sans-serif;
+    text-align: center;
+    border: 0px;
+    background-color: #FF6600;
+    color: #FFF;
+    position: absolute;
+    left: 0px;
+    top: -1px;
+    display: none; /*-moz-border-radius: 4px;     -webkit-border-radius: 4px;     border-radius: 4px;*/
+}
+#sand_btn_go_input
+{
+    width: 42px;
+    height: 16px;
+    text-align: center;
+    border: 0px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    outline: none; /* -moz-border-radius: 4px;     -webkit-border-radius: 4px;    border-radius: 4px;*/
+}
+.topbuttom
+        {
+            text-align: right;
+            padding-right: 30px;
+            margin: 30px 0;
+        }

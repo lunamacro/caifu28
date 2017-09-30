@@ -1,0 +1,38 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+.list-room {
+	margin-top: 45px;
+	display: flex;
+}
+
+.pfont {
+	position: relative;
+}
+
+.font {
+	position: absolute;
+	color: #FFFFFF;
+	font-size: 13px;
+	left: 33%;
+	top: 12%;
+}
+
+.iconuser {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	margin-right: 5px;
+	background: url(../img/user.png) no-repeat 0 0;
+}
+
+.iconfont {
+	position: relative;
+	bottom: 2px;
+}

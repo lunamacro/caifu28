@@ -1,0 +1,291 @@
+@charset "UTF-8";
+@charset "UTF-8";
+/**
+ * 
+ * @authors TabTang (jiangtao213@163.com)
+ * @date    2015-01-26 16:51:52
+ * @version $Id$
+ */
+body {
+    background: url(../images/login/login_bg.jpg) no-repeat center top;
+    background-attachment: fixed;
+}
+
+.header {
+    width: 618px;
+    margin: 0 auto;
+    height: 77px;
+    padding: 81px 0 0 0;
+    position: relative;
+}
+
+.logo {
+    width: 240px;
+    height: 77px;
+}
+
+.regbut {
+    width: 148px;
+    height: 30px;
+    line-height: 32px;
+    padding: 0 22px 0 0;
+    text-align: right;
+    position: absolute;
+    top: 119px;
+    right: 7px;
+    background: url(../images/login/icon_next.png) no-repeat right 5px;
+}
+
+    .regbut a {
+        display: block;
+        font-size: 12px;
+        color: #999;
+        font-weight: bold;
+        width: 148px;
+    }
+
+.content {
+    width: 618px;
+    margin: 0 auto;
+}
+
+.loginhead {
+    width: 618px;
+    height: 40px;
+    background: url(../images/login/main_hd.png) no-repeat;
+}
+
+.loginfoot {
+    width: 618px;
+    height: 26px;
+    background: url(../images/login/main_ft.png) no-repeat;
+}
+
+.logincon {
+    width: 618px;
+    background: url(../images/login/main_repeat.png) repeat-y;
+    padding: 20px 0 40px 0;
+}
+
+.loginwrapbox {
+    width: 368px;
+    margin: 0 auto;
+}
+
+.promptinfo {
+    height: 40px;
+    line-height: 40px;
+    color: #da1921;
+    font-size: 14px;
+    text-align: center;
+}
+
+.logininpitbox {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #ced1d0;
+    background: #fff;
+}
+
+.loginname {
+    height: 49px;
+    border-bottom: 1px solid #ced1d0;
+}
+
+.loginpassword {
+    height: 49px;
+    border-bottom: 1px solid #ced1d0;
+}
+
+.logininpitbox span {
+    display: block;
+    float: left;
+    color: #666;
+    width: 80px;
+    height: 49px;
+    line-height: 49px;
+    font-size: 14px;
+    text-align: right;
+}
+
+.logininpitbox input {
+    display: block;
+    border: 0;
+    height: 35px;
+    line-height: 35px;
+    padding: 7px 0;
+    width: 255px;
+    float: left;
+    font-size: 16px;
+}
+
+.logininpitbox i {
+    display: block;
+    float: left;
+    padding: 15px 0 0 5px;
+}
+
+.captcha {
+    height: 49px;
+    position: relative;
+}
+
+    .captcha input {
+        width: 178px;
+    }
+
+.captchaimg {
+    width: 105px;
+    height: 49px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+    .captchaimg img {
+        width: 60px;
+        height: 30px;
+        padding: 10px 0 0 10px;
+    }
+
+    .captchaimg a {
+        display: block;
+        width: 18px;
+        height: 18px;
+        text-indent: -999px;
+        background: url(../images/login/icon_flush.png) no-repeat;
+        position: absolute;
+        top: 15px;
+        right: 8px;
+    }
+
+.forgetword {
+    height: 40px;
+    line-height: 40px;
+    color: #14599e;
+    font-size: 14px;
+    text-align: right;
+}
+
+    .forgetword a {
+        text-decoration: none;
+    }
+
+.loginbtn {
+}
+
+    .loginbtn input {
+        width: 368px;
+        height: 48px;
+        font-size: 16px;
+        cursor: pointer;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        background: #da1921;
+        line-height: 48px;
+        text-align: center;
+        color: #fff;
+        border: 0;
+    }
+
+
+/**/
+.terms {
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    padding: 0 0 40px 0;
+}
+
+    .terms input {
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        margin: 0 3px 0 0;
+    }
+
+    .terms a {
+        color: #14599e;
+    }
+
+.captchamob {
+    width: 84px;
+    height: 47px;
+    position: relative;
+    top: -40px;
+    right: -226px;
+    padding: 2px 0 0 0;
+}
+
+    .captchamob input {
+        width: 80px;
+        height: 27px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        background: #1aac16;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .captchamob span {
+        width: 80px;
+        height: 26px;
+        position: absolute;
+        background: #1aac16;
+        color: #fff;
+        text-align: center;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+#tabli {
+    overflow: hidden;
+    height: 20px;
+    padding: 0 0 40px 0;
+    width: 368px;
+    margin: 0 auto;
+}
+
+    #tabli li {
+        width: 154px;
+        height: 46px;
+        float: left;
+        margin: 0 15px;
+    }
+
+        #tabli li a {
+            display: block;
+            line-height: 46px;
+            text-align: center;
+            font-size: 14px;
+            color: #999;
+            font-weight: bold;
+            background: #efefef;
+            -webkit-border-radius: 6px;
+            -moz-border-radius: 6px;
+            border-radius: 6px;
+        }
+
+            #tabli li a:hover, #tabli li.curr a {
+                text-decoration: none;
+                background: #3aca75;
+                color: #fff;
+            }
+
+.hide {
+    display: none;
+}
+
+.footer {
+    height: 140px;
+    padding: 10px 0 0 0;
+    width: 618px;
+    margin: 86px auto 0 auto;
+    text-align: center;
+    color: #999;
+    line-height: 20px;
+    font-size: 12px;
+}

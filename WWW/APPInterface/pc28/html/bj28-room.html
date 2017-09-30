@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="../css/communal.css" />
+		<link rel="stylesheet" type="text/css" href="../dist/libs/font-awesome-4.7.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="../css/room.css" />
+		<style>
+			
+		</style>
+	</head>
+
+	<body>
+		<div class="header">
+			<a onclick="fnGoBack()"><i class="fa fa-angle-left" style="font-size: 18px;margin-right: 5px;"></i>返回</a>
+			<div>
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div id="hall" class="swiper-slide">房间列表</div>
+					</div>
+				</div>
+			</div>
+			<a><span style="margin-left: 10px;"></span></a>
+		</div>
+
+		<div class="list-room">
+			<a class="pfont" onclick="goToPlay28(0)">
+				<img src="../img/room-01.png" width="90%" style="padding: 10px;" />
+				<!--<p class="font"><i class="iconuser"></i><span id="online_users_01" class="iconfont">获取中...</span></p>-->
+				<p class="font"><span id="online_users_01" class="iconfont">获取中...</span></p>
+			</a>
+			<a class="pfont" onclick="goToPlay28(1)">
+				<img src="../img/room-02.png" width="90%" style="padding: 10px;" />
+				<!--<p class="font"><i class="iconuser"></i><span id="online_users_02" class="iconfont">获取中...</span></p>-->
+				<p class="font"><span id="online_users_02" class="iconfont">获取中...</span></p>
+			</a>
+		</div>
+		<div style="margin-top: 20px;display: flex;">
+			<a class="pfont" onclick="goToPlay28(2)">
+				<img src="../img/room-03.png" width="90%" style="padding: 10px;" />
+				<!--<p class="font"><i class="iconuser"></i><span id="online_users_03" class="iconfont">获取中...</span></p>-->
+				<p class="font"><span id="online_users_03" class="iconfont">获取中...</span></p>
+			</a>
+			<a class="pfont" onclick="goToPlay28(3)">
+				<img src="../img/room-04.png" width="90%" style="padding: 10px;" />
+				<!--<p class="font"><i class="iconuser"></i><span id="online_users_04" class="iconfont">获取中...</span></p>-->
+				<p class="font"><span id="online_users_04" class="iconfont">获取中...</span></p>
+			</a>
+		</div>
+
+	</body>
+
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<script src="../js/myStorage.js"></script>
+	<script>
+		var roomId_area_array
+		$(function() {
+			roomId_area_array = myStorage.getItem('roomId_area_array')
+			roomId_area_array = roomId_area_array.split(',')
+
+			var online_users_room_array = myStorage.getItem('online_users_room_array')
+			online_users_room_array = online_users_room_array.split(',')
+			$('#online_users_01').html('在线 ' + online_users_room_array[0] + ' 人')
+			$('#online_users_02').html('在线 ' + online_users_room_array[1] + ' 人')
+			$('#online_users_03').html('在线 ' + online_users_room_array[2] + ' 人')
+			$('#online_users_04').html('在线 ' + online_users_room_array[3] + ' 人')
+		})
+
+		function goToPlay28(index) {
+			var roomId = roomId_area_array[index]
+
+			myStorage.setItem('roomIndex', index)
+			myStorage.setItem('roomId', roomId)
+			window.location.href = '../html/bj28-play.html'
+		}
+
+		function fnGoBack() {
+			window.location.replace('../html/bj28-hall.html')
+		}
+	</script>
+
+</html>

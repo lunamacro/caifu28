@@ -1,0 +1,351 @@
+/* -- 左边菜单选项 -- */
+.help
+{
+    margin-bottom: 40px;
+}
+.help .menu
+{
+    width: 170px;
+    border-top: 0;
+}
+.help .menu > h3
+{
+    height: 30px;
+    line-height: 30px;
+    background-color: #eee;
+    border-top: 2px solid #000;
+    border-bottom: 1px solid #fff;
+}
+.help .menu > h3 a
+{
+    color: #333;
+}
+.help .menu > h3 a:hover
+{
+    text-decoration: none;
+}
+.help .menu > h4
+{
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #d5d5d5;
+    border-top: 1px solid #d5d5d5;
+    background: url(/Help/images/v-down.ico.png) no-repeat 12px;
+    cursor: pointer;
+}
+.help .menu > h4.active
+{
+    background: url(/Help/images/v-up.ico.png) no-repeat 12px;
+}
+.help .menu > h4, .help .menu > div > a
+{
+    text-indent: 35px;
+}
+.help .menu > div
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.help .menu > div > a
+{
+    display: block;
+    height: 28px;
+    line-height: 28px;
+    color: #333;
+    cursor: pointer;
+}
+.help .menu > div > a.active, .help .menu > div > a:hover
+{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    background-color: #DF1515;
+}
+
+/* -- 帮助中心首页右边内容 -- */
+.help .con
+{
+    width: 814px;
+}
+.help .home .kind
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.help .home .kind > h3, .help .home .kind > h3
+{
+    background-color: #F6F6F6;
+    text-indent: 15px;
+    border-bottom: 1px solid #d5d5d5;
+}
+.help .home .kind a
+{
+    position: relative;
+    float: left;
+    height: 90px;
+    width: 202px;
+    border-bottom: 1px solid #d5d5d5;
+    border-right: 1px solid #d5d5d5;
+    color: #333;
+}
+.help .home .kind a:hover
+{
+    text-decoration: none;
+}
+.help .home .kind a > p
+{
+    line-height: 20px;
+    text-indent: 90px;
+}
+.help .home .kind a > p.title
+{
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 30px;
+}
+.help .home .kind a > img
+{
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+.help .home > h3
+{
+    border-bottom: 2px solid #000;
+    text-indent: 15px;
+}
+.help .home > ul > li
+{
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    width: 50%;
+    border-bottom: 1px dotted #d5d5d5;
+    list-style: disc inside;
+    text-indent: 10px;
+    margin-bottom: -1px;
+}
+.help .home > ul > li > a
+{
+    color: #333;
+}
+
+/* -- 彩种/引用介绍右边内容 -- */
+.help .guide > h3, .help .play > h3
+{
+    text-indent: 15px;
+    background-color: #F8F8F8;
+}
+.help .play .tabs
+{
+    margin: 15px 15px 0 15px;
+    padding-left: 15px;
+    height: 28px;
+    line-height: 27px;
+    border-bottom: 1px solid #FD9814;
+}
+.help .play .tabs > a
+{
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    padding-right: 15px;
+    padding-left: 15px;
+    color: #333;
+    font-size: 14px;
+    border: 1px solid transparent;
+}
+.help .play .tabs > a.active, .help .play .tabs > a:hover
+{
+    color: #FD9814;
+    border: 1px solid #FD9814;
+    border-bottom-color: #fff;
+    text-decoration: none;
+    border-radius: 3px 3px 0 0;
+}
+.help .guide .content, .help .play .content
+{
+    padding: 15px;
+    line-height: 22px;
+}
+
+
+/* -- 左边菜单选项 -- */
+.help
+{
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+.help .menu
+{
+    width: 170px;
+    border-top: 0;
+}
+.help .menu > h3
+{
+    height: 30px;
+    line-height: 30px;
+    background-color: #eee;
+    border-top: 2px solid #000;
+    border-bottom: 1px solid #fff;
+}
+.help .menu > h3 a
+{
+    color: #333;
+}
+.help .menu > h3 a:hover
+{
+    text-decoration: none;
+}
+.help .menu > h4
+{
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #d5d5d5;
+    border-top: 1px solid #d5d5d5;
+    background: url(../Images/v-down.ico.png) no-repeat 12px;
+    cursor: pointer;
+}
+.help .menu > h4.active
+{
+    background: url(../Images/v-up.ico.png) no-repeat 12px;
+}
+.help .menu > h4, .help .menu > div > a
+{
+    text-indent: 35px;
+}
+.help .menu > div
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.help .menu > div > a
+{
+    display: block;
+    height: 28px;
+    line-height: 28px;
+    color: #333;
+    cursor: pointer;
+}
+.help .menu > div > a.active, .help .menu > div > a:hover
+{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    background-color: #DF1515;
+}
+
+/* -- 帮助中心首页右边内容 -- */
+.help .con
+{
+    width: 814px;
+}
+.help .home .kind
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.help .home .kind > h3, .help .home .kind > h3
+{
+    background-color: #F6F6F6;
+    text-indent: 15px;
+    border-bottom: 1px solid #d5d5d5;
+}
+.help .home .kind a
+{
+    position: relative;
+    float: left;
+    height: 90px;
+    width: 202px;
+    border-bottom: 1px solid #d5d5d5;
+    border-right: 1px solid #d5d5d5;
+    color: #333;
+}
+.help .home .kind a:hover
+{
+    text-decoration: none;
+}
+.help .home .kind a > p
+{
+    line-height: 20px;
+    text-indent: 90px;
+}
+.help .home .kind a > p.title
+{
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 30px;
+}
+.help .home .kind a > img
+{
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+.help .home > h3
+{
+    border-bottom: 2px solid #000;
+    text-indent: 15px;
+}
+.help .home > ul > li
+{
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    width: 50%;
+    border-bottom: 1px dotted #d5d5d5;
+    list-style: disc inside;
+    text-indent: 10px;
+    margin-bottom: -1px;
+}
+.help .home > ul > li > a
+{
+    color: #333;
+}
+
+/* -- 彩种/引用介绍右边内容 -- */
+.help .guide > h3, .help .play > h3
+{
+    text-indent: 15px;
+    background-color: #F8F8F8;
+}
+.help .play .tabs
+{
+    margin: 15px 15px 0 15px;
+    padding-left: 15px;
+    height: 28px;
+    line-height: 27px;
+    border-bottom: 1px solid #FD9814;
+}
+.help .play .tabs > a
+{
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    padding-right: 15px;
+    padding-left: 15px;
+    color: #333;
+    font-size: 14px;
+    border: 1px solid transparent;
+}
+.help .play .tabs > a.active, .help .play .tabs > a:hover
+{
+    color: #FD9814;
+    border: 1px solid #FD9814;
+    border-bottom-color: #fff;
+    text-decoration: none;
+    border-radius: 3px 3px 0 0;
+}
+.help .guide .content, .help .play .content
+{
+    padding: 15px;
+    line-height: 22px;
+}
+
+.help .menu .cur
+{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    background-color: #DF1515;
+} 

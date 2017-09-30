@@ -1,0 +1,30 @@
+.gamerules-box {
+    padding: 40px 0;
+    background-color: #F5F5F4;
+}
+.gamerules-box table {
+	width: 85%;
+    margin: 30px auto;
+}
+.gamerules-box table, .gamerules-box tr, .gamerules-box th {
+	border: none;
+    font-weight: 100;
+}
+.gamerules-box tr {
+	background-color: #fff;
+	font-size: 14px;
+}
+.gamerules-box th {
+	padding: 10px;
+}
+.gamerules-box>div table tr:nth-child(1) {
+    text-align: center;
+    background-color: #e6e6e6;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    font-size: 16px;
+}
+.gamerules-box>div table tr:last-child {
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+}

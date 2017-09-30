@@ -1,0 +1,67 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; }
+h1, h2, h3, h4, h5, h6{ font-size:100%; }
+address, cite, dfn, em, var { font-style:normal; }
+code, kbd, pre, samp { font-family:couriernew, courier, monospace; }
+small{ font-size:12px; }
+ul, ol { list-style:none; }
+a { text-decoration:none; }
+a:hover{ text-decoration:none; }
+sup { vertical-align:text-top; }
+sub{ vertical-align:text-bottom; }
+legend { color:#000; }
+fieldset, img { border:0; }
+button, input, select, textarea { font-size:100%; }
+table { border-collapse:collapse; border-spacing:0; } 
+body{font-family: "微软雅黑";}
+#box{overflow: hidden;}
+header {
+	background: rgba(227, 57, 60, 0.77);
+	width: 100%;
+	height: 50px;
+}
+
+header div {
+	text-align: center;
+}
+
+header div img {
+	width: 30px;
+	height: 30px;
+	float: left;
+}
+
+header div span {
+	font-size: 20px;
+	color: #FFFFFF;
+	text-align: center;
+	float: left;
+}
+
+.header{
+	position: fixed;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    background: #fd7776;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    display: flex;
+    z-index: 101;
+}
+.header>a:first-child{
+	flex: 2;
+}
+.header>a:last-child{
+	flex: 2;
+}
+.header>div{
+	flex: 8;
+}
+
+.list-room .pfont img a{
+	width: 98%;
+	margin:  0 auto;
+	padding: 0;
+}

@@ -1,0 +1,37 @@
+
+
+.scheme { margin-top: 10px; margin-bottom: 30px; padding: 2px; background-color: #DDDDDD; }
+.scheme > h4,
+.scheme > h2 { height: 32px; line-height: 32px; text-align: center; color: #BD3F13; background-color: #FEF2C3; }
+.scheme > h4 { margin-top: -1px; color: #000; background: url(../Images/scheme-h4-bg.png); border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+.scheme > table { width: 100%; background-color: #fff; }
+.scheme > table > tbody > tr > th,
+.scheme > table > tbody > tr > td { padding: 8px 10px; border-bottom: 1px solid #ddd; line-height:24px; }
+.scheme > table > tbody > tr > th { padding-right: 0; width: 12%; background-color: #F5F5F5; text-align: right; border-right: 1px solid #ddd; font-weight: normal; }
+.scheme > table > tbody > tr > td { width: 88%; }
+.scheme .customize > button { padding: 5px 10px; line-height: 1; font-size: 12px; overflow: visible; border: 1px solid #EEC35D; color: #E36128; background-color: #FBF5E2; border-radius: 3px; cursor: pointer; }
+.scheme .customize > button.only { margin-right: 5px; margin-left: 10px; border: 1px solid #D60808; color: #fff; background-color: #D60808;	 }
+.scheme .sponsor-results { line-height: 24px; }
+.scheme > table table { width: 100%; border-collapse: collapse; text-align: center; }
+.scheme > table table th { font-weight: normal; background-color: #FEFAEB; }
+.scheme > table table th,
+.scheme > table table td { padding: 6px 10px; border: 1px solid #ddd; }
+.scheme > table > tbody > tr.my-buy > th,
+.scheme > table > tbody > tr.my-buy > td { background-color: #FFEEEC; }
+.scheme > table > tbody > tr.my-buy em { margin-left: 20px; }
+
+.scheme .confirm-buy { padding-top: 15px; padding-bottom: 10px; text-align: center; background-color: #fff;}
+.scheme .confirm-buy > button { margin-bottom: 15px; height: 38px; width: 150px; font: bold 18px "微软雅黑"; color: #fff; background-color: #D10909; border: 1px solid #D10909; border-radius: 5px; cursor: pointer; }
+.scheme .confirm-buy > #btnBuyagain { margin-bottom: 15px; height: 38px; width: 150px; font: bold 16px "微软雅黑"; color: #fff; background-color: #D10909; border: 1px solid #D10909; border-radius: 5px; cursor: pointer; }
+.scheme table.user-list th,
+.scheme table.user-list td { border-color: #E0CE8A; }
+.scheme table.user-list td.split { background-color: #FEFAEB; }
+
+.scheme table.my-buy-record { border: 1px solid #E0CE8A; border-bottom: 0; }
+.scheme table.my-buy-record th,
+.scheme table.my-buy-record td { border: 0; }
+.scheme table.my-buy-record td { border-bottom: 1px solid #E0CE8A; }
+
+.scheme table.win-info { margin-bottom: -1px; }
+.scheme table.win-info th { background-color: #fff; }
+.scheme table.win-info td > em { margin-left: 20px; }

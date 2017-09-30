@@ -1,0 +1,279 @@
+﻿@charset "UTF-8";
+/**
+ * 
+ * @authors TabTang (jiangtao213@163.com)
+ * @date    2015-05-16 09:05:42
+ * @version $Id$
+ */
+.jjyh {
+    width: 998px;
+    margin: 10px auto;
+    border: 1px solid #d2d2d2;
+    font-family: "微软雅黑";
+}
+
+    .jjyh h4 {
+        border-bottom: 2px solid #da3828;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+        padding: 0 0 0 10px;
+        color: #333;
+    }
+
+.tzfa {
+    width: 439px;
+    float: left;
+}
+
+.yhfa {
+    width: 558px;
+    float: left;
+    border-left: 1px solid #d2d2d2;
+}
+
+    .tzfa h5, .yhfa h5 {
+        height: 35px;
+        line-height: 35px;
+        font-size: 14px;
+        border-bottom: 1px solid #d2d2d2;
+        padding: 0 0 0 10px;
+    }
+/* 投注方案 sta*/
+.tabltz {
+    padding: 15px;
+}
+
+.tzfatabl {
+    background: #d2d2d2;
+    width: 100%;
+}
+
+    .tzfatabl th {
+        background: #f4f4f4;
+        line-height: 30px;
+    }
+
+    .tzfatabl td {
+        background: #fff;
+        text-align: center;
+        line-height: 30px;
+    }
+
+.fainfo {
+    padding: 0 0 0 15px;
+    line-height: 26px;
+}
+
+.fafs i {
+    color: #da3828;
+}
+/* 投注方案 end */
+
+
+/*优化方案 sta*/
+.tablyh {
+    padding: 15px;
+    max-height: 450px;
+    overflow: auto;
+}
+
+.yhfahead {
+    padding: 15px 15px 0 15px;
+    line-height: 32px;
+    height: 32px;
+}
+
+.yhfatabl {
+    background: #d2d2d2;
+    width: 100%;
+}
+
+    .yhfatabl th {
+        background: #f4f4f4;
+        line-height: 30px;
+    }
+
+    .yhfatabl td {
+        background: #fff;
+        text-align: center;
+        line-height: 30px;
+    }
+
+.yhfahead i {
+    display: block;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+}
+
+.team {
+    min-width: 70px;
+    padding-right: 39px !important;
+}
+
+.team {
+    border: 1px solid #FE761C;
+    height: 20px;
+    float: left;
+    margin: 3px;
+    line-height: 20px;
+    padding: 0 20px 0 0;
+    position: relative;
+}
+
+    .team i {
+        display: block;
+        height: 20px;
+        width: auto;
+        background: #FE761C;
+        color: #fff;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+
+.yhfatabl td .addj {
+    margin: 0 0 0 10px;
+}
+
+    .yhfatabl td .addj input {
+        width: 70px;
+    }
+
+.addj {
+    border: 1px solid #d2d2d2;
+    display: block;
+    float: left;
+    height: 20px;
+    margin: 5px 3px 0 0;
+}
+
+    .addj input {
+        display: block;
+        float: left;
+        width: 60px;
+        border-width: 0 1px 0 1px;
+        border-style: solid;
+        border-color: #d2d2d2;
+        height: 20px;
+        text-align: center;
+    }
+
+    .addj a {
+        display: block;
+        float: left;
+        width: 19px;
+        height: 20px;
+        text-decoration: none;
+        text-align: center;
+        line-height: 20px;
+        color: #FE761C;
+        font-size: 16px;
+    }
+
+        .addj a:hover {
+            text-decoration: none;
+        }
+
+.hedbtn {
+    float: right;
+}
+
+    .hedbtn input {
+        display: block;
+        float: left;
+        margin: 0 0 0 5px;
+        width: 70px;
+        height: 30px;
+        border: 1px solid #d2d2d2;
+        background: #f4f4f4;
+        cursor: pointer;
+        font-family: "微软雅黑";
+        border-radius: 2px;
+        *+line-height:16px;
+    }
+
+        .hedbtn input.curr {
+            background: #da3828;
+            border: 1px solid #da3828;
+            color: #fff;
+        }
+
+        .hedbtn input.tips {
+            width: 18px;
+            height: 30px;
+            background: url(../images/iconfont-yiwen.png) no-repeat center center;
+            background-size: 100%;
+            border: 0;
+            cursor: default;
+        }
+
+        .hedbtn input.wuxiao {
+            color: #d2d2d2;
+            cursor: default;
+        }
+
+.yfbs {
+    padding: 0 0 0 15px;
+    overflow: hidden;
+}
+
+    .yfbs i {
+        height: 30px;
+        line-height: 30px;
+        float: left;
+    }
+
+.yhfafoot {
+    padding: 15px;
+    overflow: hidden;
+}
+
+.fazje {
+    float: left;
+    font-size: 14px;
+    line-height: 35px;
+}
+
+    .fazje i {
+        font-size: 20px;
+        color: #da3828;
+    }
+
+.fabtn {
+    float: right;
+}
+
+    .fabtn input {
+        width: 100px;
+        height: 35px;
+        cursor: pointer;
+        font-family: "微软雅黑";
+        font-size: 14px;
+        margin: 0 0 0 5px;
+        border-radius: 2px;
+    }
+
+        .fabtn input.touzhubtn {
+            background: #da3828;
+            border: 1px solid #da3828;
+            color: #fff;
+        }
+        .fabtn input.closeBtn {
+            background: #a0a0a0;
+            border: 1px solid #a0a0a0;
+            color: #fff;
+        }
+
+        .fabtn input.hemaibtn {
+            background: #d2d2d2;
+            border: 1px solid #d2d2d2;
+        }
+
+.trhover {
+    background-color: #FFFFC9;
+}
+/*优化方案 end*/

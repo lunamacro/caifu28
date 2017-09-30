@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../dist/libs/swiper/swiper-3.4.2.min.css" />
+		<link rel="stylesheet" type="text/css" href="../dist/libs/font-awesome-4.7.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../css/play28.css" />
+		<script src="../js/jquery-3.1.1.min.js"></script>
+
+	</head>
+
+	<body>
+		<!--头部-->
+		<div class="header">
+			<a onclick="fnGoBack()"><i class="fa fa-angle-left" style="font-size: 20px;margin-right: 5px;"></i>返回</a>
+			<div>
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div id="lottery" class="swiper-slide">北京28</div>
+						<div id="hall" class="swiper-slide"></div>
+						<div id="room" class="swiper-slide"></div>
+					</div>
+				</div>
+			</div>
+			<a style="line-height: 35px;"><i class="fa fa-headphones" onclick="fnOpenKF()"></i><span class="navcontiner" style="font-size: 25px;margin-left: 10px;">+</span></a>
+		</div>
+
+		<!--截止时间-->
+		<div class="time">
+			<div id="div_startTime" class="left" style="display: block;">
+				<p>距离<span id="periods_count_down">?</span>期截止</p>
+				<p id="count_down">获取中...</p>
+			</div>
+			<div id="div_money" class="right" style="display: block;">
+				<p>余额</p>
+				<p><span id="balance">0</span>元宝</p>
+			</div>
+			<div id="div_stopTime" style="text-align: center; width: 100%; margin-top: 5%;display: none;">本游戏开售时间9:00~23:55</div>
+		</div>
+
+		<!--往期-->
+		<div class="previous showPrevius">
+			<ul id="previous_ul">
+				<li id="previous_list_base">
+					<p>第<span id="periods_previous">?</span>期</p>
+					<p id="openResult_previous">?+?=?</p>
+					<p><i class="fa fa-angle-down"></i></p>
+				</li>
+			</ul>
+
+		</div>
+
+		<!--内容）-->
+		<div class="layout-body">
+			<div id="list"></div>
+		</div>
+		<footer class="layout-foot">
+			<div class="left">
+				<img src="../img/biaoqing.png" />
+			</div>
+			<div class="center">
+				<input type="text" disabled="disabled" />
+			</div>
+			<div class="right">
+				<div id="btn_send">投注</div>
+			</div>
+		</footer>
+
+		<!--投注框-->
+		<div class="bet_area">
+			<div>
+				<ul class="exp_hd">
+					<li id="area_0" class="exp_hd_item active" data-i="0">
+						<a href="javascript:;">大小单双</a>
+					</li>
+					<li class="exp_hd_item" data-i="1">
+						<a href="javascript:;">猜数字</a>
+					</li>
+					<li class="exp_hd_item" data-i="2">
+						<a href="javascript:;">特殊玩法</a>
+					</li>
+				</ul>
+				<div class="exp_bd">
+					<div class="winSum"><span id="win_sum">中奖和值：14 15 16 17 18 19 20 21 22 23 24 25 26 27</span></div>
+					<div id="emo_list" class="exp_cont active"></div>
+				</div>
+			</div>
+			<div>
+				<div class="div_input_area">
+					<input id="editArea_number" onkeyup="this.value=this.value.replace(/\D/g,'')" onpaste="return false" placeholder="请输入投注金额"><span onclick="fnOpenOddsthat()">赔率说明</span>
+				</div>
+				<div class="div_bet_btn">
+					<a href="javascript:;" id="btn_min">最小投注</a>
+					<a href="javascript:;" id="btn_double">双倍投注</a>
+					<button id="btn_bet">投注</button>
+				</div>
+			</div>
+		</div>
+
+		<!--loading动画-->
+		<!--<div><img class="loadingimg" id='loading' src='../img/loading.gif' style="width:35px;height: 35px;z-index: 1000;"></div>-->
+
+		<!--遮罩层1(全局遮住)-->
+		<div class="mask"></div>
+		<!--遮罩层2（局部遮住）-->
+		<div class="mask2"></div>
+
+		<!--跟投框-->
+		<div class="sureInport">
+			<ul>
+				<li>确定跟投吗？</li>
+				<li><span>玩家</span><span id="nickname_follow">李哈明</span></li>
+				<li><span>期数</span><span id="periods_follow">826452</span></li>
+				<li><span>类别</span><span id="betType_follow">小</span></li>
+				<li><span>金额</span><span id="money_follow">440</span></li>
+				<li>
+					<p class="btn-cancel">取消</p>
+					<p id="follow_submit">确定</p>
+				</li>
+			</ul>
+		</div>
+
+		<!--带一个按钮的提示框-->
+		<div class="tips-warning">
+			<div>提示</div>
+			<div id="one_content">封盘中，不能下注</div>
+			<div id="one_submit">确定</div>
+		</div>
+
+		<!--带两个按钮提示框-->
+		<div class="tips-warning-two">
+			<div>提示</div>
+			<div id="two_content">已封盘，停止下注</div>
+			<span id="two_cancel">取消</span>
+			<span id="two_submit">确定</span>
+		</div>
+
+		<!--顶部导航-->
+		<div class="nav-top">
+			<div class="angle"></div>
+			<ul id="nav_list">
+				<li>
+					<a><i></i><span>投注记录</span></a>
+				</li>
+				<li>
+					<a><i></i><span>玩法介绍</span></a>
+				</li>
+				<li>
+					<a><i></i><span>走势图</span></a>
+				</li>
+				<li>
+					<a><i></i><span>回水规则</span></a>
+				</li>
+			</ul>
+		</div>
+
+		<!--全体禁言-->
+		<div class="Shutup">全体禁言中，请选择投注</div>
+
+		<!--往期开奖列表数据模板-->
+		<script type="text/template" id="previous_list">
+			{{~it:value:index}}
+			<li>
+				<p>第<span>{{=value.periods}}</span>期</p>
+				<p>{{=value.open_result}}</p>
+				<p><i></i></p>
+			</li>
+			{{~}}
+		</script>
+
+		<!--投注选择框数据模板-->
+		<script type="text/template" id="template">
+			{{~it:value:index}}
+			<div id="item{{=index}}" class="betType_item" onclick="fnSelectToggle(this,'{{=value.dataTotal}}','{{=value.winSum}}','{{=value.playType}}','{{=index}}')">
+				<span id="weight{{=index}}" class="s_win_weight">{{=value.win_weight}}</span>
+				<span id="scale{{=index}}" class="s_win_scale">{{=value.win_scale}}</span>
+			</div>
+			{{~}}
+		</script>
+		<!--消息列表数据模板-->
+		<script type="text/template" id="msg_temp">
+			{{~it:value:index}} {{? value.type === 0 }}
+			<div class="peosonalBet betOthers">
+				<p class="betTime">{{=value.time}}</p>
+				<div class="userInport">
+					<div class="left">
+						<img src="{{=value.avatar}}" />
+					</div>
+					<div class="right">
+						<p class="userID">{{=value.nickname}}</p>
+						<div class="chartArea" onclick="followBet('{{=value.nickname}}','{{=value.periods}}','{{=value.betType}}','{{=value.money}}')">
+							<div class="areaTop">
+								<p><i class="fa fa-clock-o" style="margin-right: 5px;"></i>第{{=value.periods}}期</p>
+								<p>投注类型：{{=value.betType}}</p>
+							</div>
+							<div class="areaBom">
+								<p><img src="../img/325.png" class="yb" />{{=value.money}}元宝</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{{?? value.type === 1}}
+			<div class="peosonalBet">
+				<p class="betTime">{{=value.time}}</p>
+				<div class="userInport">
+					<div class="left">
+						<img src="{{=value.avatar}}" />
+					</div>
+					<div class="right">
+						<p class="userID">{{=value.nickname}}</p>
+						<div class="chartArea" onclick="followBet('{{=value.nickname}}','{{=value.periods}}','{{=value.betType}}','{{=value.money}}')">
+							<div class="areaTop">
+								<p><i class="fa fa-clock-o" style="margin-right: 5px;"></i>第{{=value.periods}}期</p>
+								<p>投注类型：{{=value.betType}}</p>
+							</div>
+							<div class="areaBom">
+								<p><img src="../img/325.png" class="yb" />{{=value.money}}元宝</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{{?? value.type === 2}}
+			<div class="tips">
+				<p>
+					<span class="red">[{{=value.periods}}期]</span>距离封盘时间不足<span class="red">60秒</span>，请抓紧时间下注！
+				</p>
+			</div>
+			{{?? value.type === 3}}
+			<div class="tips">
+				<p>
+					<span class="red">[{{=value.periods}}期] 已封盘</span>，下注结果以系统开奖为准，如果有异议，请及时联系客服
+				</p>
+			</div>
+			{{?? value.type === 4}}
+			<div class="tips">
+				<p>
+					<span class="red">[{{=value.periods}}期]</span>单注<span class="red">{{=value.minBetMoney}}元</span>起, <span class="red">{{=value.maxBetMoney}}元</span>封顶,总注<span class="red">{{=value.maxBetSumMoney}}元</span>封顶
+					<p class="red"><i class="fa fa-star star"></i><i class="fa fa-star star"></i>现在可以投注了<i class="fa fa-star star"></i><i class="fa fa-star star"></i></p>
+				</p>
+			</div>
+			{{?? value.type === 5}}
+			<div class="tips">
+				<p>
+					<span class="red">[{{=value.periods}}期] 开奖：{{=value.open_result}}</span>
+				</p>
+			</div>
+			{{?? value.type === 6}}
+			<div class="tips">
+				<p>
+					欢迎<span class="red">{{=value.welcome_user}}</span>进入房间...
+				</p>
+			</div>
+			{{?? value.type === 7}}
+			<div class="tips">
+				<p>
+					各位老板，本游戏处于停售时间，想要继续娱乐的老板请到其他彩种继续娱乐！！！
+				</p>
+			</div>
+			{{??}} {{?}} {{~}}
+		</script>
+
+		<script src="../js/myStorage.js"></script>
+		<script src="../js/rong/RongIMLib-2.2.5.min.js"></script>
+		<script src="../js/doT.min.js"></script>
+		<script src="../js/config.js"></script>
+		<script src="../js/timeUtil.js"></script>
+		<script src="../js/moment.js"></script>
+		<script src="../js/timer.js"></script>
+		<script src="../js/bj28-chatbox.js"></script>
+		<script src="../js/bj28-play.js"></script>
+		<script src="../dist/libs/swiper/swiper-3.4.2.jquery.min.js"></script>	
+		<script>
+			var hallIndex = myStorage.getItem('hallIndex')
+			if(hallIndex == 0){
+				$('#hall').html('玩法一')
+			}else if(hallIndex == 1){
+				$('#hall').html('玩法二')
+			}else if(hallIndex == 2){
+				$('#hall').html('玩法三')
+			}
+			var roomIndex =  parseInt(myStorage.getItem('roomIndex')) + 1
+			$('#room').html('VIP房间' + roomIndex)
+			var mySwiper = new Swiper('.swiper-container', {
+				direction: 'vertical',
+				loop: true,
+				autoplay: 2000,
+				speed: 300,
+				// 如果需要分页器
+				pagination: '.swiper-pagination',
+			})
+
+			//显示和隐藏往期 
+			$(".previous>ul>li:first-child").click(function() {
+				$(".previous").toggleClass("showPrevius")
+			})
+
+			//显示和隐藏顶部导航
+			$('.navcontiner').click(function() {
+				$('.nav-top,.mask2').toggleClass('showActive');
+			})
+			$('.mask2').click(function() {
+				$('.nav-top,.mask2').removeClass('showActive')
+			})
+			$('#nav_list').on('click', 'li', function() {
+				var list_text = $(this).find('span').html()
+				$('.nav-top,.mask2').removeClass('showActive')
+				myStorage.setItem('lotteryId', 99)
+				if(list_text == '投注记录') {
+					window.location.href = '../html/betting.html'
+				} else if(list_text == '玩法介绍') {
+					window.location.href = '../html/gameshows-02.html'
+				} else if(list_text == '走势图') {
+					window.location.href = '../html/trendchart.html'
+				} else if(list_text == '回水规则') {
+					window.location.href = '../html/gamerules-02.html'
+				}
+
+			})
+
+			var tips
+			//显示和隐藏全体禁言框	
+			$('.layout-foot .left,.center').click(function() {
+				showTips('全体禁言中，请选择投注', '#fff', 1500)
+			})
+
+			function showTips(showText, showTextColor, showTime) {
+				$(".Shutup").css('color', showTextColor)
+				$(".Shutup").text(showText)
+				$(".Shutup").toggleClass('showActive');
+				tips = setTimeout(function() {
+					clearTimeout(tips)
+					$('.Shutup').removeClass('showActive')
+				}, showTime)
+			}
+
+			//显示跟投框
+			function showMask() {
+				$('.sureInport').css('display', 'block')
+				$('.mask').css('display', 'block')
+			}
+			//隐藏跟投框
+			function hiddenMask() {
+				$('.sureInport').css('display', 'none')
+				$('.mask').css('display', 'none')
+			}
+			$('#follow_submit').click(function() {
+				hiddenMask()
+
+				var play_type = ''
+				var lotteryNumber = $('#betType_follow').html()
+				var array01 = ['大', '小', '单', '双', '大单', '小单', '大双', '小双', '极大', '极小'],
+					array02 = ['红', '绿', '蓝', '豹子']
+				for(var i = 0; i < array01.length; i++) {
+					if(array01[i] == lotteryNumber) {
+						play_type = 9901
+						break
+					}
+				}
+				for(var i = 0; i < array02.length; i++) {
+					if(array02[i] == lotteryNumber) {
+						play_type = 9903
+						break
+					}
+				}
+				if(play_type == '') {
+					play_type = 9902
+				}
+
+				buyParameter.PlayTypeID = play_type
+				bet_type = lotteryNumber
+				var balance = Number($('#balance').text())
+				var sumMoney = Number($('#money_follow').html())
+				if((balance + handsel) < sumMoney) {
+					showAlertAtOneBtn('余额不足，请充值后再投注！')
+				} else {
+					buyParameter.SumMoney = sumMoney
+					buyParameter.SchemeContent = bet_type + '|' + buyParameter.PlayTypeID + '|' + buyParameter.SumMoney + '|1'
+					//提交投注
+					postBet(sumMoney)
+				}
+
+			})
+
+			function followBet(nickname, periods, betType, money) {
+				if(periods != periods_current) {
+					showAlertAtOneBtn('只能跟投当前期')
+				} else if(isEnding) {
+					showAlertAtOneBtn('封盘中，不能投注')
+				} else {
+					showMask()
+					$('#nickname_follow').html(nickname)
+					$('#periods_follow').html(periods)
+					$('#betType_follow').html(betType)
+					$('#money_follow').html(money)
+					$('.btn-cancel,.mask').click(function() {
+						hiddenMask()
+					})
+				}
+			}
+			
+			// 隐藏OneBtn提示框	
+			$('#one_submit').click(function() {
+				$('.tips-warning').css('display','none')
+			})
+			// 显示OneBtn提示框
+			function showAlertAtOneBtn(content){
+				$('#one_content').text(content)
+				$('.tips-warning').css('display','block')
+			}
+			
+			// 隐藏TwoBtn提示框
+			$('#two_cancel, #two_submit').click(function(){
+				$('.tips-warning-two').css('display','none')
+				$('.mask').css('display', 'none')
+			})
+			// 显示TwoBtn提示框
+			function showAlertAtTwoBtn(content){
+				$('#two_content').text(content)
+				$('.tips-warning-two').css('display','block')
+				$('.mask').css('display', 'block')
+			}
+
+			function fnGoBack() {
+				window.location.replace('../html/bj28-room.html')
+			}
+
+			function fnOpenKF() {
+				myStorage.setItem('lotteryId', 99)
+				window.location.href = '../html/KeFu.html'
+			}
+
+			function fnOpenOddsthat() {
+				$('.bet_area').css("display", "none")
+				$('.mask').css('display', 'none');
+				myStorage.setItem('lotteryId', 99)
+				window.location.href = '../html/oddsthat.html'
+			}
+		</script>
+	</body>
+
+</html>

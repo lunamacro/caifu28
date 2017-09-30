@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9FC136D6-3959-46E9-8735-F0C7C50CCAEB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RongYun</RootNamespace>
+    <AssemblyName>RongYun</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="messages\CmdMsgMessage.cs" />
+    <Compile Include="messages\CmdNtfMessage.cs" />
+    <Compile Include="messages\ContactNtfMessage.cs" />
+    <Compile Include="messages\CustomTxtMessage.cs" />
+    <Compile Include="messages\ImgMessage.cs" />
+    <Compile Include="messages\ImgTextMessage.cs" />
+    <Compile Include="messages\InfoNtfMessage.cs" />
+    <Compile Include="messages\LBSMessage.cs" />
+    <Compile Include="messages\ProfileNtfMessage.cs" />
+    <Compile Include="messages\TxtMessage.cs" />
+    <Compile Include="messages\VoiceMessage.cs" />
+    <Compile Include="methods\Chatroom.cs" />
+    <Compile Include="methods\Group.cs" />
+    <Compile Include="methods\Message.cs" />
+    <Compile Include="methods\Push.cs" />
+    <Compile Include="methods\SMS.cs" />
+    <Compile Include="methods\User.cs" />
+    <Compile Include="methods\Wordfilter.cs" />
+    <Compile Include="models\BlockChatRoomUser.cs" />
+    <Compile Include="models\BlockUsers.cs" />
+    <Compile Include="models\ChatRoom.cs" />
+    <Compile Include="models\ChatRoomInfo.cs" />
+    <Compile Include="models\ChatroomQueryReslut.cs" />
+    <Compile Include="models\ChatRoomUser.cs" />
+    <Compile Include="models\ChatroomUserQueryReslut.cs" />
+    <Compile Include="models\CheckOnlineReslut.cs" />
+    <Compile Include="models\CodeSuccessReslut.cs" />
+    <Compile Include="models\GagChatRoomUser.cs" />
+    <Compile Include="models\GagGroupUser.cs" />
+    <Compile Include="models\GroupInfo.cs" />
+    <Compile Include="models\GroupUser.cs" />
+    <Compile Include="models\GroupUserQueryReslut.cs" />
+    <Compile Include="models\HistoryMessageReslut.cs" />
+    <Compile Include="models\ListBlockChatroomUserReslut.cs" />
+    <Compile Include="models\ListGagChatroomUserReslut.cs" />
+    <Compile Include="models\ListGagGroupUserReslut.cs" />
+    <Compile Include="models\ListWordfilterReslut.cs" />
+    <Compile Include="models\MsgObj.cs" />
+    <Compile Include="models\Notification.cs" />
+    <Compile Include="models\PlatformNotification.cs" />
+    <Compile Include="models\PushMessage.cs" />
+    <Compile Include="models\QueryBlacklistUserReslut.cs" />
+    <Compile Include="models\QueryBlockUserReslut.cs" />
+    <Compile Include="models\RongUser.cs" />
+    <Compile Include="models\SMSImageCodeReslut.cs" />
+    <Compile Include="models\SMSSendCodeReslut.cs" />
+    <Compile Include="models\TagObj.cs" />
+    <Compile Include="models\TemplateMessage.cs" />
+    <Compile Include="models\TokenReslut.cs" />
+    <Compile Include="models\UserTag.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RongCloud.cs" />
+    <Compile Include="util\RongHttpClient.cs" />
+    <Compile Include="util\RongJsonUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,71 @@
+﻿.gamerules-box {
+    padding: 10px 0;
+    background-color: #F5F5F4;
+    margin-top: 40px;
+}
+.gamerules-box table {
+	width: 85%;
+    margin: 10px auto;
+}
+.gamerules-box table, .gamerules-box tr, .gamerules-box th {
+	border: none;
+    font-weight: 100;
+}
+.gamerules-box tr {
+	background-color: #fff;
+	font-size: 14px;
+}
+.gamerules-box th {
+	color: white;
+	height: 28px;
+	line-height: 28px;
+	background-color: #fd7776;
+	font-size: 14px;
+	border: solid #E3E3E3 1px;
+	font-family: "黑体";
+	font-weight: bold;
+}
+
+.gamerules-box td {
+	color: #DF1515;
+	height: 28px;
+	line-height: 28px;
+	background-color: white;
+	font-size: 14px;
+	font-family: "arial";
+	border: solid #E3E3E3 1px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.gamerules-box>div table tr:nth-child(1) {
+    text-align: center;
+    background-color: #e6e6e6;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    font-size: 16px;
+}
+.gamerules-box>div table tr:last-child {
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+h3{
+	padding-left: 5%;
+	margin-left: 5%;
+	color: #666;
+	font-family: "黑体";
+	margin-top: 16px;
+}
+.lastBox{
+	width: 85%;
+    margin: 10px auto;
+    font-size: 12px;
+}
+.lastBox p{
+	line-height: 22px;
+	height: 22px;
+	padding-left: 6%;
+	color: #666;
+	font-family: "黑体";
+}

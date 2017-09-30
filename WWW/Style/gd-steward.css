@@ -1,0 +1,23 @@
+.steward { margin-top: 10px; margin-bottom: 30px; }
+.steward .gd-top { position: relative; height: 90px; background-color: #FBFBFB; padding-left: 15px; border-bottom: 0; }
+.steward .gd-top .btn { position: relative; display: inline-block; margin-right: 10px; margin-top: 22px; padding: 4px 6px; color: #333; background-color: #FEDFAA; cursor: pointer; }
+.steward .gd-top .trilateral-down { position: absolute; bottom: -7px; left: 50%; display: none; margin-left: -7px; height: 0; width: 0; border-top: 8px solid #F5A51A; border-left: 7px solid transparent; border-right: 7px solid transparent; }
+.steward .gd-top .btn.active { background-color: #F5A51A; color: #fff; }
+.steward .gd-top .btn.active .trilateral-down { display: inline-block; }
+.steward .gd-top ul.tabs { position: absolute; left: 0; bottom: 0; }
+.steward .gd-top ul.tabs > li { float: left; width: 120px; height: 35px; font: 14px/35px "微软雅黑"; text-align: center; border-right: 1px solid #ddd; border-top: 1px solid #ddd; cursor: pointer; }
+.steward .gd-top ul.tabs > li.active { color: #fff; background-color: #DF1515; }
+.steward .gd-top .time { position: absolute; right: 15px; bottom: 8px; }
+.steward .gd-top .time .input { padding: 3px; width: 100px; border: 1px solid #ccc; background: url(../Images/time-bg.png) no-repeat 85px center; vertical-align: middle; }
+.steward .gd-top .time input { margin-left: 3px; padding: 4px 8px; line-height: 1; font-size: 12px; background-color: #FBF5E2; color: #E36128; border: 1px solid #EEC35D; border-radius: 3px; cursor: pointer; vertical-align: middle; overflow: visible; }
+.steward .gd-top .center { position: absolute; left: 50%; margin-left: -168px; top: -6px; width: 336px; height: 41px; text-align: center; background-image: url(../Images/steward-top.png); }
+.steward .gd-top .center > div { margin-top: 10px; }
+.steward .gd-top .center > div select { min-width: 100px; }
+
+
+
+.steward > table { border-top-color: #df1515; border-width: 2px; }
+.steward > table th { background-color: #FFF2F2; font-weight: normal; }
+.steward > table td > i { margin-left: 3px; background-color: #FFA24D; color: #fff; border-radius: 2px; }
+.steward > table td> .cls{ padding: 3px 10px; font-size: 12px; background-color: #CC0000; color: #fff; border: 1px solid #A20508; overflow: visible; cursor:pointer; }
+.steward > .page { border-top: 0; }

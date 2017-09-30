@@ -1,0 +1,964 @@
+﻿@charset "UTF-8";
+/**
+ * 
+ * @authors Tab Tang (tangjiangtao@eims.com.cn)
+ * @date    2014-12-05 15:03:51
+ * @version sls5.3.0
+ */
+/* Public */
+html,
+body,
+div,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+input,
+select,
+button,
+textarea,
+iframe,
+table,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: 0 none;
+    vertical-align: top;
+}
+
+ul,
+li,
+dl,
+dd,
+dt {
+    list-style-type: none;
+}
+
+i,
+em,
+cite {
+    font-style: normal;
+}
+
+body {
+    -webkit-text-size-adjust: none;
+    font-family: "微软雅黑";
+    background: url(../images/admin/body_bg.png);
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+    a:hover {
+        color: #096ED6;
+    }
+
+.cle {
+    clear: both;
+}
+/* end_Public */
+/*Header style sta*/
+.header {
+    width: 100%;
+    height: 59px;
+    background: url(../images/admin/header_bg_repeat.png) repeat-x;
+    min-width: 1000px;
+    border-bottom: solid 1px #325e9f;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.heade {
+    height: 59px;
+    background: url(../images/admin/header_bg.png) no-repeat left top;
+}
+
+.header .logo {
+    width: 450px;
+    height: 59px;
+    text-indent: -99999px;
+    float: left;
+}
+
+.shortcut_menu {
+    width: 450px;
+    height: 59px;
+    float: right;
+    text-align: right;
+    padding: 0 35px 0 0;
+    color: #ffffff;
+    line-height: 59px;
+    font-size: 12px;
+}
+
+    .shortcut_menu a {
+        font-size: 12px;
+        padding: 0 5px;
+        color: #ffffff;
+    }
+/*Header style end*/
+/*Content style sta*/
+.content {
+    padding: e0px 0 0 0;
+}
+/*Content style end*/
+/* Sidebar style sta*/
+.sidebar {
+    position: fixed;
+    width: 186px;
+    left: 0;
+    /*此值请勿修改，与JS判断相关*/
+    top: 0px;
+}
+
+.sidebar_insi {
+    width: 186px;
+}
+
+.sidebar_con {
+    width: 175px;
+    border-right: 1px solid #bbd1eb;
+    background: #e4effc;
+}
+
+.sidebar_insi dl {
+    width: 175px;
+}
+
+    .sidebar_insi dl dt {
+        height: 36px;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #c4defc;
+        background: #e4effc;
+        font-family: "微软雅黑";
+        cursor: pointer;
+    }
+
+        .sidebar_insi dl dt h2 {
+            font-size: 14px;
+            line-height: 36px;
+            color: #3977c3;
+            padding: 0 0 0 35px;
+        }
+
+    .sidebar_insi dl dd {
+        height: 30px;
+        line-height: 30px;
+        display: none;
+        background: #f4faff;
+    }
+
+        .sidebar_insi dl dd h3 {
+            font-size: 12px;
+            font-weight: normal;
+        }
+
+            .sidebar_insi dl dd h3 a {
+                display: block;
+                height: 30px;
+                line-height: 30px;
+                padding: 0 0 0 32px;
+            }
+
+                .sidebar_insi dl dd h3 a:hover {
+                    background: url(../images/Sprite.png) no-repeat -280px -268px;
+                    color: #ffffff;
+                    background-color: #6aa1e3;
+                    font-weight: bold;
+                }
+
+.sidebar_but {
+    width: 14px;
+    height: 82px;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    margin-top: -41px;
+    background: url(../images/Sprite.png) no-repeat -5px -320px;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+    .sidebar_but.open {
+        background: url(../images/Sprite.png) no-repeat -30px -320px;
+    }
+
+.sidebar_insi dl.content_manage dt {
+    background: url(../images/Sprite.png) no-repeat 7px 7px;
+}
+
+.sidebar_insi dl.user_manage dt {
+    background: url(../images/Sprite.png) no-repeat 7px -28px;
+}
+
+.sidebar_insi dl.lottery_manage dt {
+    background: url(../images/Sprite.png) no-repeat 7px -68px;
+}
+
+.sidebar_insi dl.message_manage dt {
+    background: url(../images/Sprite.png) no-repeat 7px -108px;
+}
+
+.sidebar_insi dl.server_manage dt {
+    background: url(../images/Sprite.png) no-repeat 7px -153px;
+}
+
+.sidebar_insi dl.financial_manage dt {
+    background: url(../images/Sprite.png) no-repeat 7px -193px;
+}
+
+.sidebar_insi dl.system_settings dt {
+    background: url(../images/Sprite.png) no-repeat 7px -233px;
+}
+
+.sidebar_insi dl.system_settings dt {
+    background: url(../images/Sprite.png) no-repeat 7px -233px;
+}
+
+.sidebar_insi dl.push_message dt {
+    background: url(../images/Sprite.png) no-repeat 7px -404px;
+}
+/* Sidebar style end*/
+/*Main Public sta */
+.main {
+    padding-left: 10px;
+    padding-top: 8px;
+    padding-right: 14px;
+    padding-bottom: 8px;
+    min-width: 1000px;
+}
+
+.maincon {
+    border: 1px solid #eaeef1;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    min-height: 500px;
+    background: #fff;
+}
+
+    .maincon h2 {
+        height: 40px;
+        line-height: 40px;
+        color: #3977c3;
+        padding: 0 0 2px 12px;
+        background: url(../images/admin/main_head_bg.png) repeat-x left bottom;
+        font-size: 14px;
+    }
+
+.main_list {
+    padding: 12px;
+}
+/*Main Public end*/
+/*Main Pic News Style sta*/
+.newspic {
+    border-top: 1px solid #e0e6eb;
+    border-left: 1px solid #e0e6eb;
+    border-right: 1px solid #e0e6eb;
+}
+
+    .newspic dt {
+        height: 30px;
+        line-height: 30px;
+        border-bottom: 1px solid #e0e6eb;
+    }
+
+    .newspic ul li {
+        float: left;
+        font-size: 12px;
+        color: #333;
+    }
+
+    .newspic dt ul li {
+        float: left;
+        font-size: 12px;
+        color: #333;
+    }
+
+        .newspic dt ul li.litime {
+            width: 15%;
+            text-align: center;
+        }
+
+        .newspic dt ul li.lititle {
+            width: 30%;
+            padding: 0 0 0 10%;
+        }
+
+        .newspic dt ul li.liedit {
+            width: 10%;
+            text-align: center;
+        }
+
+    .newspic dd ul li.litime {
+        width: 15%;
+        text-align: center;
+    }
+
+    .newspic dd ul li.lititle {
+        width: 25%;
+        padding: 0 0 0 10%;
+    }
+
+    .newspic dd ul li.liedit {
+        width: 15%;
+        text-align: center;
+        padding: 0 0 0 5%;
+    }
+
+        .newspic dd ul li.liedit a {
+            display: block;
+            float: left;
+            color: #3977c3;
+            font-family: "微软雅黑";
+            width: 50px;
+            margin: 9px;
+            height: 22px;
+            line-height: 22px;
+            text-align: center;
+            background: url(../images/Sprite.png) no-repeat -205px -320px;
+        }
+
+            .newspic dd ul li.liedit a:hover {
+                background: url(../images/Sprite.png) no-repeat -274px -320px;
+            }
+
+    .newspic dd {
+        height: 40px;
+        line-height: 40px;
+        border-bottom: 1px solid #e0e6eb;
+    }
+/* lest end*/
+.paging {
+    font-size: 14px;
+    text-align: right;
+    line-height: 24px;
+    padding: 10px 0;
+}
+
+    .paging i {
+        font-style: normal;
+    }
+
+    .paging em {
+        font-style: normal;
+    }
+
+    .paging b {
+        font-weight: normal;
+    }
+
+    .paging s {
+        text-decoration: none;
+    }
+
+    .paging span {
+        border: 1px solid #ccc;
+        padding: 2px 5px;
+        color: #999999;
+        margin: 0 2px;
+    }
+/* paging end*/
+.newspic_addbut {
+    width: 80px;
+    height: 30px;
+    margin: 15px auto;
+}
+
+    .newspic_addbut a {
+        display: block;
+        height: 30px;
+        width: 80px;
+        background: url(../images/Sprite.png) no-repeat -105px -320px;
+        text-indent: -9999px;
+    }
+
+    .newspic_addbut input {
+        display: block;
+        height: 30px;
+        width: 80px;
+        background: url(../images/Sprite.png) no-repeat -105px -320px;
+        text-indent: -9999px;
+    }
+
+
+
+/* add but*/
+.newspic_addwrap {
+    padding: 10px;
+}
+    /*add end*/
+
+    .newspic_addwrap ul li {
+        overflow: hidden;
+        font-size: 12px;
+        margin: 0 0 16px 0;
+    }
+
+        .newspic_addwrap ul li .titl {
+            width: 120px;
+            float: left;
+            text-align: right;
+            line-height: 26px;
+            min-height: 24px;
+        }
+
+        .newspic_addwrap ul li .inpu {
+            width: 620px;
+            float: left;
+        }
+
+            .newspic_addwrap ul li .inpu input {
+                width: 360px;
+                height: 24px;
+                border: 1px solid #80b3e7;
+            }
+
+                .newspic_addwrap ul li .inpu input.inpufile {
+                    border: 0;
+                    width: 120px;
+                    height: 20px;
+                    float: left;
+                    margin: 0 0 0 14px;
+                }
+
+            .newspic_addwrap ul li .inpu .inpupic {
+                padding: 10px;
+                width: 340px;
+                border: 1px solid #80b3e7;
+                float: left;
+            }
+
+            .newspic_addwrap ul li .inpu a.addbut {
+                display: block;
+                width: 50px;
+                height: 22px;
+                background: url(../images/Sprite.png) no-repeat -340px -320px;
+                text-indent: -9999px;
+            }
+
+        .newspic_addwrap ul li .inputu {
+            width: 620px;
+            float: left;
+        }
+
+            .newspic_addwrap ul li .inputu input {
+                border: 1px solid #80b3e7;
+            }
+
+                .newspic_addwrap ul li .inputu input.inpufile {
+                    border: 0;
+                    width: 120px;
+                    height: 20px;
+                    float: left;
+                    margin: 0 0 0 14px;
+                }
+
+            .newspic_addwrap ul li .inputu .inpupic {
+                padding: 10px;
+                width: 340px;
+                border: 1px solid #80b3e7;
+                float: left;
+            }
+
+            .newspic_addwrap ul li .inputu a.addbut {
+                display: block;
+                width: 50px;
+                height: 22px;
+                background: url(../images/Sprite.png) no-repeat -340px -320px;
+                text-indent: -9999px;
+            }
+
+/*Main Pic News Style end*/
+
+/* public */
+#btnAdd, .btnAdd, #btnSearch, #btnOut, #btnGO, #setre, #saverecai, #cancelrecai {
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    background: url(../images/Sprite.png) no-repeat -405px -320px;
+    border: 0;
+    color: #fff;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#btnCancel, .btnCancel {
+    display: block;
+    height: 32px;
+    width: 82px;
+    background: url(../images/Sprite.png) no-repeat -105px -280px;
+    text-indent: -9999px;
+    border: 0;
+    cursor: pointer;
+}
+
+.wraptable {
+    width: 96%;
+    margin: 30px auto;
+}
+
+/* public */
+
+
+/*new add*/
+.toptable {
+    width: 804px;
+    margin: 100px auto;
+    font-size: 12px;
+    background: #fff;
+}
+
+.tobimg table {
+    width: 670px;
+    margin: 0 auto;
+}
+
+    .tobimg table .STYLE1 {
+        display: block;
+        font-size: 14px;
+        font-family: "微软雅黑";
+        color: red;
+        padding: 0 0 0 10px;
+    }
+
+.newspic_addbut input {
+    border: 0;
+    cursor: pointer;
+}
+
+.liedit input {
+    border: 0;
+    cursor: pointer;
+}
+
+.del_but {
+    float: left;
+    width: 50px;
+    margin: 9px;
+    height: 22px;
+}
+
+    .del_but input {
+        color: #3977c3;
+        border: 0;
+        font-family: "微软雅黑";
+        width: 50px;
+        height: 22px;
+        line-height: 22px;
+        text-align: center;
+        background: url(../images/Sprite.png) no-repeat -205px -320px;
+    }
+
+        .del_but input:hover {
+            background: url(../images/Sprite.png) no-repeat -274px -320px;
+        }
+
+.newspic_addwrap ul li.newspic_naddimg .inpu input {
+    border: 0;
+}
+
+.newspic_addwrap ul li.newspic_addimginfo .inpu {
+    color: red;
+}
+
+.newspic_addwrap ul li.newspic_addbut {
+    height: 35px;
+}
+
+.newspic_addwrap ul li.newspic_addbut2 .inpu input#btnAdd {
+    display: block;
+    width: 50px;
+    height: 22px;
+    background: url(../images/Sprite.png) no-repeat -340px -320px;
+    text-indent: -9999px;
+    border: 0;
+}
+
+.newspic_addwrap ul li.newspic_addbut2 .inpu input#btnSave {
+    display: block;
+    width: 80px;
+    height: 30px;
+    background: url(../images/Sprite.png) no-repeat -405px -320px;
+    border: 0;
+    color: #fff;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.newspic_addwrap ul li.newspic_addbut2 .inpu input#btnBack {
+    display: block;
+    width: 80px;
+    height: 30px;
+    background: url(../images/Sprite.png) no-repeat -405px -320px;
+    border: 0;
+    color: #fff;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 100px;
+    margin-top: -30px;
+}
+
+.newspic_addwrap ul li.newspic_addimg {
+    display: none;
+}
+
+.newspic_addwrap ul li.newspic_addimginfo .noeditimg {
+    float: left;
+}
+
+    .newspic_addwrap ul li.newspic_addimginfo .noeditimg input {
+        width: 10px;
+        height: 10px;
+    }
+
+    .newspic_addwrap ul li.newspic_addimginfo .noeditimg label {
+        color: #333;
+    }
+/*new add*/
+
+/**/
+.newsTable thead th {
+    border: 1px solid #dfdfdf;
+}
+
+.newsTable tr {
+    height: 40px;
+}
+
+.newsTable tbody td {
+    border: 1px solid #dfdfdf;
+    border-top: 0px;
+}
+
+.newsTable tbody td {
+    text-align: center;
+}
+
+.newsTable .time {
+    width: 15%;
+}
+
+.newsTable .title {
+    width: 40%;
+}
+
+.newsTable .isShow {
+    width: 10%;
+}
+
+.newsTable .isRead {
+    width: 10%;
+}
+
+.newsTable .edit {
+    width: 15%;
+    border-right: 1px solid #dfdfdf;
+}
+
+.newsTable .btnEdit {
+    display: block;
+    float: left;
+    color: #3977C3;
+    font-family: "微软雅黑";
+    width: 50px;
+    margin: 10px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    border: 0px;
+    cursor: pointer;
+    background: url('../images/Sprite.png') no-repeat scroll -205px -320px transparent;
+}
+
+.btnEdit:hover {
+    background: url("../images/Sprite.png") no-repeat scroll -274px -320px rgba(0, 0, 0, 0);
+}
+
+.newsTable #btn {
+    display: block;
+    height: 32px;
+    width: 82px;
+    border-radius: 5px;
+    background: url(../images/Sprite.png) no-repeat -105px -320px;
+    border: 0px;
+    cursor: pointer;
+}
+
+    .newsTable #btn:hover {
+        border: 1px solid #3977C3;
+    }
+
+.send {
+    text-align: right;
+    padding-right: 170px;
+}
+
+.newsTable {
+    font-size: 12px;
+}
+/**/
+
+
+/**/
+.siteaffadd_wrap {
+    padding: 15px;
+    font-size: 12px;
+}
+
+.siteafftable {
+    width: 100%;
+}
+
+.siteaffadd_wrap #btnAdd, .siteaffadd_wrap #btnSave {
+    display: block;
+    height: 32px;
+    width: 82px;
+    background: url(../images/Sprite.png) no-repeat -3px -280px;
+    text-indent: -9999px;
+    border: 0;
+    cursor: pointer;
+}
+
+.siteaffadd_wrap #ShoveConfirmButton1 {
+    display: block;
+    height: 32px;
+    background: url(../images/Sprite.png) no-repeat -3px -280px;
+    width: 82px;
+    text-indent: -9999px;
+    border: 0;
+    cursor: pointer;
+}
+
+.siteafftime, .siteafftitl, .siteafftabli {
+    height: 40px;
+    line-height: 40px;
+}
+
+    .siteafftabli td {
+        padding: 0 0 0 35px;
+    }
+
+    .siteafftime #tbDateTime {
+        width: 200px;
+        height: 24px;
+        border: 1px solid #80b3e7;
+    }
+
+    .siteafftitl #tbTitle {
+        width: 520px;
+        height: 24px;
+        border: 1px solid #80b3e7;
+    }
+
+.inputextbox #tbContent {
+    width: 100%;
+    height: 320px;
+}
+
+.siteafftable #trUrl input {
+    width: 520px;
+    height: 24px;
+    border: 1px solid #80b3e7;
+}
+
+.siteafftable #trUrlOK td {
+    padding: 20px 0 0 0;
+}
+
+.siteafftable .inputextbox {
+    padding: 0 0 20px 0;
+}
+/**/
+
+/**/
+.newswrap .toptable {
+    width: 96%;
+    margin: 30px auto;
+    font-size: 12px;
+}
+
+.newswrap .newsaddtable {
+    width: 96%;
+    margin: 30px auto;
+    font-size: 12px;
+}
+
+    .newswrap .newsaddtable td {
+        padding: 6px 0;
+    }
+/**/
+
+/**/
+.lottery_ball .toptable {
+    width: 96%;
+    margin: 30px auto;
+    font-size: 12px;
+}
+/**/
+
+/**/
+.topbuttom input {
+    width: 100px;
+    height: 35px;
+    background: #54a0e6;
+    line-height: 35px;
+    border-radius: 5px;
+    border: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    font-family: "微软雅黑";
+    cursor: pointer;
+}
+/**/
+
+/*名人管理*/
+.peronages_addwrap .toptable {
+    width: 96%;
+    margin: 30px auto;
+}
+
+.peronages_addwrap .newsTable {
+    width: 96%;
+    margin: 30px auto;
+}
+/*名人管理*/
+
+/*充值明细*/
+.financedd_wrap {
+    font-size: 12px;
+}
+
+    .financedd_wrap .toptable {
+        width: 96%;
+        margin: 30px auto;
+    }
+
+    .financedd_wrap .newsTable {
+        width: 96%;
+        margin: 30px auto;
+    }
+/*充值明细*/
+
+/*交易明细*/
+.accountd_wrap {
+    font-size: 12px;
+}
+
+    .accountd_wrap .newsTable {
+        width: 96%;
+        margin: 30px auto;
+    }
+/*交易明细*/
+.financewin_wrap {
+    font-size: 12px;
+}
+
+    .financewin_wrap .topp {
+        width: 96%;
+        margin: 30px auto;
+    }
+
+    .financewin_wrap .topbutton {
+        float: right;
+        padding: 0 30px 0 0;
+    }
+
+    .financewin_wrap .winmoney_num {
+        float: left;
+        height: 40px;
+        margin: 30px;
+    }
+
+/*中奖明细end*/
+.financeDis_wrap .topbutton {
+    float: right;
+    padding: 0 30px 0 0;
+}
+
+.financeDis_wrap .newsTable {
+    width: 96%;
+    margin: 30px auto;
+}
+/*提款明细end*/
+.success_wrap .tikuan {
+    width: 40%;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    margin: 20px 0 0 0;
+}
+
+.success_wrap .buom {
+    width: 40%;
+    float: right;
+    display: inline-block;
+}
+/*提款一览表end*/
+.ledger_wrap .NotSelectedTab {
+    padding: 30px 0 0 0;
+}
+
+.ledger_wrap .newsTable {
+    width: 100%;
+}
+/*提款对帐单end*/
+.finanbalan_wrap .newsTable {
+    width: 96%;
+    margin: 30px auto;
+}
+/* 公司收支汇总 end */
+.cardagadd_wrap .toptable {
+    width: 96%;
+    margin: 30px auto;
+}
+/*增加卡密代理商*/
+
+/*蓝色按钮样式*/
+.blueButtonClass {
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    background: url(../images/Sprite.png) no-repeat -405px -320px;
+    border: 0;
+    color: #fff;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*
+    2015-07-17增加
+**/
+.input520 {
+    border: 1px solid blue;
+}

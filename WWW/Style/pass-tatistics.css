@@ -1,0 +1,44 @@
+
+/* -- 左边选项卡 -- */
+#pass { margin-top: 20px; margin-bottom: 30px; }
+#pass .menu { width: 170px; border-bottom: 1px solid #D08482; }
+#pass .menu > h3 { height: 30px; line-height: 30px; color: #fff; text-align: center; background-color: #E32E12; border-radius: 3px 3px 0 0; }
+#pass .menu > div { position: relative; border: 1px solid #D08482; border-bottom: 0; background-color: #FFFAF5; }
+
+#pass .menu .left-bg { position: absolute; left: 0; top: 0; width: 56px; height: 100%; background-color: #FFE9D7; text-align: center; }
+#pass .menu .left-bg .category { position: absolute; left: 0; top: 50%; margin-top: -24px; width: 56px; }
+#pass .menu .left-bg .category > p { line-height: 20px; font-weight: bold; color: #C51C31; }
+
+#pass .menu > div > ul { margin-left: 69px; width: 100px; padding-top: 20px; padding-bottom: 20px; margin-right: -1px; }
+#pass .menu > div > ul > li { height: 25px; line-height: 25px; text-indent: 10px; border:1px solid transparent; border-radius: 3px 0 0 3px; cursor: pointer; }
+#pass .menu > div > ul > li.active { color: #df1515; border: 1px solid #D08482; border-right: 1px solid #fff; } 
+
+/* -- 右边主要内容 -- */
+#pass .con { width: 815px; }
+#pass .ziehung-info { position: relative; *padding-bottom: 20px; }
+#pass .ziehung-info > div { position: absolute; top: 20px; left: 0; }
+.ziehung-info > div .logo { position: absolute; top: 0; left: 0; width: 136px; text-align: center; }
+.ziehung-info > div .logo > a { display: inline-block; font: bold 14px "微软雅黑"; margin-top: 10px; height: 28px; width: 90px; line-height: 28px; color: #fff; border: 1px solid #A70103; background-color: #CE0000; border-radius: 6px; }
+.ziehung-info > div .logo > a:hover { text-decoration: none; }
+#pass .ziehung-info > div > p { height: 28px; line-height: 28px; margin-left: 136px; }
+#pass .ziehung-info > div > p.period { font-size: 14px; }
+.ziehung-info > div .num { margin-top: 10px; margin-bottom: 10px; }
+#pass .ziehung-info > div .num > b { display: inline-block; height: 28px; width: 28px; margin-right: 3px; color: #fff; font-size: 16px; background-image: url(../Images/ziehung-ball-red.png); text-align: center; }
+#pass .ziehung-info > div .num > b.blue { background-image: url(../Images/ziehung-ball-blue.png); }
+#pass .ziehung-info table { margin: 20px 25px 20px 440px; table-layout:fixed; border-collapse:collapse; }
+#pass .ziehung-info table th { background-color: #F5F5F5; }
+#pass .ziehung-info table th,
+#pass .ziehung-info table td { height: 30px; line-height: 30px; text-align: center; border: 1px solid #e5e5e5; }
+
+#pass .scheme { margin-top: 15px; }
+#pass .scheme > ul { height: 30px; line-height: 30px; background-color: #FEF2F2; border-bottom: 2px solid #DF1515; }
+#pass .scheme > ul > li { float: left; width: 80px; text-align: center; cursor: pointer; }
+#pass .scheme > ul > li.active { background-color: #DF1515; font-weight: bold; color: #fff; border-radius: 3px 3px 0 0; }
+#pass .scheme table { border: 1px solid #d5d5d5; text-align: center; }
+#pass .scheme table th { height: 30px; line-height: 30px; background-color: #B7B7B7; font-weight: normal; color: #fff; }
+#pass .scheme table td { height: 38px; line-height: 38px; border-top: 1px solid #d5d5d5; }
+#pass .scheme table tr:nth-child(odd) { background-color: #F8F8F8; }
+#pass .scheme table .order-by { cursor: pointer; }
+#pass .scheme .order-by > span { display: inline-block; height: 8px; width: 7px; background-image: url(../Images/white-down.png); }
+#pass .scheme .order-by > span.active { background-image: url(../Images/white-up.png); }
+#pass .scheme .page { padding-right: 0; }

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>玩法说明</title>
+		<script src="../js/jquery-3.1.0.min.js"></script>
+	</head>
+
+	<body>
+		<div style="margin:10px">
+			<div>
+				<p style="color: #fd7776;">加拿大28玩法说明</p>
+				<br />
+				<p>加拿大28数据（20:00-次日19:00）为正常销售时间，19:00-20:00（大约）为系统维护时间，具体情况依据加拿大28官方开售时间为准：</p>
+				<p>加拿大28开奖结果来源于加拿大福利彩票的加拿大幸运28开奖结果。</p>
+				<p>加拿大28每期开奖共开出20个号码，并且按照从小到大的顺序依次排列</p>
+				<p>取其2、5、8、11、14、17位数进行相加，和值的末位作为幸运28开奖的第一位数值；</p>
+				<p>取其3、6、9、12、15、18位数进行相加，和值的末位作为幸运28开奖的第二位数值；</p>
+				<p>取其4、7、10、13、16、19位数进行相加，和值的末位作为幸运28开奖的第三位数值；</p>
+				<p>将三位数值进行相加，所得的结果即为幸运28的开奖结果。</p>
+				<p> </p>
+				<p>幸运28玩法：</p>
+				<p>28个号码，抽中即可获得奖励。玩法类型共有以下玩法：</p>
+				<p>1、大，小，单，双</p>
+				<p>2、小单，小双，大单，大双</p>
+				<p>3、极小值（0-5），极大值（22-27）</p>
+				<p>4、28个号码定位</p>
+				<p> </p>
+				<p>备注</p>
+				<p>加拿大28:	24小时	3分钟一期<br/>
+周二到周日460期（19:00-20:00）维护，
+周一440期（19:00-21:00）维护，维护时间只能算大概，例如维护时间为30分钟，则另外30分钟直接开奖，三分钟一期。</p>
+				</div>	
+			</div>
+		</div>
+	</body>
+	<script type="text/template" id="odds_temp">
+		{{~it:value:index}}
+		<div>
+			<div class="top">{{=value.hallName}}</div>
+			<ul class="info">
+				{{~value.infoArray:info:i}}
+				<li>{{=info}}</li>
+				{{~}}
+			</ul>
+		</div>
+		{{~}}
+	</script>
+	<script src="../js/doT.min.js"></script>
+	<script src="../js/config.js"></script>
+	<script src="../js/myStorage.js"></script>
+	<script src="../json/gameshows.js"></script>
+	<script>
+		var lotteryId = myStorage.getItem('lotteryId')
+		$(function() {
+			//getOddsData()
+			//setDataList(listArray)
+		})
+
+		function getOddsData() {
+			$.ajax({
+				type: "Get",
+				url: "../json/gameshows.json",
+				cache: false,
+				async: false,
+				success: function(data) {
+					console.log(data)
+					var dataArray
+					if(systemType() == 'Android') {
+						dataArray = JSON.parse(data).listArray
+					} else {
+						dataArray = data.listArray
+					}
+					setDataList(dataArray)
+				},
+				error: function() {
+					//alert("调用错误")
+					console.log('调用错误')
+				}
+			})
+		}
+
+		function getScale() {
+			var hallName = myStorage.getItem('hallName')
+			var hallId = 0
+			if(hallName == '回水厅') {
+				hallId = 0
+			} else if(hallName == '保本厅') {
+				hallId = 1
+			} else if(hallName == '高倍率厅') {
+				hallId = 2
+			}
+			$.ajax({
+				type: "Post",
+				url: config().base_url + "/ajax/Bjxy28.ashx",
+				data: {
+					"opt": 2,
+					"lotteryId": lotteryId,
+					"hall": hallId
+				},
+				cache: false,
+				async: false,
+				success: function(data) {
+					console.log(data)
+					if(data.error == '0') {
+						if(data.msg.length > 0) {
+							for(var i = 0; i < data.msg.length; i++) {
+								var name = data.msg[i].name
+								var nameArray = name.split(',')
+								if(nameArray.length > 0) {
+									for(var j = 0; j < nameArray.length; j++) {
+										//weight_scale_json[nameArray[j]] = data.msg[i].defaultMoney
+									}
+								} else {
+									//weight_scale_json[name] = data.msg[i].defaultMoney
+								}
+							}
+						}
+					}
+				},
+				error: function() {
+					//alert("调用错误")
+					console.log('调用错误')
+				}
+			})
+		}
+
+		function setDataList(data) {
+			var tempFN = doT.template(document.getElementById('odds_temp').innerHTML)
+			var resultText = tempFN(data)
+			$('.last').before(resultText)
+		}
+
+		function fnGoBack() {
+			var url
+			if(lotteryId == '99') {
+				url = '../html/bj28-play.html'
+			} else {
+				url = '../html/jnd28-play.html'
+			}
+			window.location.replace(url)
+		}
+	</script>
+
+</html>

@@ -1,0 +1,72 @@
+晓风彩票软件竞彩版 安装说明：
+
+1 服务器要求：
+	(1)硬件方面：
+		a、CPU ： 奔腾双核 （推荐：酷睿双核）
+		b、内存：1G（推荐：2G）
+		c、硬盘：20G (推荐：磁盘阵列)
+		d、网络带宽：独享2M（推荐：电信网通双线）
+    (1) 操作系统：
+        windows2003 Server，IIS 6（或更高版本）, 微软 ASP.NET 3.5 框架
+    (2) 数据库：
+        MS SQLServer 2008（或更高版本） 数据库，数据库空间大小最少需要50MB，随着运营，空间需要会越来越大，一般购买100M 以上空间即可。
+
+2 本系统压缩包文件说明：
+    (1) 将本系统 rar 压缩包解压，会得到本系统的所有文件。
+    (2) GetSportteryService.rar ，SLS.ClearanceStatistics.Task.rar ，
+			SLS.MHB.Task.rar ，SLS.Resource.Task.rar ，SLS.Score.Task.rar 是本系统的任务安装文件。
+    (3) 其他所有文件都是本系统的文件。
+
+3 安装本系统：
+    a. 将服务器安装好操作系统 (Windows 2003 Server)。
+    b. 安装好 Windows 2003 Server 后，打上 Win2003 的补丁 SP2。
+    c. 从 window2003 “增加删除程序”中增加组件“IIS”、“ASP.NET”、"消息队列"。
+    d. 安装微软 ASP.NET 3.5 框架。
+    e. 安装 MSSQLServer 2008 数据库，并打好 MSSQLServer2008 的补丁程序(要求SP2)。微软官方网站提供下载。
+    f. 重新启动服务器。
+
+    g. 打开 MSSQLServer 企业管理器，把“SLS.Club.rar和SLS6_JC.rar”解压后 App_Data 文件夹下面的SLS6_JC.bak,SLS6_JC_bbs.bak文件恢复数据库。下面假设恢复的数据库名称为：SLS6_JC,SLS6_JC_bbs
+    h. 设置好 MSSQLServer 的用户密码，访问数据库权限等等。关闭 MSSQLServer 企业管理器。下面假设 MSSQLServer 的用户名为 sa, 密码为 shove。
+
+    i. 将SLS.Club.rar和SLS6_JC.rar解压复制到站点的目录下。如：d:\wwwroot\ShoveLottery(注：以下的目录名“SLS6_JC”可能为“WWW")
+    j. 打开 IIS 管理，新建一个站点，目录指向 d:\wwwroot\ShoveLottery\SLS6_JC。设置好站点相关参数后，
+	   再在站点里面新建一个虚拟目录取名叫 bbs, 目录指向 d:\wwwroot\ShoveLottery\SLS.Club ,退出 IIS 管理。
+       注意：站点需要 ASP.NET 3.5 框架运行。
+
+    k. 系统如下目录及文件需要授予来宾帐号和 IIS_WPG 用户的写权限：
+           目录：SLS.Club\cache,SLS.Club\config,SLS.Club\avatars\upload, SLS.Club\App_Log
+				 SLS6_JC\Private\1，SLS6_JC\Uploadfile,SLS6_JC\Temp,SLS6_JC\App_Log，SLS6_JC\XML，SLS6_JC\SchemeInfo
+
+    l. 打开 SLS6_JC\Web.config 文件，找到如下文字：
+	a、<add key="ConnectionString" value="server=(local);Uid=sa;Pwd=shove;Database=SLS6_JC" />
+	b、 5 个任务压缩包中的 Config.ini 文件 ConnectionString="server=(local);uid=sa;pwd=shove;Database=SLS6_JC" 也是同样的修改;
+        c、 SLS.Club 目录下的 Web.config、DNT.config 中的数据库链接也一样的修改；
+
+
+       将其中的 server=(local) 改为相应的MS SQLServer 2008 的地址，如果是本机，将 (local) 改为数据库实例名；
+       将其中的 User id=sa 改为相应的 MS SQLServer 2008 的用户名，如果是 sa,则不变(建议不要使用sa，使用新建数据库帐号)；
+       将其中的 Pwd=shove 改为相应的 MS SQLServer 2008 的用户密码；
+       将其中的 Database=SLS6_JC 改为刚恢复的 MS SQLServer 2008 数据库名，其中 a,b 中的 数据库名是SLS6_JC, c中的数据库名是SLS6_JC_bbs。
+       保存并退出。
+
+   m. 5个任务安装文件解压后， 双击 "安装" 进行任务安装， 安装完成后 到服务里面分别手动启动一次，注意， 这些任务 要设置成自动启动
+		注意，在安装 SLS.Resource.Task 这个任务时，要先做两个修改：
+			1、SLS.Resource.Task\Config.ini 中的 JsFilePath=D:\wwwroot\SLS6_JC\Home\Room\JavaScript 要改成 d:\wwwroot\ShoveLottery\SLS6_JC\Home\Room\JavaScript
+		注意，在安装 GetSportteryService 这个任务时，需要修改三个地方，其他参数不推荐修改。(本任务用于竞彩的数据抓取)
+			1、GetSportteryService\Config.ini 中的 ConnectionString ，ConnectionStringInformation 的设置同上"3.l"中的设置。
+			2、GetSportteryService\Config.ini 中的 Database = SLS6_JC ，此处为本机数据库名。
+			3、GetSportteryService\Config.ini 中的 PathName = D:\wwwroot\SLS6_JC\Xml 要改成 d:\wwwroot\ShoveLottery\SLS6_JC\Xml。
+		注意，在安装 SLS.AutomaticOpenLottery.Task 这个任务时，在\Config.ini文件中只需修改 ConnectionString参数即可。以下参数不推荐修改。
+		
+    n. 如果需要统计网站流量，请到 http://tongji.linezing.com 网站上注册帐号，
+	添加网站并获取统计代码，放到SLS6_JC\Html\TrafficStatistics\1.htm文件中的<div style="display: none;">中。
+	
+    o.结束
+
+4. IIS配置使网站可以执行进程权限
+	
+	1. 网站--》属性--》目录安全性--》身份验证和访问控制--》启用匿名访问--》输入具有管理员权限的用户名和密码
+
+	2. 应用程序池--》属性--》标识--》配置--》输入具有管理员权限的用户名和密码
+
+=============================================================================

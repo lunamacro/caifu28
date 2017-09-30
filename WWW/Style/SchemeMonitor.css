@@ -1,0 +1,140 @@
+﻿.SchemeMonitorContainer {
+    width: 500px;
+    position: fixed;
+    bottom: 0px;
+    right: 10px;
+    font-size: 12px;
+    background-color: White;
+    z-index:99999;
+}
+
+    .SchemeMonitorContainer .topbar {
+        font-weight: bold;
+        color: #FFF;
+        font-size: 14px;
+        cursor: pointer;
+        height: 30px;
+        line-height: 30px;
+        text-align: left;
+        background-color: #5aa7e8;
+    }
+
+        .SchemeMonitorContainer .topbar .close {
+            display: block;
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            font-size: 0px;
+            background-position: -171px -111px;
+            overflow: hidden;
+            text-indent: -999px;
+            right: 6px;
+            top: 7px;
+            cursor: pointer;
+            z-index: 10;
+            background-image: url(/images/admin/ssq_full.png);
+        }
+
+        .SchemeMonitorContainer .topbar .show {
+            display: block;
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            font-size: 0px;
+            background-position: -92px -111px;
+            overflow: hidden;
+            text-indent: -999px;
+            right: 6px;
+            top: 7px;
+            cursor: pointer;
+            z-index: 10;
+            background-image: url(/images/admin/ssq_full.png);
+        }
+
+    .SchemeMonitorContainer .data table {
+        border: 1px solid #DDD;
+        border-bottom: 0px;
+        
+    }
+
+    .SchemeMonitorContainer .data {
+        position:relative;
+    }
+
+    .SchemeMonitorContainer .data table .firstLoad {
+        height: 45px;
+        line-height: 45px;
+        text-align: left;
+        padding-left: 40px;
+        border-right: 0px;
+    }
+
+        .SchemeMonitorContainer .data table .firstLoad span {
+            padding-left: 40px;
+        }
+
+         .SchemeMonitorContainer .data table .firstLoad img {
+            position: absolute;
+            top: 30px;
+            left: 5px;
+            display: block;
+        }
+
+    .SchemeMonitorContainer .data table tr {
+        height: 25px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+     .SchemeMonitorContainer .data table tbody tr:nth-child(2n+1) {
+        background-color: #F8F8F8;
+    }
+
+     .SchemeMonitorContainer .data table tbody tr:hover {
+        background-color: rgb(255, 228, 225);
+    }
+
+
+     .SchemeMonitorContainer .data table td,  .SchemeMonitorContainer .data table th {
+        border-right: 1px solid #DDD;
+        border-bottom: 1px solid #DDD;
+    }
+
+     .SchemeMonitorContainer .data table .lottery {
+        width: 15%;
+    }
+
+     .SchemeMonitorContainer .data table .currIssue {
+        width: 20%;
+    }
+
+    .SchemeMonitorContainer .data table .noPrintOutSchemeCount {
+        width: 20%;
+    }
+
+     .SchemeMonitorContainer .data table .fullNoPrintOutSchemeCount {
+        width: 20%;
+    }
+
+     .SchemeMonitorContainer .data table .noOpenIssueCount {
+        border-right: 0px;
+        width: 25%;
+    }
+
+     .SchemeMonitorContainer .data .masking {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        background-color: black;
+        filter: alpha(Opacity=10);
+        -moz-opacity: 0.1;
+        opacity: 0.1;
+        display: none;
+    }
+
+    .SchemeMonitorContainer .data .loading {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        display: none;
+    }

@@ -1,0 +1,99 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.center {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+}
+
+.list-hall {
+	margin-top: 45px;
+}
+
+.img-hall {
+	width: 96%;
+	margin: 2%;
+}
+
+.pfont {
+	position: relative;
+}
+
+.font {
+	position: absolute;
+	color: #FFFFFF;
+	font-size: 13px;
+	right: 2%;
+	top: 77%;
+	/*background-color: rgba(0, 0, 0, 0.1);*/
+	padding: 2px 50px 1px 50px;
+	border-radius: 10px;
+}
+
+.iconuser {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	margin-right: 5px;
+	background: url(../img/user.png) no-repeat 0 0;
+}
+
+.iconfont {
+	position: relative;
+	bottom: 2px;
+}
+
+.loadingimg {
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	right: 40%;
+	top: 50%;
+	z-index: 1000;
+	display: none;
+}
+
+
+/*遮罩层*/
+
+.mask {
+	position: absolute;
+	height: 100%;
+	left: 0;
+	right: 0;
+	top: 40px;
+	bottom: 0;
+	background: #000000;
+	opacity: 0.5;
+	z-index: 100;
+	display: none;
+}
+
+.oddsthat {
+	width: 48px;
+	position: absolute;
+	color: white;
+	font-size: 12px;
+	right: 5%;
+	background-color: #fd7776;
+	padding: 1% 4%;
+	border-radius: 20px;
+	border: 2px solid #fff;
+	z-index: 100;
+}
+
+#oddsthat_01 {
+	top: 10%;
+}
+
+#oddsthat_02 {
+	top: 38%;
+}
+
+#oddsthat_03 {
+	top: 66%;
+}

@@ -1,0 +1,230 @@
+﻿@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2014-12-09 16:16:17
+ * @version $Id$
+ */
+/* CSS Document */
+.content { width:1000px; margin:0 auto; }
+.pailie3_wrap { margin:10px 0 30px 0; font-family:Arial,"微软雅黑";}
+.cz_pailie3_head { height:124px; border:1px solid #ddd; background:url(../Images/p3_head_bg.png) repeat-x; position:relative; margin:0 0 10px 0; }
+.cz_pailie3_pic { width:65px; height:65px; margin:10px 13px 0 13px; float:left; }
+.cz_pailie3_head h3 { font-family:"微软雅黑"; font-size:24px; font-weight:normal; height:50px; line-height:50px; float:left; }
+.cz_pailie3_period_num { float:left; height:50px; line-height:50px; padding:0 0 0 10px; font-family:"Arial Black","微软雅黑"; }
+.cz_pailie3_period_num i { color:#ff6600; padding:0 0 0 10px; font-family:Arial,"微软雅黑"; }
+.cz_pailie3_countdown { width:268px; height:30px; position:absolute; top:10px; right:10px; text-align:right; color:#333; }
+.cz_pailie3_countdown i { display:inline-block; border:1px solid #f08a8a; line-height:20px; padding:0 5px; }
+.cz_pailie3_countdown i em { color:#df1515; font-family:"Arial Black"; }
+.cz_pailie3_link { height:30px; line-height:30px; position:absolute; top:55px; right:10px; text-align:right; }
+.cz_pailie3_link a { padding:0 5px; }
+/*pailie3 Header end*/
+
+/* pailie3 main sta */
+.cz_pailie3_conbox { width:768px; border:1px solid #ddd; float:left; position:relative; }
+.pailie3_tabli { position:absolute; width:460px; height:30px; left:92px; top:-79px; }
+.pailie3_tabli li { float:left; width:92px; height:29px; line-height:29px; font-size:14px; font-weight:bold; border-width:1px 1px 0 1px; border-color:#d8d8d8; border-style:solid; margin:0 -1px 0 0; text-align:center; cursor: pointer; background:#fff; }
+.pailie3_tabli li.curr,.pailie3_tabli li:hover { border-color:#da3828; background:#da3828; color:#fff; }
+.pailie3_tabcon { display:none; }
+/* Tab 1 head end */
+.pailie3_tz_tabli { width:980px; height:26px; position:absolute; left:15px; top:-40px; }
+.pailie3_tz_tabli li { float:left; width:72px; height:22px; line-height:22px; padding:0 0 4px 0; cursor:pointer; margin:0 2px 0 0; text-align:center; }
+.pailie3_tz_tabli li.curr,.pailie3_tz_tabli li:hover { background:url(../Images/p3_tabbg2.png) no-repeat; color:#fff; }
+.pailie3_tz_tabcon { display:none; }
+/* Tab 2 head end */
+
+/*直选投注*/
+.pailie3_description { padding:11px 0 0 22px; height:20px; line-height:20px; color:#333; background:url(../Images/p3_descr.png) no-repeat 10px 15px;  }
+.pailie3_description i { color:#df1515; }
+.play_choiceli { width:720px; height:25px; padding:5px 0 5px 11px; }
+.play_choiceli li { float:left; width:94px; height:25px; line-height:25px; }
+.play_choiceli li label { display:block; height:25px; padding:1px 0 0 0; cursor:pointer;}
+.play_choiceli li label input { margin:5px 3px 0 0; display:block; float:left; }
+.paly_choice_con { display:none; padding:11px 0 11px 11px }
+/*直选投注END*/
+
+.info_confirm { width:734px; margin:0 auto 20px auto; height:145px; background:url(../Images/p3_arrow_bg.png) no-repeat; }
+.choice_ball_info { width:300px; margin:0 auto; height:26px; line-height:26px; text-align:center; }
+.choice_ball_info i { color:#df1515; font-family:"Arial Black"; }
+.confirm_but { width:148px; height:36px; text-indent:-9999px; background:url(../Images/p3_but_xuanhao.png) no-repeat; margin:24px auto 0 auto; cursor:pointer; }
+
+/*Tou Zhu Xuan Ze Qing Dan*/
+.pailie3_touzhu_con {}
+.touzhu_conwrap { width:584px; height:143px; margin:0 auto; border:1px solid #ddd; }
+.touzhu_conlist { width:486px; height:143px; float:left; overflow-y:scroll;   }
+.touzhu_conlist ul li { height:28px; line-height:28px; border-bottom:1px dashed #ddd; padding:0 0 0 8px; color:#333; }
+.touzhu_conlist ul li:hover { background:#fffee6; }
+.touzhu_conlist ul li span { float:right; }
+.touzhu_conlist ul li i { color:#df1515; font-family:"Arial Black"; padding:0 5px; }
+.touzhu_conlist ul li em{ color:#096ed6; font-family:"Arial Black"; padding:0 5px; }
+.touzhu_conlist ul li a { padding:0 6px; color:#333; }
+.touzhu_conlist ul li a:hover { color:#096ed6; }
+/*机选多注与清空*/
+.machine_pick { width:98px; height:143px; float:right; }
+.machine_pick ul li { width:78px; height:24px; background:url(../Images/p3_suiji_but.png) no-repeat; text-align:center; line-height:24px; color:#e36128; cursor:pointer; margin:9px 0 0 10px;moz-user-select: -moz-none; -moz-user-select: none; -o-user-select:none; -khtml-user-select:none;  -webkit-user-select:none; -ms-user-select:none; user-select:none;}
+
+/* 增加倍数 */
+.add_note { height:22px; padding:14px 0; line-height:22px; }
+.add_note .alloy_note,.add_note .add_redu { height:22px; float:left; }
+.add_note .alloy_note { margin:0 0 0 233px; }
+.add_note .alloy_note i,.add_note em { color:#df1515; padding:0 5px; font-family:"Arial Black"; }
+.add_note .add_redu { width:85px; height:21px; background:url(../Images/p3_add_bg.png) no-repeat; padding:1px 0 0 0; }
+.add_note .add_redu input { width:37px; height:20px; float:left; text-align:center; border:0; }
+.add_note .add_redu a { display:block; width:24px; height:21px; float:left; }
+/*Tou Zhu Xuan Ze Qing Dan*/
+.pailie3_buy_mode { width:584px; height:28px; margin:0 auto; border:1px solid #ddd;}
+.pailie3_buy_mode h4 { float:left; padding:0 0 0 15px; line-height:28px; }
+.pailie3_buy_mode .mode_list { float:left; line-height:28px; padding:0 0 0 8px; }
+.pailie3_buy_mode .mode_list label { padding:0 5px; display:block; float:left; }
+.pailie3_tishi { float:right; line-height:28px; padding:0 30px 0 0; position:relative; }
+.pailie3_tishi a { width:14px; height:14px; position:absolute; top:7px; right:12px; background:url(../Images/p3_tishi.png) no-repeat; }
+.pailie3_tishi a .info { width:120px; height:60px; border:1px solid #ddd; background:#fff; position:absolute; left:-55px; top:16px; display:none; line-height:20px; padding:5px; }
+.pailie3_tishi a:hover .info { display:block; }
+/*购买方式结束*/
+.pailie3_submit_but { padding:21px 0 10px 0; text-align:center; line-height:24px; }
+.submit_buybut { width:148px; height:36px; background:url(../Images/p3_sub_but.png) no-repeat; margin:0 auto 10px auto; text-indent:-9999px;  }
+.submit_buybut a { display:block; height:36px; }
+.submit_buybut_u { width:148px; height:36px; background:url(../Images/p3_sub_but_u.png) no-repeat; margin:0 auto 10px auto; text-indent:-9999px;  }
+.submit_buybut_u a { display:block; height:36px; cursor:default; }
+/*服务条款与购买按钮*/
+
+.pailie3_zutao3 { padding:5px 0 5px 11px; }
+.pailie3_zutao6 { padding:5px 0 5px 11px; }
+
+/* 各玩法选球列表 */
+.pailie_choose_numwrap {}
+.pailie_choose_numwrap li { width:720px; height:66px; margin:0 0 5px 0; }
+.pailie_choose_numwrap li .pailie_choose_num { float:left; width:468px; }
+.pailie_choose_numwrap li .pailie_choose_fast { float:left; width:252px; }
+.pailie_choose_numwrap li .pailie_choose_num.plzuxuan { width:650px; }
+
+.pailie_num_bit { height:32px; }
+.pailie_num_bit .pailie_nun_name { width:40px; height:19px; float:left; background:url(../Images/p3_icon.png) no-repeat; padding:0 0 0 10px; line-height:19px; margin:5px 0 0 0; }
+.pailie_num_bit ol {  height:32px; float:left; }
+.pailie_num_bit ol li { width:32px; height:32px; float:left; line-height:32px; text-align:center; background:url(../Images/js_ball.png) no-repeat; margin:0 0 0 6px; cursor:pointer; font-size:14px;  font-family:"微软雅黑"; font-weight:bold; color:#555; }
+.pailie_num_bit ol li.curr { background:url(../Images/hl_03.png) no-repeat; color:#fff; }
+
+.pailie_num_bit ol.fangxing li { width:98px; height:32px; float:left; line-height:32px; text-align:center; background:url(../Images/fangxingbut.png) no-repeat; }
+.pailie_num_bit ol.fangxing li.curr {width:98px; height:32px; float:left; line-height:32px; text-align:center; background:url(../Images/fangxing_red.png) no-repeat;}
+
+.pailie_num_omission { height:32px; }
+.pailie_num_omission .pailie_omission_name { width:40px; height:19px; float:left;  background:url(../Images/p3_icon.png) no-repeat left bottom; padding:0 0 0 10px; line-height:19px; margin:5px 0 0 0;}
+.pailie_num_omission ol { height:32px; float:left; }
+.pailie_num_omission ol li {width:32px; height:32px; float:left; line-height:32px; text-align:center; margin:0 0 0 6px;}
+
+.pailie_choose_fast ol { padding:3px 0 0 0; }
+.pailie_choose_fast ol li { width:26px; height:26px; float:left; background:url(../Images/p3_icon2.png) no-repeat 0 0; line-height:26px; text-align:center; margin:0 10px 0 0; cursor:pointer; }
+.pailie_choose_fast ol li:hover {background:url(../Images/p3_icon2.png) no-repeat -36px 0;}
+.pailie_choose_fast ol li.qk { width:39px; background:url(../Images/p3_icon2.png) no-repeat -180px 0; }
+.pailie_choose_fast ol li.qk:hover { width:39px; background:url(../Images/p3_icon2.png) no-repeat -137px 0; }
+/* 各玩法选球列表 */
+
+/* pailie3 main  end */
+
+/* pailie3 inside sta*/
+
+.cz_pailie3_inside { width:222px; float:right; }
+.lucky_number { width:220px; height:171px; border:1px solid #ddd; margin:0 0 10px 0;}
+.lucky_number h4 { height:30px; border-bottom:1px solid #ddd; background:#f1f1f1; line-height:30px; padding:0 0 0 9px; font-size:14px; color:#333; }
+ul.lucky_number_type { height:22px; border-bottom:1px solid #ddd; background:#f8f8f8; padding:3px 0 0 0;}
+ul.lucky_number_type li { float:left; width:54px; height:21px; border-width:1px; border-style:solid; border-color:#f8f8f8 #f8f8f8 #ddd #f8f8f8; margin:0 -1px -1px 0; text-align:center; line-height:21px; background:#f8f8f8; cursor:pointer; }
+ul.lucky_number_type li.curr,ul.lucky_number_type li:hover { border-width:1px; border-style:solid; border-color:#ddd #ddd #fff #ddd; margin:0 0 -1px -1px;  background:#fff; }
+.lucky_number_con { padding:13px 0 0 16px; display:none; }
+.lucky_choose { width:83px; height:24px; float:left; }
+.lucky_choose select { width:65px; height:24px; }
+.lucky_choose input { width:70px; height:22px; border:1px solid #ddd; }
+.lucky_but { width:107px; height:24px; float:left; background:url(../Images/p3_lucky_but.png) no-repeat; text-indent:-9999px; cursor:pointer; }
+.lucky_num_list { clear:both; height:25px; padding:10px 0; }
+.lucky_num_list ol li { width:22px; height:22px; line-height:22px; text-align:center; color:#fff; font-family:"Arial Black"; float:left; background:url(../Images/smallRedball.png) no-repeat; margin:0 10px 0 0;}
+.lucky_but_betting { height:24px; text-indent:-9999px; background:url(../Images/p3_lucky_but2.png) no-repeat; cursor:pointer; }
+.lucky_but_betting_dropsell { height:24px; text-indent:-9999px; background:url(../Images/zanting.png) no-repeat; cursor:pointer; }
+/*幸运号码 END*/
+.pl3_inside_notice {width:220px; height:233px; border:1px solid #ddd; margin:0 0 10px 0;}
+.pl3_inside_notice h4 {height:30px; border-bottom:1px solid #ddd; background:#f1f1f1; line-height:30px; padding:0 0 0 9px; font-size:14px; color:#333;}
+.pl3_inside_notice h4 a { display:block; font-size:12px; font-weight:normal; float:right; color:#333; padding:0 11px 0 0; *+display:inline; }
+.pl3_inside_notice dl { padding:5px; }
+.pl3_inside_notice dl dt,.pl3_inside_notice dl dd { border-bottom:1px dashed #ddd; height:29px; line-height:29px; }
+.pl3_inside_notice dl .pl3_inside_time,.pl3_inside_notice dl .pl3_inside_num { float:left; width:105px; text-align:center; height:29px; }
+.pl3_inside_notice dl dd .pl3_inside_num { color:#df1515; }
+.pl3_inside_notice dl dd:hover { font-weight:bold; }
+/*开奖公告END*/
+.pl_newest_lottery {width:220px; height:183px; border:1px solid #ddd; margin:0 0 10px 0;}
+.pl_newest_lottery h4 {height:30px; border-bottom:1px solid #ddd; background:#f1f1f1; line-height:30px; padding:0 0 0 9px; font-size:14px; color:#333;}
+.pl_newest_lottery ul { padding:5px; }
+.pl_newest_lottery ul li { border-bottom:1px dashed #ddd; height:28px; line-height:28px; }
+.pl_newest_lottery_money{ float:right; text-align:left; width:50%;}
+.pl_newest_lottery_money i {color:#df1515;}
+.pl_newest_lottery_user { background:url(../Images/zhongjiang_ming.png) no-repeat 5px 5px; text-indent:25px; float:left; }
+/*最新中奖END*/
+.pl_paly_introduction {width:220px; height:164px; border:1px solid #ddd;}
+.pl_paly_introduction h4 {height:30px; border-bottom:1px solid #ddd; background:#f1f1f1; line-height:30px; padding:0 0 0 9px; font-size:14px; color:#333;}
+.pl_paly_introduction ul { padding:10px; }
+.pl_paly_introduction ul li { float:left; width:100px; height:27px; line-height:27px; *+height:20px; *+line-height:20px; }
+/* pailie3 inside end*/
+
+
+/*单式上传*/
+.pl3_danshishangc {}
+.pl3_danshi_tabli { width:734px; height:29px; border-bottom:1px solid #ddd;  }
+.pl3_danshi_tabli li { width:99px; height:28px; border-width:1px; border-style:solid; border-color:#ddd #ddd #ddd #ddd; text-align:center; line-height:28px; background:#f9f9f9; float:left; margin:0 6px; cursor:pointer;}
+.pl3_danshi_tabli li.curr,.pl3_danshi_tabli li:hover { border-color:#ddd #ddd #fff #ddd; background:#fff }
+.pl3_danshi_con { display:none; }
+
+.pl3_danshi_xuanhao { padding:15px 0; }
+.pl3_danshi_xuanhao h5 { width:60px; height:187px; float:left; font-weight:normal; text-align:center; font-size:12px; }
+.pl3_danshi_texttare { width:650px; height:187px; float:left; border:1px solid #ddd; overflow:hidden; }
+.pl3_danshi_texttare textarea { width:650px; height:187px; border:0; }
+.pl3_danshi_but { margin:0 0 0 60px; clear:both; padding:10px 0; }
+.pl3_danshi_but input { *+height:28px; }
+
+.pl3_danshi_faqibox { padding:15px ; }
+.pl3_danshi_fqfa { height:36px; font-size:14px; margin:0 0 15px 0; padding:1px 0 0 0; line-height:36px; }
+.pl3_danshi_fqfa label { display:block; height:36px; line-height:36px; float:left; }
+.pl3_danshi_faqibox .pl3_danshi_fqfa label input { width:121px; height:20px; border:1px solid #ddd; }
+.pl3_danshi_fqfa span { display:block; float:left; width:85px; height:22px; background:url(../Images/p3_add_bg.png) no-repeat; padding:1px 0 0 0; margin:8px 0 0 0; }
+.pl3_danshi_fqfa span input {width:37px; height:20px; float:left; text-align:center; border:0; }
+.pl3_danshi_fqfa span a { display:block; width:24px; height:21px; float:left; }
+.pl3_danshi_fqfa i { color:#df1515; font-family:"Arial Black"; }
+
+.pl3_danshi_faqibox div label input { width:auto; height:20px; border:1px solid #ddd; }
+.pl3_danshi_wyfc { height:30px; font-size:12px; }
+
+.pl3_danshi_wyrg { height:30px; font-size:12px;}
+
+.pl3_danshi_wybd { height:30px; font-size:12px;}
+
+.pl3_danshi_wyfc i,.pl3_danshi_wyrg i,.pl3_danshi_wybd i{ color:#df1515; }
+.pl3_danshi_wyfc em,.pl3_danshi_wyrg em,.pl3_danshi_wybd em{ color:#999; }
+.pl3_danshi_wybd a { padding:5px; }
+
+.pl3_danshi_fztc { height:30px; font-size:12px;}
+.pl3_danshi_fztc em { padding:2px 3px; border:1px solid #ddd; margin:0 5px; }
+.pl3_danshi_fztc em.curr { border:1px solid #dd590a; background:#ff7b23; color:#fff; }
+
+.pl3_danshi_bmsz { height:30px; font-size:12px;}
+.pl3_danshi_bmsz em { padding:2px 3px; border:1px solid #ddd; margin:0 5px; }
+.pl3_danshi_bmsz em.curr { border:1px solid #dd590a; background:#ff7b23; color:#fff; }
+
+.pl3_danshi_kxxx { height:30px; font-size:12px;}
+.pl3_danshi_faqibox .pl3_danshi_kxxx label input { border:0; width:12px; height:12px; }
+.pl3_danshi_kxxx_hide { display:none; margin:15px 0 0 0; border-top:1px dotted #ddd; width:734px; padding:15px 0 0 0; }
+.pl3_danshi_faqibox .pl3_danshi_kxxx_hide .pl3_danshi_fa_title label input { width:500px; border:1px solid #ddd; }
+.pl3_danshi_kxxx_hide .pl3_danshi_fa_miaos { padding:10px 0 0 0; }
+.pl3_danshi_kxxx_hide .pl3_danshi_fa_miaos textarea { width:500px; height:178px; border:1x solid #ddd; }
+/**/
+
+
+.pailie_num_bit ol li.sha {
+    background: rgba(0, 0, 0, 0) url("/images/t01df24192ace1dbec8.png") no-repeat scroll -135px 0;
+    color: #555;
+    cursor: pointer;
+    display: block;
+    font-family: "Microsoft Yahei";
+    font-size: 15px;
+    font-weight: bold;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    text-shadow: 1px 1px 1px #fff;
+    width: 32px;
+}

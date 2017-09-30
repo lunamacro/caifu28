@@ -1,0 +1,47 @@
+﻿.validStr {
+    width: 50px;
+    height: 14px;
+    border: 1px #ccc solid;
+    margin: 3px 3px 3px 0px;
+    padding: 1px;
+    float: left;
+    text-align: center;
+}
+.validStrEnd {
+    width: 50px;
+    height: 14px;
+    border: 1px #ccc solid;
+    margin: 3px 3px 3px 0px;
+    padding: 1px;
+    text-align: center;
+}
+.validRed {
+    background: #ff0000;
+    color: #fff;
+}
+
+.validError {
+    background: url(../images/No.png) no-repeat right;
+    border: 1px #ff0000 solid;
+    height: 21px;
+    padding: 2px;
+}
+
+.validRight {
+    background: url(../Images/yes.png) no-repeat right;
+    border: 1px #ccc solid;
+    height: 21px;
+    padding: 2px;
+}
+
+#PasswordIsOk {
+    border: 0px #ccc solid;
+    margin-top: 5px;
+    width: 300px;
+}
+
+#validMsg {
+    margin-top: 5px;
+    color: red;
+    width: 200px;
+}

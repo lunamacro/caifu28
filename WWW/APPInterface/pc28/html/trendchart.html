@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="../js/jquery-3.1.0.min.js"></script>
+		<script src="../dist/dropload.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/trendency.css" />
+		<link rel="stylesheet" type="text/css" href="../dist/dropload.css" />
+        <style>
+            .chartTitle {padding-top:10px;padding-bottom:10px;background:#eeeeee; width:100%;text-align:center}
+        </style>
+	</head>
+
+	<body>
+		<div class="layout-body">
+			<div class="chartTitle">
+				载入中...
+			</div>
+			<div class="tablebody">
+				<table class="body">
+
+					<!--<tr><td>825193</td><td>9</td><td></td><td>小</td><td>单</td><td></td><td></td><td></td><td></td><td>小双</td></tr>-->
+				</table>
+			</div>
+		</div>
+	</body>
+	<script type="text/template" id="tendency_temp">
+		{{~it:value:index}}
+		<tr>
+			<td>{{=value.issue}}</td>
+			<td>{{=value.number}}</td>
+			{{? value.size === '小'}}
+			<td></td>
+			<td class="bg_orange">{{=value.size}}</td>
+			{{??}}
+			<td class="bg_orange">{{=value.size}}</td>
+			<td></td>
+			{{?}} {{? value.nature === '双'}}
+			<td></td>
+			<td class="bg_red">{{=value.nature}}</td>
+			{{??}}
+			<td class="bg_red">{{=value.nature}}</td>
+			<td></td>
+			{{?}} {{? value.sizenature === '大单'}}
+			<td class="bg_pink">{{=value.sizenature}}</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			{{?? value.sizenature === '小单'}}
+			<td></td>
+			<td class="bg_pink">{{=value.sizenature}}</td>
+			<td></td>
+			<td></td>
+			{{?? value.sizenature === '大双'}}
+			<td></td>
+			<td></td>
+			<td class="bg_pink">{{=value.sizenature}}</td>
+			<td></td>
+			{{??}}
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="bg_pink">{{=value.sizenature}}</td>
+			{{?}}
+		</tr>
+		{{~}}
+	</script>
+	<script src="../js/doT.min.js"></script>
+	<script src="../js/myStorage.js"></script>
+	<script src="../js/config.js"></script>
+	<script type="text/javascript">
+		//var lotteryId = myStorage.getItem('lotteryId')
+		var lotteryId = getQueryString('lotteryId');
+		var titString = lotteryId=="98"?"加拿大28":"北京28";
+		$(".chartTitle").text(titString+"走势图");
+		
+		$(function() {
+			//dropload()
+			$.ajax({
+				type: "Post",
+				url: config().base_url + "/ajax/Bjxy28.ashx",
+				data: {
+					"opt": 1,
+					"lotteryId": lotteryId
+				},
+				cache: false,
+				async: false,
+				success: function(data) {
+					console.log(data)
+					var previous_array = []
+					if(data.error == '0') {
+						if(data.msg.length > 0) {
+							for(var i = 0; i < data.msg.length; i++) {
+								var obj = {
+									"issue": data.msg[i].name,
+									"number": data.msg[i].winLotteryNumber.split('=')[1],
+									"size": data.msg[i].type1,
+									"nature": data.msg[i].type2,
+									"sizenature": data.msg[i].type1 + data.msg[i].type2
+								}
+								previous_array.push(obj)
+							}
+							fnSetTendencyItem(previous_array)
+						}
+					}
+				},
+				error: function() {
+					//alert("调用错误")
+					console.log('调用错误')
+				}
+			})
+		})
+
+		function dropload() {
+			$('.tablebody').dropload({
+				scrollArea: window,
+				loadDownFn: function(me) {
+					getHistoryOpenData(me)
+				}
+			})
+		}
+
+		function getHistoryOpenData(me) {
+			$.ajax({
+				type: "Post",
+				url: config().base_url + "/ajax/Bjxy28.ashx",
+				data: {
+					"opt": 1,
+					"lotteryId": lotteryId
+				},
+				cache: false,
+				async: false,
+				success: function(data) {
+					console.log(data)
+					var previous_array = []
+					if(data.error == '0') {
+						if(data.length <= 0) {
+							// 锁定
+							me.lock();
+							// 无数据
+							me.noData();
+							//已经没有更多数据了，必须重置
+							me.resetload()
+							return
+						}
+						if(data.msg.length > 0) {
+							for(var i = 0; i < data.msg.length; i++) {
+								var obj = {
+									"issue": data.msg[i].name,
+									"number": data.msg[i].winLotteryNumber.split('=')[1],
+									"size": data.msg[i].type1,
+									"nature": data.msg[i].type2,
+									"sizenature": data.msg[i].type1 + data.msg[i].type2
+								}
+								previous_array.push(obj)
+							}
+						}
+						// 为了测试，延迟1秒加载
+						setTimeout(function() {
+							console.log('1')
+							fnSetTendencyItem(previous_array)
+							// 每次数据加载完，必须重置
+							me.resetload()
+						}, 1000);
+					}
+				},
+				error: function() {
+					//alert("调用错误")
+					console.log('调用错误')
+					// 即使加载出错，也得重置
+					me.resetload();
+				}
+			})
+		}
+
+		function fnSetTendencyItem(data) {
+			var tempFn = doT.template(document.getElementById('tendency_temp').innerHTML)
+			var resultText = tempFn(data)
+			$('.body').append(resultText)
+		}
+
+		function getQueryString(name) { 
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+				var r = window.location.search.substr(1).match(reg); 
+				if (r != null) return unescape(r[2]); return null; 
+			} 
+	</script>
+
+</html>
