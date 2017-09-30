@@ -11,7 +11,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta content="telephone=no,email=no" name="format-detection">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <title>财富28-App下载</title>
+    <title>财富28-App下载  </title>
         <style type="text/css">
         *{margin:0; padding:0;}
 
